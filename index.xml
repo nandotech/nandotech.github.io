@@ -29,7 +29,9 @@
 
 &lt;p&gt;Launches a page where you type any github username you’d like to look up and returns projects sorted by stars along with the user’s avatar.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1600/0*7h_r_uTlUc68krRf.png&#34; alt=&#34;Screenshot&#34; /&gt;\n\n\n\nYou should also be able to view the source code. Feel free to make any comments! Special thanks again to Scott Allen &amp;amp; Pluralsight.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1600/0*7h_r_uTlUc68krRf.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You should also be able to view the source code. Feel free to make any comments! Special thanks again to Scott Allen &amp;amp; Pluralsight.&lt;/p&gt;
 
 &lt;p&gt;Even with Angular 2.0 coming, I’ll bear with the growing pains. There’s a bright future ahead for this stack and developing with it is a joy.&lt;/p&gt;
 </description>
