@@ -1,0 +1,36 @@
+baseurl = "https://nandotech.github.io/"
+languageCode = "en-us"
+title = "NandoTech"
+name = "NandoTech Blog"
+canonifyurls = true
+
+[Params]
+  logo = "img/nandotech_logo_gray.gif"
+  subtitle = "Welcome to our Blog: All things related to programming, technology and entrepreneurship. Read, enjoy & share. Occassional SIP gems."
+  description = "Blog posts on programming, technology and entrepreneurship. A true polyglot, Software Developer and CEO of NandoTech Inc, Fernando Rodriguez, blogging on how & where we cater custom software & SIP solutions for small to medium sized businesses."
+  keywords = "blog, company, nandotech, software engineer, web development, microsoft, consultant"
+
+
+[Author]
+  name = "Fernando Rodriguez"
+  email = "info@nandotech.com"
+  facebook = "nandotechinc"
+  github = "nandotech"
+  twitter = "nandotechinc"
+  linkedin = "in/fernando-rodriguez-6082914a"
+  stackoverflow = "4308952/fernando-rodriguez"
+
+  [[menu.main]]
+  name = "Company Website"
+  url = "http://nandotech.com"
+  weight = 0
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "/page/about/"
+    weight = 2

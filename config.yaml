@@ -1,0 +1,9 @@
+---
+contentdir: "content"
+layoutdir: "layouts"
+publishdir: "public"
+indexes:
+  category: "categories"
+baseurl: "https://nandotech.github.io"
+title: "NandoTech Blog"
+canonifyurls: true
