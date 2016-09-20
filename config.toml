@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "NandoTech"
 name = "NandoTech Blog"
 canonifyurls = true
+googleAnalytics = "UA-59045667-5"
 
 [Params]
   logo = "img/nandotech_logo_gray.gif"
