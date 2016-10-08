@@ -1,5 +1,5 @@
 ---
-title: Greenfield Applications
+title: Greenfield Applications (Part 1, Project Armadillo)
 subtitle: Architecture Decisions and where we're headed
 date: 2016-10-02
 ---
@@ -44,6 +44,9 @@ So without further ado, here is our tentative model & deployment plan for what w
 - We have plenty of in-house infrastructure on which the bulk of this software will run.
     * We may utilize [Azure](http://www.azure.com) for some fail-safe or high-availability functionality
 
+#### Front End Framework/Design Decisions
+
+- Still finalizing on this front and we will see a part 2 of this blog post.
 
 
 
