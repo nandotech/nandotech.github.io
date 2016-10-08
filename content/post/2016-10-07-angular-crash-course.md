@@ -1,7 +1,7 @@
 ---
 title: Angular 2 Crash Course
 subtitle: A collection of free & paid Angular 2 resources
-date: 2016-10-02
+date: 2016-10-07
 ---
 
 _PSA: Skip to the **TL;DR** for list of resources_
