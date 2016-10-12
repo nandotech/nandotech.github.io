@@ -10,9 +10,9 @@ I have an deep love for Clean Code and strive for many of the same principles ap
 
 Much of what I'm rambling on about, you can read more about in [The Agile Manifesto](http://agilemanifesto.org/) and what have probably become my two favorite books: [Clean Code by Robert C. Martin](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) and [Scrum by Kent Beck & Jeff Sutherland](https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X) that have deeply help shape my views and experiences in software development.
 
-I began writing HTML & JavaScript and made awesome (read: brightly colored with flashing backgrounds) websites in my early teen years and my love affair with computers took off.  It would be a while yet, but around 2006 at Florid Atlantic University I was first exposed to C and algorithms.
+I began writing HTML & JavaScript and made awesome (read: brightly colored with flashing backgrounds) websites in my early teen years and my love affair with computers took off.  It would be a while yet, but around 2006 at Florida Atlantic University I was first exposed to C and algorithms.
 
-I fell in love all over again.  Next came C++, Data Structures.  I couldn't get enough.
+I fell in love all over again.  Next came C++. Then Data Structures.  I couldn't get enough.
 
 Fortunately for all of us, I am now heavily invested in C# and absolutely love the [ASP.NET](https://dot.net) stack.  I consider myself an extremely competent web developer and also a polyglot.  There is something about programming especially and solving problems that completely transcends all programming languages and technology stacks 
 

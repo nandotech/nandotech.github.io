@@ -11,7 +11,7 @@ the [Angular 2 Workshop](http://ftlauderdale.ng-learn.com) we were registered fo
 
 #### That said, we were incredibly lucky, and many residents in the central and northern regions of our state are not nearly as lucky.  Areas near and around Daytona Beach, FL I believe suffered the brunt of it and our best wishes are with the most affected communities.
 
-That's not even saying anythin in regards to the rest of the Carribean like Cuba, Haiti & Jamaica who suffered through the grand [majority of Matthew's wrath](https://weather.com/news/news/hurricane-matthew-haiti-latest-news) and will be in recovery mode for quite a while.  I wish I knew a good charity, because this is where I would link and recommend some.  If someone cares to enlighten me, I will update this post.
+That's not even saying anything in regards to the rest of the Carribean like Cuba, Haiti & Jamaica who suffered through the grand [majority of Matthew's wrath](https://weather.com/news/news/hurricane-matthew-haiti-latest-news) and will be in recovery mode for quite a while.  I wish I knew a good charity, because this is where I would link and recommend some.  If someone cares to enlighten me, I will update this post.
 
 ## **Workshop Or Not:**
 
