@@ -1,7 +1,7 @@
 ---
 title: Building an (awesome) API with NancyFX 2.0 + Dapper
 subtitle: Plus, dependency injection explained and everything you need to get up and running.
-date: 2016-10-20
+date: 2016-10-21
 bigimg: /img/nancyhome.png
 ---
 
