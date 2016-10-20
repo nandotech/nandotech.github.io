@@ -45,39 +45,31 @@ _project.json_
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.AspNetCore.Owin": "1.0.0",
     "Nancy": "2.0.0-barneyrubble",
-    "xunit": "2.2.0-beta2-build3300",
-    "Swashbuckle": "6.0.0-beta901",
     "Dapper": "1.50.2",
     "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
     "Microsoft.Extensions.Configuration.Json": "1.0.0"
   },
-
   "tools": {
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"
   },
-
   "frameworks": {
     "netcoreapp1.0": {}
   },
-
   "buildOptions": {
     "debugType": "portable", 
     "emitEntryPoint": true
   },
-
   "runtimeOptions": {
     "configProperties": {
       "System.GC.Server": true
     }
   },
-
   "publishOptions": {
     "include": [
       "wwwroot",
       "web.config"
     ]
   },
-
   "scripts": {
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:coreclr%" ]
   }
