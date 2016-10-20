@@ -22,7 +22,10 @@
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/pygment_highlights.css" />
-  
+  <!-- Code Highlighting / highlightjs -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <!-- Facebook OpenGraph tags -->
   <meta property="og:title" content="{{ .Title }}" />
   <meta property="og:type" content="website" />
