@@ -1,7 +1,7 @@
 ---
 title: Building an (awesome) API with NancyFX 2.0 + Dapper
 subtitle: Plus, dependency injection explained and everything you need to get up and running.
-date: 2016-10-21
+date: 2016-10-24
 bigimg: /img/nancyhome.png
 ---
 
@@ -103,12 +103,8 @@ _Startup.cs_
         }
         // This method gets called by the runtime.
         // We will configure this to use Nancy middleware.
-        public void Configure(IApplicationBuilder app,
-                              IHostingEnvironment env,
-                              ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app)
         {
-            //Not required, but we will use later on
-            loggerFactory.AddConsole();
             // Creating our request pipeline--strictly Nancy middleware
             app.UseOwin(x => x.UseNancy());
         }
