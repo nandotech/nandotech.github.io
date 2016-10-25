@@ -1,7 +1,7 @@
 ---
 title: Building an (awesome) API with NancyFX 2.0 + Dapper
 subtitle: Plus, dependency injection explained and everything you need to get up and running.
-date: 2016-10-26
+date: 2016-10-25
 bigimg: /img/nancyhome.png
 ---
 
@@ -12,6 +12,8 @@ bigimg: /img/nancyhome.png
 [ASP.NET Core](http://asp.net) looks extremely promising, but I was always a fan of NancyFX and wanted to try it out. Subsequently, I was extremely excited when I found out that [NancyFX](http://nancyfx.org) would be compatible with Core, and I basically gave myself a reason to use it.
 
 That reason is a rather small Web API project that I very simply needed to accept `POST` requests from two separate web servers/services and provide `GET` routes that would be accessed via a SPA (probably [Angular 2](http://angular.io)) with some relevant business information that would be coming in from the API's.
+
+For the lazy, TL;DR -- Repository is available on Github: [https://github.com/nandotech/VSNancyDemo](https://github.com/nandotech/VSNancyDemo).  Feel free to clone it, fork it, add, fix & send pull requests if you fancy.
 
 Moral of the story is that this was incredibly easy to accomplish, especially if you stay on the "[Super Duper Happy Path](https://github.com/NancyFx/Nancy/wiki/Introduction)" as the developers like to put it.  We will only cover the back end service here, possibly saving the Angular 2 portion for another post.
 
@@ -283,6 +285,8 @@ _HomeModule.cs_
 
 Our `index.html` is now returning the message labelled `"Greeting"` from our `appsettings.json` file at the `/` route. The `/test` route just returns the same thing in plain text to the browser and/or [Postman](https://www.getpostman.com/).
 
+For the sake of length, I'm actually going to skip reviewing `async`, `Before()` and `After()` lifetime hooks as well as built-in context logger--you can still look over how this works in the `AsyncModule.cs` within the [repository](https://github.com/nandotech/VSNancyNetCore/). You can run this Get request from your browser and see how it works.
+
 --------------------
 
 With all the basics out of the way, including our side foray into using `NancyFX` with a View Engine and exploring Dependency Injection, now we're ready to build a database and get `Dapper` up and running.
@@ -320,7 +324,7 @@ _DbConnectionProvider.cs_
     }
 ```
 
-This way any other service or repository we may need to create simply needs a constructor accepting `IDbConnectionProvider` and it will have access to the correct `IDbConnection` instance.  That said, we must add the following line to our `Bootstrapper`
+This way any other service or repository we may need to create simply needs a constructor accepting `IDbConnectionProvider` and it will have access to the correct `IDbConnection` instance. Would also save having to update a bunch of different locations if the variable or connection  type were changed.  That said, we must add the following line to our `Bootstrapper`.  
 
 ```csharp
 container.Register<IDbConnectionProvider, DbConnectionProvider>();  
@@ -329,6 +333,176 @@ container.Register<IDbConnectionProvider, DbConnectionProvider>();
 Once again: this is a `Singleton` but since the IDbConnection object does not directly control opening/closing DB connections this is perfectly okay. (Thanks [@jchannon](http://twitter.com/jchannon) for helping me out here).
 
 Let's see now what we have in our `/Data/` folder for classes that need to become database tables. In our app we will have 2 simple data types, `Disposition` and `Sale` that we'll be able to INSERT into (POST) and also return (GET) some contextual data. Here are the classes below--without using a database migration tool, we'll just run a `.sql` script to create the requisite database.
+
+We'll be using SQL Server for our example, but remember Dapper supports many different types of databases, from SQLite to Postgres.
+
+_Sale.cs_
+
+```csharp
+    public class Sale
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime Timestamp { get; set; }
+    }
+ ``` 
+_Disposition.cs_    
+
+``` csharp
+    public class Disposition
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime Timestamp { get; set; }
+    }
+``` 
+which we can translate to:
+
+_CreateDatabase.sql_
+
+```sql
+CREATE TABLE [dbo].[Dispositions](
+    [Id] [int] IDENTITY(1,1) NOT NULL,
+    [Name] [nvarchar](max) NULL,
+    [Description] [nvarchar](max) NULL,
+    [Timestamp] datetime NULL,
+ CONSTRAINT [PK_Dispositions] PRIMARY KEY CLUSTERED 
+(
+    [Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+CREATE TABLE [dbo].[Sales](
+    [Id] [int] IDENTITY(1,1) NOT NULL,
+    [Name] [nvarchar](max) NULL,
+    [Description] [nvarchar](max) NULL,
+    [Timestamp] datetime NULL,
+ CONSTRAINT [PK_Sales] PRIMARY KEY CLUSTERED 
+(
+    [Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+```
+
+## Looks like we're ready to use Dapper and interact with our database from our `NancyFX` application now.
+
+We'll start by creating a simple `service` or `repository` depending who you ask, and using that to call Dapper functions to interact with our database.  If you're reading this, I'm going to assume you're at least a little familiar with SQL, so we won't be going over any of that. Moreover, for this demo, I don't think we'll be doing anything real complicated.  The SQL script above is included in the [Github Repository](https://github.com/nandotech/VSNancyDemo) for your convenience.
+
+_DispoRepository.cs_
+
+```csharp
+    public class DispoRepository
+    {
+        private IDbConnection dbConn;
+
+        public DispoRepository(IDbConnectionProvider _dbConn)
+        {
+            dbConn = _dbConn.Connection;
+        }
+        public IEnumerable<Disposition> GetAll()
+        {
+            using (IDbConnection active = dbConn)
+            {
+                active.Open();
+                return active.Query<Disposition>("SELECT * FROM Dispositions");
+            }
+        }
+        public Disposition Get(int id)
+        {
+            using (IDbConnection active = dbConn)
+            {
+                active.Open();
+                return active.QueryFirst<Disposition>("SELECT * FROM Dispositions WHERE id = @Id", new { Id = id });
+            }
+        }
+        public void Add(Disposition dispo)
+        {
+            string sQuery = "INSERT INTO dbo.Dispositions (Name, Description, Timestamp)"
+                + " VALUES(@Name, @Description, @Timestamp)";
+            using (IDbConnection active = dbConn)
+            {
+                active.Open();
+                active.Execute(sQuery, dispo);
+            }
+        }
+        public void Remove(int id)
+        {
+            using (IDbConnection active = dbConn)
+            {
+                active.Open();
+                active.Execute("DELETE FROM Dispositions WHERE Id = @Id", new { Id = id });
+            }
+        }
+
+    }
+```
+
+The `DispoRepository` above contains some basic functions for interaction with the `Dispositions` table we created in `SQL Server`.  We have `GetAll()`, `Get(int id)`, `Add(Disposition dispo)`, and `Remove(int id)` and predictably they all do exactly what you'd expect.  Again for brevity, I will likely leave only the `Disposition` Repo & `DispoModule` completed with the `SaleModule.cs` & implementing a `SalesRepository.cs` as an exercise for you.  You may even add a field to relate the two and create a more robust data model.
+
+I will personally be doing exactly that, as this is basically the barebones/precursor to a very simple closely related application I am working on.  I just really wanted to explore both Nancy & Dapper while I did it.
+
+That said, here's our `DispoModule.cs`
+
+_DispoModule.cs_
+
+```csharp
+    public class DispoModule : NancyModule
+    {
+
+        public DispoModule(IDbConnectionProvider _dbConn)
+            : base("/dispo")
+        {
+            var _repo = new DispoRepository(_dbConn);
+
+            Get("/", args =>
+            {
+                return _repo.GetAll();
+            });
+
+            Get("Id={id}", args =>
+            {
+                return _repo.Get(args.id);
+            });
+
+            Post("/Name={name}&Desc={description}", args =>
+            {
+                var posted = new Disposition();
+                posted.Name = args.Name;
+                posted.Description = args.Description;
+                posted.Timestamp = DateTime.Now;
+                _repo.Add(posted);
+
+                return posted;
+            });
+
+            Delete("Id={id}", args =>
+            {
+                _repo.Remove(args.id);
+                return $"{args.id} Removed";
+            });
+        }
+
+    }
+```
+
+Use your favorite API tester to see the results (the `/dispo/` route will not display in your browser, as we saw before this is expected since there is no view associated with it).
+
+| Get Requests | Post Requests |
+|--------------|---------------|
+|![GetAll()](http://i.imgur.com/Q316PoH.png) | ![Post New](http://i.imgur.com/blNKGRg.png)
+|![Get By ID](http://i.imgur.com/0qhU561.png) | ![Delete Post](http://i.imgur.com/N7OUbsL.png)
+
+There are obviously several strategies you can take, and I was fairly primitive in my argument passing & capturing in these examples, intentionally so.  I didn't want to confuse intent while covering full functionality and everything you should need. 
+
+Along the lines of Dapper, rather than creating `Repository` class for each data type, we could also do something much more generic. From creating a single repository that would include all necessary methods for data retrieval app-wide to actually using a "Generic Repository" pattern to have each data type inherit from a common `interface`.
+
+Anyhow, that was much longer than I intended for it to be.  I did want the walkthrough to be fairly thorough and approachable for those coming into the stack with no prior knowledge, while still providing useful insight for those who have used these technologies together before.
+
+With that, please direct any questions or comments to me via twitter or any of the links at the bottom of the page, I would love to hear from you. Do you use Dapper and .NET Core (and more specifically, Nancy) in production? Your hobby project?  How do your patterns differ from what I show here?  How could some of this code be improved?  Let me know.
+
+* [Github Repository](https://github.com/nandotech/VSNancyDemo)
 
 
 ----------------------------------
