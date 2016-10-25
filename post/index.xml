@@ -542,15 +542,21 @@ CREATE TABLE [dbo].[Sales](
 
 &lt;p&gt;&lt;strong&gt;I want to give a huge shout-out and big thank you to the &lt;code&gt;NancyFX&lt;/code&gt; developers.&lt;/strong&gt;  These guys do amazing work for the community &lt;em&gt;for free&lt;/em&gt; and I could not be  more thankful.  On top of that, the &lt;code&gt;NancyFX&lt;/code&gt; community has a &lt;a href=&#34;http://nancyfx.slack.com&#34;&gt;Slack&lt;/a&gt; that you can feel free to join @ &lt;a href=&#34;http://nancyfx.slack.com&#34;&gt;http://nancyfx.slack.com&lt;/a&gt; and ask questions!  Rarely do you find such a friendly and helpful community online these days, and these guys were awesome at answering all my questions and contributing to my understanding of th stack.&lt;/p&gt;
 
-&lt;p&gt;Nonetheless, in no particular order I&amp;rsquo;d like to recognize the following specifically:
-* &lt;a href=&#34;https://github.com/thecodejunkie&#34;&gt;Andreas Hakansson aka &amp;ldquo;thecodejunkie&amp;rdquo;&lt;/a&gt;
-* &lt;a href=&#34;https://github.com/jchannon&#34;&gt;Jonathan Channon&lt;/a&gt;
-* &lt;a href=&#34;https://github.com/grumpydev&#34;&gt;Steven Robbins aka &amp;ldquo;grumpydev&amp;rdquo;&lt;/a&gt;
-* &lt;a href=&#34;https://github.com/phillip-haydon&#34;&gt;Phillip Haydon&lt;/a&gt;
-* &lt;a href=&#34;https://github.com/khellang&#34;&gt;Kristian Hellang&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Nonetheless, in no particular order I&amp;rsquo;d like to recognize the following specifically:&lt;/p&gt;
 
-&lt;p&gt;and lastly, non-Nancy team member but awesome community member:
-* &lt;a href=&#34;https://github.com/Sphiecoh&#34;&gt;Sifiso Shezi&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/thecodejunkie&#34;&gt;Andreas Hakansson aka &amp;ldquo;thecodejunkie&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jchannon&#34;&gt;Jonathan Channon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/grumpydev&#34;&gt;Steven Robbins aka &amp;ldquo;grumpydev&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/phillip-haydon&#34;&gt;Phillip Haydon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/khellang&#34;&gt;Kristian Hellang&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and lastly, non-Nancy team member but awesome community member:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Sphiecoh&#34;&gt;Sifiso Shezi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;I have had the pleasure of having direct access to and some interaction with just about every single one of these guys and it has been absolutely invaluable.  Again, all are encouraged to join the community, drop in Slack and ask questions! This is an awesome project and the community behind it is just as awesome as it grows and matures. :)&lt;/p&gt;
 
