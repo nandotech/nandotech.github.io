@@ -511,6 +511,7 @@ With that, please direct any questions or comments to me via twitter or any of t
 **I want to give a huge shout-out and big thank you to the `NancyFX` developers.**  These guys do amazing work for the community _for free_ and I could not be  more thankful.  On top of that, the `NancyFX` community has a [Slack](http://nancyfx.slack.com) that you can feel free to join @ http://nancyfx.slack.com and ask questions!  Rarely do you find such a friendly and helpful community online these days, and these guys were awesome at answering all my questions and contributing to my understanding of th stack.  
 
 Nonetheless, in no particular order I'd like to recognize the following specifically:
+
 * [Andreas Hakansson aka "thecodejunkie"](https://github.com/thecodejunkie)
 * [Jonathan Channon](https://github.com/jchannon)
 * [Steven Robbins aka "grumpydev"](https://github.com/grumpydev)
@@ -518,6 +519,7 @@ Nonetheless, in no particular order I'd like to recognize the following specific
 * [Kristian Hellang](https://github.com/khellang)
 
 and lastly, non-Nancy team member but awesome community member:
+
 * [Sifiso Shezi](https://github.com/Sphiecoh)
 
 I have had the pleasure of having direct access to and some interaction with just about every single one of these guys and it has been absolutely invaluable.  Again, all are encouraged to join the community, drop in Slack and ask questions! This is an awesome project and the community behind it is just as awesome as it grows and matures. :)
