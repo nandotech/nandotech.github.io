@@ -81,21 +81,9 @@
 
 &lt;p&gt;When we publish this app, whether you follow Visual Studio prompts or the command line, you will end up with this in your folder.&lt;/p&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;CLI&lt;/th&gt;
-&lt;th&gt;Folder Contents&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/rID1iFK.png&#34; alt=&#34;CLI commands&#34; /&gt;&lt;/p&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/rID1iFK.png&#34; alt=&#34;CLI commands&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/9r0Gx55.png&#34; alt=&#34;Folder Dir&#34; /&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/9r0Gx55.png&#34; alt=&#34;Folder Dir&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So&amp;hellip;since there&amp;rsquo;s no &lt;code&gt;.exe&lt;/code&gt;&amp;hellip; &lt;code&gt;dotnet run myproj.dll&lt;/code&gt; right?  Immediately, you&amp;rsquo;ll get an error about missing &lt;code&gt;project.json&lt;/code&gt; and &lt;code&gt;appsettings.json&lt;/code&gt;.  I found no documentation on this, however I personally had to manually copy the &lt;code&gt;.json&lt;/code&gt; files directly to my server where this application ran. So we try again.&lt;/p&gt;
 
