@@ -7,7 +7,7 @@ bigimg: /img/nancyhome.png
 
 ## NancyFX & Dapper are so hot right now. Naturally, I had to put them together.
 
-#### I am a huge fan and follower of [.NET Core](https://dot.net) and the entire open source movement insinde Microsoft. 
+#### I am a huge fan and follower of [.NET Core](https://dot.net) and the entire open source movement going on inside Microsoft and really what seems like the world over. More and more companies, big and small are open sourcing projects as the default rather than the exception. 
 
 [ASP.NET Core](http://asp.net) looks extremely promising, but I was always a fan of NancyFX and wanted to try it out. Subsequently, I was extremely excited when I found out that [NancyFX](http://nancyfx.org) would be compatible with Core, and I basically gave myself a reason to use it.
 
