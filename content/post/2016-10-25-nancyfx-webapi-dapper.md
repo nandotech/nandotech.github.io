@@ -295,42 +295,56 @@ For this example, I will use my `localdb`, specifically `(localdb)\\MSSQLLocalDB
 
 In typical usage, [Dapper](https://github.com/StackExchange/dapper-dot-net) expects that you have a connection open, or you may explicitly advise the library to `Open` the database connection by calling `.Open()` on their extended `IDbConnection` interface.  In the interest of keeping code a little more [D.R.Y.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), I decided to make a `IDbConnectionProvider.cs` and `DbConnectionProvider.cs` which will return the `IDbConnection` required for our Dapper queries.
 
-_IDbConnectionProvider.cs_
+_Update 11/2/2016:_ If you check out the [public github repo](https://github.com/nandotech/VSNancyDemo/) you will see I have factored out the need for `DbConnectionProvider` and `IDbConnectionProvider` from the project. Instead, there is an `IDispoRepository.cs` and the `Startup.cs` has the same singleton style instantiation, `container.Register<IDispoRepository, DispoRepository>();`.
+
+Such a small piece of code was simple to move into the data repository, and saved us 2 unncessary files.  Updated code below.
+
+_IDispoRepository.cs_
 
 ```csharp
-    public interface IDbConnectionProvider
+    public interface IDispoRepository
     {
-        IDbConnection Connection { get; }
+        IEnumerable<Disposition> GetAll();
+        Disposition Get(int id);
+        void Add(Disposition dispo);
+        void Remove(int id);
     }
+}
 ```
 
 _DbConnectionProvider.cs_
 
 ```csharp
-    public class DbConnectionProvider : IDbConnectionProvider
+    public class DispoRepository : IDispoRepository
     {
-        private string connectionString;
-        public DbConnectionProvider(IConfiguration config)
+        //private IDbConnection dbConn;
+        private string dbConnectionString;
+        public DispoRepository(IConfiguration _dbConn)
         {
-            connectionString = config.GetConnectionString("DefaultConnection");
+            dbConnectionString = _dbConn.GetConnectionString("DefaultConnection"); ;
         }
-        public IDbConnection Connection
+
+        internal IDbConnection dbConn
         {
             get
             {
-                return new SqlConnection(connectionString);
+                return new SqlConnection(dbConnectionString);
             }
         }
+       
+       // I finish this class up further down the post
+       // after we've created our database
     }
 ```
 
-This way any other service or repository we may need to create simply needs a constructor accepting `IDbConnectionProvider` and it will have access to the correct `IDbConnection` instance. Would also save having to update a bunch of different locations if the variable or connection  type were changed.  That said, we must add the following line to our `Bootstrapper`.  
+This way any other service or repository we may need to create simply needs a constructor accepting `IDispoRepository` and it will have access to the correct `IDbConnection` instance. Would also save having to update a bunch of different locations if the variable or connection  type were changed.  That said, we must add the following line to our `Bootstrapper`.  
 
 ```csharp
-container.Register<IDbConnectionProvider, DbConnectionProvider>();  
+container.Register<IDispoRepository, DispoRepository>();  
 ```
 
 Once again: this is a `Singleton` but since the IDbConnection object does not directly control opening/closing DB connections this is perfectly okay. (Thanks [@jchannon](http://twitter.com/jchannon) for helping me out here).
+
 
 Let's see now what we have in our `/Data/` folder for classes that need to become database tables. In our app we will have 2 simple data types, `Disposition` and `Sale` that we'll be able to INSERT into (POST) and also return (GET) some contextual data. Here are the classes below--without using a database migration tool, we'll just run a `.sql` script to create the requisite database.
 
@@ -451,10 +465,11 @@ _DispoModule.cs_
     public class DispoModule : NancyModule
     {
 
-        public DispoModule(IDbConnectionProvider _dbConn)
+        public DispoModule(IDispoRepository _repo)
             : base("/dispo")
         {
-            var _repo = new DispoRepository(_dbConn);
+            //No longer needed, since we are injecting IDispoRepository
+           // var _repo = new DispoRepository(_dbConn);
 
             Get("/", args =>
             {
