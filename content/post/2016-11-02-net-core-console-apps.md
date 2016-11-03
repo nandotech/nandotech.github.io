@@ -54,9 +54,9 @@ _project.json_
 
 When we publish this app, whether you follow Visual Studio prompts or the command line, you will end up with this in your folder. 
 
-| CLI | Folder Contents |
-|-----|-----------------|
-| ![CLI commands](http://i.imgur.com/rID1iFK.png) | ![Folder Dir](http://i.imgur.com/9r0Gx55.png)
+![CLI commands](http://i.imgur.com/rID1iFK.png)
+
+![Folder Dir](http://i.imgur.com/9r0Gx55.png)
 
 So...since there's no `.exe`... `dotnet run myproj.dll` right?  Immediately, you'll get an error about missing `project.json` and `appsettings.json`.  I found no documentation on this, however I personally had to manually copy the `.json` files directly to my server where this application ran. So we try again.  
 
