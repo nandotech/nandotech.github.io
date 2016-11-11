@@ -1,4 +1,4 @@
-baseurl = "http://blog.nandotech.com"
+baseurl = "http://blog.nandotech.com/"
 languageCode = "en-us"
 title = "NandoTech"
 name = "NandoTech Blog"
