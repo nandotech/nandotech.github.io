@@ -3,6 +3,8 @@ title: Exploring Asynchronous Modules with NancyFX 2.0 & .NET Core
 subtitle: Plus, using the Before & After hooks built into Nancy Request Pipeline.
 date: 2016-11-10
 bigimg: /img/nancyhome.png
+show-avatar: true
+social-share: true
 ---
 
 ## This post will serve as a follow-up to our earlier NancyFX exploration.  A few weeks ago, I posted [Building an (awesome) API with NancyFX 2.0 + Dapper](/post/2016-10-25-nancyfx-webapi-dapper/) where we covered all the basics of [Nancy](https://www.nancyfx.org) and running on [.NET Core](https://dot.net).
@@ -116,6 +118,12 @@ _DispoModule.cs_
 We navigate to `/dispo/` and exactly as expected, the browser simply returns the `string` "Intercepted", indicating that our `Before` hook did hijack the request. So, in other words, using `Before` executes that specified action before executing the requested Route, right?
 
 This is not _entirely_ true.  Because of the manner which Nancy operates, when you first hit a module (ANY Module) with a request, Nancy steps through the `Module` to ensure the current route is valid/matches. I imagine this has in large part to do with the fact the routes are dynamically constructed and also for Nancy to determine the Route with the highest **weight** to receive the request.
+
+**EDIT 11/11/2016**: _Thanks to [Phillip Haydon](http://www.philliphaydon.com/) from the [NancyFX Team](http://www.nancyfx.org) for some clarification on how this works. Reach him on [Twitter](https://www.twitter.com) at [@philliphaydon](https://twitter.com/philliphaydon). Quoted from him:_
+
+> "This is because we scan all modules and the routes and build a cache. Once built then we just match based on route and invoke the correct Func on the module for that request."
+
+Awesome.  I was actually not aware Nancy built and kept a cache of all routes, that is really rather ingenious and makes subsequent executions extremely efficient.
 
 Once Nancy finds a matching route, then it jumps over to the `Before` hook, if there is one available. See the execution of our `DispoModule.cs` currently, first breaking at the matching Route ("/") and upon pressing `F5` it jumps right into the before hook.
 

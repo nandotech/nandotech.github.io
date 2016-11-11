@@ -4,6 +4,6 @@ layoutdir: "layouts"
 publishdir: "public"
 indexes:
   category: "categories"
-baseurl: "https://nandotech.github.io"
+baseurl: "http://blog.nandotech.com"
 title: "NandoTech Blog"
-canonifyurls: true
+canonifyurls: false
