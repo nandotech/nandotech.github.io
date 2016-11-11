@@ -523,7 +523,7 @@ With that, please direct any questions or comments to me via twitter or any of t
 ----------------------------------
 
 # Lastly:
-**I want to give a huge shout-out and big thank you to the `NancyFX` developers.**  These guys do amazing work for the community _for free_ and I could not be  more thankful.  On top of that, the `NancyFX` community has a [Slack](http://nancyfx.slack.com) that you can feel free to join @ http://nancyfx.slack.com and ask questions!  Rarely do you find such a friendly and helpful community online these days, and these guys were awesome at answering all my questions and contributing to my understanding of th stack.  
+**I want to give a huge shout-out and big thank you to the `NancyFX` developers.**  These guys do amazing work for the community _for free_ and I could not be  more thankful.  On top of that, the `NancyFX` community has a [Slack](http://nancyfx.slack.com) that you can feel free to join @ http://nancyfx.slack.com and ask questions!  Rarely do you find such a friendly and helpful community online these days, and these guys were awesome at answering all my questions and contributing to my understanding of the stack.  
 
 Nonetheless, in no particular order I'd like to recognize the following specifically:
 
