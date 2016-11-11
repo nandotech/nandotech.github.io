@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on NandoTech</title>
-    <link>https://nandotech.github.io/page/</link>
+    <link>http://blog.nandotech.com/page/</link>
     <description>Recent content in Pages on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
-    <atom:link href="https://nandotech.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nandotech.com/page/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About me</title>
-      <link>https://nandotech.github.io/page/about/</link>
+      <link>http://blog.nandotech.com/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>https://nandotech.github.io/page/about/</guid>
+      <guid>http://blog.nandotech.com/page/about/</guid>
       <description>
 
 &lt;p&gt;My name is Fernando Rodriguez. I am the Founder &amp;amp; CEO of NandoTech Inc, where we specialize in customized software development work for businesses of all shapes and sizes.  Beyond custom and software development work, we have also developed a fairly strong portfolio of VoIP customers ranging from small office phone systems to large-scale call center capablities.&lt;/p&gt;
