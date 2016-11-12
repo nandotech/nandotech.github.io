@@ -2,6 +2,9 @@
 title: Going From Zero to One
 subtitle: Must-Read Book for Every Entrepreneur
 date: 2016-02-27
+tags: ["entrepreneurship"]
+categories:
+    - "Books"
 ---
 
 Chances are I’m also not the first person you’ve heard this from, either. This is one of the very few books that truly is a must-read for anyone who calls themselves a business owner, entrepreneur or anyone even considering the prospect of it.

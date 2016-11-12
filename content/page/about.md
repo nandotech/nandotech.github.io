@@ -2,6 +2,7 @@
 layout: page
 title: About me
 subtitle: Who am I and where did I come from?
+comments: false
 ---
 
 My name is Fernando Rodriguez. I am the Founder & CEO of NandoTech Inc, where we specialize in customized software development work for businesses of all shapes and sizes.  Beyond custom and software development work, we have also developed a fairly strong portfolio of VoIP customers ranging from small office phone systems to large-scale call center capablities.

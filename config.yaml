@@ -4,6 +4,11 @@ layoutdir: "layouts"
 publishdir: "public"
 indexes:
   category: "categories"
+  tag: "tags"
 baseurl: "http://blog.nandotech.com"
 title: "NandoTech Blog"
 canonifyurls: false
+enableRobotsTXT: true
+taxonomies:
+  category: "categories"
+  tag: "tags"

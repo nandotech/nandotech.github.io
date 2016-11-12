@@ -3,10 +3,23 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
       <article role="main" class="blog-post">
           {{ .Content }}
       </article>
-
+<div class="row">
+<div>
+{{ if .Params.categories }}
+  <strong>Categories:</strong>
+  {{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "/categories/" }}">{{ . }}</a>{{ end }}
+{{ end }}
+<br />
+{{ if .Params.tags }}
+  <strong>Tags:</strong>
+  {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "/tags/" }}">{{ . }}</a>{{ end }}
+{{ end }} <br />
+</div>
+  </div>
       <ul class="pager blog-pager">
         {{ if .PrevInSection }}
         <li class="previous">
@@ -25,7 +38,6 @@
         {{ template "_internal/disqus.html" . }}
       </div>
       {{ end }}
-
     </div>
   </div>
 </div>

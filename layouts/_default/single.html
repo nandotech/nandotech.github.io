@@ -14,9 +14,12 @@
         {{ partial "post.html" . }}
       {{ else if eq .Type "page" }}
         {{ partial "page.html" . }}
-      {{ else }}
-        NO MATCHING PARTIAL
-      {{ end }}
+      {{ else if eq .Type "tags"}}
+        {{ partial "taxonomies.html" . }}
+      {{else if eq .Type "categories"}}
+        {{ partial "categories.html" .}}
+      {{else}}
+        {{end}}
 
     </div>
 

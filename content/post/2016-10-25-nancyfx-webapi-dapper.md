@@ -3,6 +3,10 @@ title: Building an (awesome) API with NancyFX 2.0 + Dapper
 subtitle: Plus, dependency injection explained and everything you need to get up and running.
 date: 2016-10-25
 bigimg: /img/nancyhome.png
+tags: ["api","nancyfx",".net core","dapper"]
+categories:
+    - ".NET Core"
+    - "NancyFX"
 ---
 
 ## NancyFX & Dapper are so hot right now. Naturally, I had to put them together.

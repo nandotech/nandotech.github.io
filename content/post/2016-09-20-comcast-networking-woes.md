@@ -3,6 +3,9 @@ title: Networking Woes
 subtitle: The art of setting up Comcast
 date: 2016-09-20
 bigimg: /img/comcast.png
+tags: ["comcast","router","mikrotik","network setup"]
+categories:
+    - "Networking"
 ---
 
 Let me start off by saying unequivocally and without any shadow of a doubt: I am not a networking expert.  Although I understand all the constructs of the web and most all of the requisite information pertaining to how computers and the internet communicate as well as the nuances of local and public networks. 

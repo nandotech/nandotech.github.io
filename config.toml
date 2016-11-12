@@ -12,6 +12,9 @@ disqusShortname = "nandotech"
   description = "Blog posts on programming, technology and entrepreneurship. A true polyglot, Software Developer and CEO of NandoTech Inc, Fernando Rodriguez, blogging on how & where we cater custom software & SIP solutions for small to medium sized businesses."
   keywords = "nancyfx, asp.net, company, .net, .net core, software engineer, web development, microsoft, consultant"
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
 
 [Author]
   name = "Fernando Rodriguez"

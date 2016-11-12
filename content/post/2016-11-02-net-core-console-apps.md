@@ -2,6 +2,11 @@
 title: .NET Core Console Apps (Twilio API)
 subtitle: Our first open source .NET Core utility and deployment gotcha's
 date: 2016-11-02
+tags: ["twilio","console",".net core","dapper","csharp"]
+categories:
+    - ".NET Core"
+    - "Twilio"
+    - "VoIP"
 ---
 
 ### In the spirit of open source (and to pay it something better than lip service) 

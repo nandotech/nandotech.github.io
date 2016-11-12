@@ -1,6 +1,9 @@
 ---
 title: Getting Started with AngularJS 1.x
 date: 2016-06-11
+tags: ["angular1","github"]
+categories:
+    - "AngularJS"
 ---
 
 I recently took the Pluralsight course AngularJS: Get Started by Scott Allen.

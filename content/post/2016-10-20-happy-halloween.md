@@ -2,6 +2,9 @@
 title: Happy Halloween! 
 subtitle: GitHub Octocat Pumpkin is amazing.
 date: 2016-10-20
+tags: ["fun","github"]
+categories:
+    - "Miscellaneous"
 ---
 
 ## It has been a little while since our last post, 

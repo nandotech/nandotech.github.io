@@ -1,0 +1,13 @@
+<div>
+    <h1>Listing of Articles by Tags</h1>
+     <ul>
+        {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
+        <li> {{ $key }} </li>
+        <ul>
+            {{ range $taxonomy.Pages }}
+            <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </ul>
+</div>

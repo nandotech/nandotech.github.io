@@ -3,8 +3,11 @@ title: Exploring Asynchronous Modules with NancyFX 2.0 & .NET Core
 subtitle: Plus, using the Before & After hooks built into Nancy Request Pipeline.
 date: 2016-11-10
 bigimg: /img/nancyhome.png
-show-avatar: true
-social-share: true
+description: "Exploring Async Modules with NancyFX 2.0 & .NET Core.  Plus, using the Before and After hooks built into the Nancy Request Pipeline."
+tags: ["async","nancyfx",".net core","dapper"]
+categories:
+    - ".NET Core"
+    - "NancyFX"
 ---
 
 ## This post will serve as a follow-up to our earlier NancyFX exploration.  A few weeks ago, I posted [Building an (awesome) API with NancyFX 2.0 + Dapper](/post/2016-10-25-nancyfx-webapi-dapper/) where we covered all the basics of [Nancy](https://www.nancyfx.org) and running on [.NET Core](https://dot.net).

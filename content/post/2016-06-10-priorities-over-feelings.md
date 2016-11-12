@@ -1,6 +1,10 @@
 ---
 title: Priorities Over Feelings
 date: 2016-06-10
+tags: ["priorities","feelings","management","people"]
+categories:
+    - "Entrepreneurship"
+    - "Management"
 ---
 
 #### Let's be honest.

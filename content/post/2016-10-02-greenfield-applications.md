@@ -2,6 +2,9 @@
 title: Greenfield Applications (Part 1, Project Armadillo)
 subtitle: Architecture Decisions and where we're headed
 date: 2016-10-02
+tags: ["greenfield","nancyfx",".net core","dapper"]
+categories:
+    - ".NET Core"
 ---
 
 #### There's something whimsical about Greenfield applications.
