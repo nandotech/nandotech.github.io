@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Greenfield on NandoTech</title>
+    <link>http://blog.nandotech.com/tags/greenfield/</link>
+    <description>Recent content in Greenfield on NandoTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
+    <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
+    <lastBuildDate>Sun, 02 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://blog.nandotech.com/tags/greenfield/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Greenfield Applications (Part 1, Project Armadillo)</title>
+      <link>http://blog.nandotech.com/post/2016-10-02-greenfield-applications/</link>
+      <pubDate>Sun, 02 Oct 2016 00:00:00 +0000</pubDate>
+      <author>info@nandotech.com (Fernando Rodriguez)</author>
+      <guid>http://blog.nandotech.com/post/2016-10-02-greenfield-applications/</guid>
+      <description>
+
+&lt;h4 id=&#34;there-s-something-whimsical-about-greenfield-applications&#34;&gt;There&amp;rsquo;s something whimsical about Greenfield applications.&lt;/h4&gt;
+
+&lt;p&gt;The feeling of complete freedom over architecture decisions. The drawn out, sometimes heated debates concerning the most minute of details. Javascript frameworks.  &lt;a href=&#34;reactjs.org&#34;&gt;React&lt;/a&gt;, no&amp;ndash;let&amp;rsquo;s use &lt;a href=&#34;http://angular.io&#34;&gt;Angular&lt;/a&gt;!  Better yet, let&amp;rsquo;s use Anguar 2 because that&amp;rsquo;s got to be better than 1, right?&lt;/p&gt;
+
+&lt;p&gt;All kidding aside, the feeling of freedom of laying out and choosing technologies and how they will be distributed, hosted &amp;amp; supported is pretty awesome.&lt;/p&gt;
+
+&lt;p&gt;To be &lt;em&gt;perfectly honest&lt;/em&gt;, we&amp;rsquo;ve probably put off this exact project for many months.  Between semi-pending projects hanging over our heads and some existential crises, we spent some time not making much progress.  This is something we&amp;rsquo;ve known our clients could use for a long time, but we didn&amp;rsquo;t pull the trigger.&lt;/p&gt;
+
+&lt;p&gt;Being .NET developers, we have been closely following the .NET core and it&amp;rsquo;s developments.  We have also very much enjoyed and embraced &lt;a href=&#34;http://typescriptlang.org&#34;&gt;TypeScript&lt;/a&gt; and dabbled in &lt;a href=&#34;http://nativescript.org&#34;&gt;NativeScript&lt;/a&gt;, which further interested us in Angular 2.&lt;/p&gt;
+
+&lt;p&gt;It feels like the perfect storm.  Now that .NET Core was released as 1.0 and then even patched to 1.0.1, I was ready. To my utter joy and surprise, the Angular team then announces Angular 2 Final.&lt;/p&gt;
+
+&lt;h3 id=&#34;all-that-said-this-post-was-about-greenfield-apps-right&#34;&gt;All that said, this post was about Greenfield apps, right?&lt;/h3&gt;
+
+&lt;p&gt;So without further ado, here is our tentative model &amp;amp; deployment plan for what we&amp;rsquo;ve codenamed &lt;strong&gt;Project Armadillo &lt;em&gt;1.0 alpha&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;development-server-technologies&#34;&gt;Development/Server Technologies:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/cloud-platform/sql-server&#34;&gt;SQL Server 2016&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Love the new &lt;a href=&#34;https://blogs.msdn.microsoft.com/jocapc/2015/05/16/json-support-in-sql-server-2016/&#34;&gt;Json data type&lt;/a&gt; which we will leverage heavily&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dot.net&#34;&gt;ASP.NET Core 1.0&lt;/a&gt; Web API
+
+&lt;ul&gt;
+&lt;li&gt;Although &lt;a href=&#34;https://docs.asp.net/en/latest/mvc/controllers/index.html&#34;&gt;MVC&lt;/a&gt; made both MVC &amp;amp; WebAPI controllers derive from the same class, ASP.NET is planned to be used explicitly as a back-end web service&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.efproject.net/en/latest/intro.html&#34;&gt;Entity Framework Core 1.0&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;for majority of data access/CRUD)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/StackExchange/dapper-dot-net&#34;&gt;Dapper.NET&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;for SQL-intensive returns &amp;amp; complex queries&lt;/li&gt;
+&lt;li&gt;I imagine there may be several composing and/or decomposing JSON data&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.newtonsoft.com/json&#34;&gt;JSON.NET&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If necessary for further serialization capabilities&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://redis.io&#34;&gt;Redis&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For any caching mechanisms &amp;amp; needs (haven&amp;rsquo;t planed this out)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/StackExchange/StackExchange.Redis&#34;&gt;StackExchange.Redis&lt;/a&gt; to manage connections&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;deployment-decisions&#34;&gt;Deployment Decisions&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MOSTLY TBD&amp;hellip;&lt;/li&gt;
+&lt;li&gt;The only thing we are certain of is we will be running kestrel, but it will be either behind IIS or NGINX, something we have not decided on.&lt;/li&gt;
+&lt;li&gt;There is the tertiary option of running any/all of these things on Docker now that they are fully supported (other than SQL Server, which we have servers to run on)&lt;/li&gt;
+&lt;li&gt;We have plenty of in-house infrastructure on which the bulk of this software will run.
+
+&lt;ul&gt;
+&lt;li&gt;We may utilize &lt;a href=&#34;http://www.azure.com&#34;&gt;Azure&lt;/a&gt; for some fail-safe or high-availability functionality&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;front-end-framework-design-decisions&#34;&gt;Front End Framework/Design Decisions&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Still finalizing on this front and we will see a part 2 of this blog post.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
