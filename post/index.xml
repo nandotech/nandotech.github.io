@@ -8,8 +8,82 @@
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
-    <lastBuildDate>Mon, 21 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://blog.nandotech.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Holiday Reading List</title>
+      <link>http://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</link>
+      <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
+      <author>info@nandotech.com (Fernando Rodriguez)</author>
+      <guid>http://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</guid>
+      <description>
+
+&lt;h1 id=&#34;these-days-it-seems-like-there-are-more-and-more-people-out-there-learning-to-code&#34;&gt;These days, it seems like there are more and more people out there &amp;ldquo;learning to code&amp;rdquo;.&lt;/h1&gt;
+
+&lt;h4 id=&#34;tl-dr-book-list-is-at-the-bottom&#34;&gt;TL;DR - Book list is at the bottom.&lt;/h4&gt;
+
+&lt;p&gt;Every day there is another boot camp, code school, or one of many scores of opportunistic business ventures opening up. Many claim to not only teach you this amazing magical skill that is programming, but they will also magically imbue you with the personality needed to get past the HR Manager.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;rsquo;t fall for the trap. There are &lt;em&gt;so many&lt;/em&gt; extremely reputable websites out there, free tutorials available, along with tons and tons of amazing blogs, videos and more that are just itching to teach those willing to learn.&lt;/p&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Hearing the WWDC keynote say coding isn&amp;#39;t hard frustrates me. It&amp;#39;s extremely hard. You&amp;#39;re setting beginners up for huge disappointments.&lt;/p&gt;&amp;mdash; Tyler McGinnis (@tylermcginnis33) &lt;a href=&#34;https://twitter.com/tylermcginnis33/status/742431287684694017&#34;&gt;June 13, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;In my experience, it seems like the most likely candidate to attend a &amp;ldquo;Code School&amp;rdquo;&amp;ndash;or any of these 8 to 12 week &amp;ldquo;Bootcamps&amp;rdquo; where you&amp;rsquo;re supposed to learn everything you need about coding to not only get a job but also be a ninja&amp;ndash;is the aspiring coder with 0 experience and sometimes even lacking technical knowledge. This is an issue, and unfortunately not one that is necessarily the business&amp;rsquo; fault or aim to achieve.&lt;/p&gt;
+
+&lt;p&gt;As &lt;a href=&#34;https://twitter.com/shanselman&#34;&gt;Scott Hanselman&lt;/a&gt; recently posted on his blog, &lt;a href=&#34;http://www.hanselman.com/blog/StopSayingLearningToCodeIsEasy.aspx&#34;&gt;Stop saying learning to code is easy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why? Because if you&amp;rsquo;re someone who has spent any amount of time programming, &lt;em&gt;you know better.&lt;/em&gt; Scott mentions this on his blog: specifically landing the argument that when we tell people that programming is &lt;strong&gt;easy&lt;/strong&gt;, what will they think when it gets difficult? And as any &lt;strong&gt;real developer&lt;/strong&gt; can flatly tell you: &lt;em&gt;It will get difficult. Your difficult and my difficult may not be the same. In fact, let&amp;rsquo;s hope they&amp;rsquo;re not. However, NOTHING changes the fact that it WILL GET HARD.&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;When we tell folks - kids or otherwise - that programming is easy, what will they think when it gets difficult? And it will get difficult. That&amp;rsquo;s where people find themselves saying &amp;ldquo;well, I guess I&amp;rsquo;m not wired for coding. It&amp;rsquo;s just not for me.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Now, to be clear, that may be the case. I&amp;rsquo;m arguing that if we as an industry go around telling everyone that &amp;ldquo;coding is easy&amp;rdquo; we are just prepping folks for self-exclusion, rather than enabling a growing and inclusive community. That&amp;rsquo;s the goal right? Let&amp;rsquo;s get more folks into computers, but let&amp;rsquo;s set their expectations.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;ndash; &lt;a href=&#34;http://www.hanselman.com/blog/StopSayingLearningToCodeIsEasy.aspx&#34;&gt;Scott Hanselman, June 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;That said, I think the best thing any and all developers can do then is to always &lt;strong&gt;always&lt;/strong&gt; &lt;em&gt;always&lt;/em&gt; be working on getting better at your craft. This is what will keep you sharp. Caring about your craft and continuously improving upon your skill set are the only tools we have to combat entropy, thus we must use them.&lt;/p&gt;
+
+&lt;p&gt;For this, nothing beats reading. And I mean nothing. Sure, there are plenty of situations where perhaps coding a sample teaches me a lot more. Sometimes it seems so much easier to just copy &amp;amp; paste in someone else&amp;rsquo;s solution, or drag in a library we know solves the problem.  The question is: &lt;em&gt;At what cost?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Without any further adieu, mark rant end, here is my list of &lt;strong&gt;absolutely required reading&lt;/strong&gt; for any and &lt;em&gt;every&lt;/em&gt; Software Developer out there, in no particular order.  These are all books that I have personally read cover to cover and completely recommend that you do too. Each and every one provided me with new and different insights, all of which have been absolutely invaluable.&lt;/p&gt;
+
+&lt;h3 id=&#34;programming-books&#34;&gt;Programming Books&lt;/h3&gt;
+
+&lt;h4 id=&#34;almost-every-book-on-this-list-except-last-few-are-100-language-agnostic-as-such-the-advice-in-them-can-be-applied-to-all-programming-languages&#34;&gt;Almost every book on this list (except last few) are 100% language agnostic, as such the advice in them can be applied to &lt;em&gt;ALL&lt;/em&gt; programming languages.&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLm0Mg&#34;&gt;Clean Code&lt;/a&gt; by Robert C. Martin&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCPK23&#34;&gt;The Clean Coder&lt;/a&gt; by Robert C. Martin&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLjl5o&#34;&gt;Scrum: The Art of Doing Twice the Work in Half the Time&lt;/a&gt; by Jeff Sutherland &amp;amp; Kent Beck&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLiwt7&#34;&gt;The Pragmatic Programmer&lt;/a&gt; by Andrew Hunt &amp;amp; David Thomas&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLgnOl&#34;&gt;Code Complete: A Practical Handbook of Software Construction&lt;/a&gt; by Steve McConnell&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLhihM&#34;&gt;Code: The Hidden Language of Computer Hardware and Software&lt;/a&gt; by Charles Petzold&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLkXvV&#34;&gt;Soft Skills: The software developer&amp;rsquo;s life manual&lt;/a&gt; by John Sonmez&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLmFxi&#34;&gt;ADTs, Data Structures and Problem Solving with C++&lt;/a&gt; by Larry R Nyhoff&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCUkNy&#34;&gt;Problem Solving with C++&lt;/a&gt; by Walter Savitch&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLm3ba&#34;&gt;C# In Depth&lt;/a&gt; by Jon Skeet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;books-on-management-entrepreneurship&#34;&gt;Books on Management &amp;amp; Entrepreneurship&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLmAcU&#34;&gt;The Hard Thing About Hard Things&lt;/a&gt; by Ben Horowitz&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLhBJs&#34;&gt;Zero To One: Notes on Startups, or How To Build The Future&lt;/a&gt; by Peter Thiel&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hsU8gK&#34;&gt;How to Fail at Almost Everything and Still Win Big: Kind of the Story of My Life&lt;/a&gt; by Scott Adams&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCQkNh&#34;&gt;Start with Why: How Great Leaders Inspire Everyone to Take Action&lt;/a&gt; by Simon Sinek&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLe0v1&#34;&gt;High Output Management&lt;/a&gt; by Andrew Grove&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCNAiN&#34;&gt;Deep Work: Rules for Focused Success in a Distracted World&lt;/a&gt; by Cal Newport&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLgTMh&#34;&gt;Work Rules!: Insights from Inside Google That Will Transform How You Live and Lead&lt;/a&gt; by Laszlo Bock&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCUOmQ&#34;&gt;The Obstacle Is the Way: The Timeless Art of Turning Trials into Triumph&lt;/a&gt; by Ryan Holiday&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2ht2yEH&#34;&gt;Pitch Anything: An Innovative Method for Presenting, Persuading, and Winning the Deal&lt;/a&gt; by Oren Klaff&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hope everyone is having a wonderful holiday season! Now that things have calmed down a bit, I will turn back toward blogging as often as possible.  I am very much looking forward to continuing and completing my series of &lt;a href=&#34;https://www.nancyfx.org&#34;&gt;NancyFX&lt;/a&gt;. Beyond that, I take great pleasure in knowing that I may be helping someone solve problems. That being said, &lt;a href=&#34;https://dot.net&#34;&gt;.NET Core&lt;/a&gt; continues development at a breakneck pace and I will do everything I can to keep everyone up to date here.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>.NET Core Curated Resources List</title>

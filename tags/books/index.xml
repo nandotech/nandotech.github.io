@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Books on NandoTech</title>
-    <link>http://blog.nandotech.com/categories/books/</link>
+    <link>http://blog.nandotech.com/tags/books/</link>
     <description>Recent content in Books on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Tue, 13 Dec 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://blog.nandotech.com/categories/books/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nandotech.com/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Holiday Reading List</title>
@@ -82,32 +82,6 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Hope everyone is having a wonderful holiday season! Now that things have calmed down a bit, I will turn back toward blogging as often as possible.  I am very much looking forward to continuing and completing my series of &lt;a href=&#34;https://www.nancyfx.org&#34;&gt;NancyFX&lt;/a&gt;. Beyond that, I take great pleasure in knowing that I may be helping someone solve problems. That being said, &lt;a href=&#34;https://dot.net&#34;&gt;.NET Core&lt;/a&gt; continues development at a breakneck pace and I will do everything I can to keep everyone up to date here.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Going From Zero to One</title>
-      <link>http://blog.nandotech.com/post/2016-02-27-going-from-zero-to-one/</link>
-      <pubDate>Sat, 27 Feb 2016 00:00:00 +0000</pubDate>
-      <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-02-27-going-from-zero-to-one/</guid>
-      <description>&lt;p&gt;Chances are I’m also not the first person you’ve heard this from, either. This is one of the very few books that truly is a must-read for anyone who calls themselves a business owner, entrepreneur or anyone even considering the prospect of it.&lt;/p&gt;
-
-&lt;p&gt;Turns out my Amazon Prime subscription came with a free few Audible credits. Naturally, the temptation of free being too much to resist, I grabbed a copy of Peter Thiel’s Zero to One.
-Peter Thiel co-founded PayPal in 1998 with Max Levchin and later Elon Musk and served as its CEO before going on to co-found Palantir and many other successful investments and ventures.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1600/0*xYzzIwDiflb5ndSD.jpg&#34; alt=&#34;Zero to One&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I listened to the entire book in the last 30 hours and am preparing myself for a second listen. To say that Mr. Thiel provides sage advice to any entrepreneur or businessperson considering it is a gross understatement. Some of what you read (hear?) may sound a bit grandiose, but the author manages to have these great visions always be firmly rooted in really simple fundamental truths.&lt;/p&gt;
-
-&lt;p&gt;The book opens posing the contrarian question that he poses at every interview he has, “What very important truth do very few people agree with you on?”&lt;/p&gt;
-
-&lt;p&gt;Think about it. At once, the question asks you to identify an important truth (daunting, on its own) while adding that very few people agree with you on it. Outright asking someone to voice what is inherently an unpopular opinion by definition can be an uncomfortable question to ask. But an important one nonetheless.
-Peter Thiel and Blake Masters provide us examples of good and bad answers to this question, as well as their own responses. Mr. Thiel postulates that monopolies are good for business while perfect competition stifles it. Something naturally opposed to what we are taught our entire lives.&lt;/p&gt;
-
-&lt;p&gt;My answer? We are on the verge of having a technically illiterate generation if we do not begin to close the tech skills gap immediately and teach computer programming as a core subject beginning in grade school. I haven’t exactly polled it. Does that qualify as unpopular? Is the idea that today’s system of education is failing our youth not something many people would agree with me on? I’m not sure.&lt;/p&gt;
-
-&lt;p&gt;There’s one thing I am sure of. We must go from Zero to One.&lt;/p&gt;
 </description>
     </item>
     
