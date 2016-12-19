@@ -34,7 +34,7 @@ That said, I think the best thing any and all developers can do then is to alway
 
 For this, nothing beats reading. And I mean nothing. Sure, there are plenty of situations where perhaps coding a sample teaches me a lot more. Sometimes it seems so much easier to just copy & paste in someone else's solution, or drag in a library we know solves the problem.  The question is: _At what cost?_
 
-Without any further adieu, mark rant end, here is my list of **absolutely required reading** for any and _every_ Software Developer out there, in no particular order.  These are all books that I have personally read cover to cover and completely recommend that you do too. Each and every one provided me with new and different insights, all of which have been absolutely invaluable.
+Without any further ado _(thanks [Lizard](http://disq.us/p/1eh3ym3))_, mark rant end, here is my list of **absolutely required reading** for any and _every_ Software Developer out there, in no particular order.  These are all books that I have personally read cover to cover and completely recommend that you do too. Each and every one provided me with new and different insights, all of which have been absolutely invaluable.
 
 ### Programming Books
 #### Almost every book on this list (except last few) are 100% language agnostic, as such the advice in them can be applied to _ALL_ programming languages.
