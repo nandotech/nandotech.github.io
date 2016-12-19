@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Csharp on NandoTech</title>
+    <link>http://blog.nandotech.com/tags/csharp/</link>
+    <description>Recent content in Csharp on NandoTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
+    <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
+    <lastBuildDate>Wed, 02 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://blog.nandotech.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>.NET Core Console Apps (Twilio API)</title>
+      <link>http://blog.nandotech.com/post/2016-11-02-net-core-console-apps/</link>
+      <pubDate>Wed, 02 Nov 2016 00:00:00 +0000</pubDate>
+      <author>info@nandotech.com (Fernando Rodriguez)</author>
+      <guid>http://blog.nandotech.com/post/2016-11-02-net-core-console-apps/</guid>
+      <description>
+
+&lt;h3 id=&#34;in-the-spirit-of-open-source-and-to-pay-it-something-better-than-lip-service&#34;&gt;In the spirit of open source (and to pay it something better than lip service)&lt;/h3&gt;
+
+&lt;p&gt;NandoTech has published our &lt;a href=&#34;https://github.com/nandotechinc/TwilioCallsImporter&#34;&gt;first open source utility&lt;/a&gt; that we are using in-house.  The application in and of itself is nothing special and doesn&amp;rsquo;t do anything particuarly complicated, but it solves an important problem for us while having the added benefit of possibly helping someone else with a similar problem.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;a href=&#34;http://www.nandotech.com&#34;&gt;NandoTech&lt;/a&gt;&lt;/th&gt;
+&lt;th&gt;&lt;a href=&#34;http://www.twilio.com&#34;&gt;Twilio&lt;/a&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/P0ccWI9.gif&#34; alt=&#34;NandoTech&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/XApo9Wc.png&#34; alt=&#34;Twilio Logo&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The utility we&amp;rsquo;ve released is a &lt;a href=&#34;https://github.com/nandotechinc/TwilioCallsImporter&#34;&gt;Twilio Call Importer&lt;/a&gt; which essentially just goes out and grabs all SIP call logs from &lt;a href=&#34;https://www.twilio.com&#34;&gt;Twilio&lt;/a&gt; and then saves them in batches of 1,000 to [SQL Server](), but there are serveral guides showing how you can configure Dapper for other databases very easily around the web.  There&amp;rsquo;s guides for &lt;a href=&#34;https://github.com/mysql-net/MySqlConnector&#34;&gt;MySQL&lt;/a&gt;, &lt;a href=&#34;http://techbrij.com/asp-net-core-postgresql-dapper-crud&#34;&gt;Postgres&lt;/a&gt; and &lt;a href=&#34;http://www.dotnetcurry.com/aspnet-mvc/1267/using-mongodb-nosql-database-with-aspnet-webapi-core&#34;&gt;MongoDB&lt;/a&gt; that you could easily adapt for your needs.&lt;/p&gt;
+
+&lt;p&gt;I think what this has really done is actually inspired me.  Currently, there is no &lt;a href=&#34;http://dot.net&#34;&gt;.NET Core&lt;/a&gt; Twilio API either officially from Twilio nor unofficial.  I think I may take a crack at writing a &lt;em&gt;relatively&lt;/em&gt; complete wrapper for the entire Twilio API, preferably using 1. their new API version and also 2. following conventions similar to their previous .NET API or their current new ones.&lt;/p&gt;
+
+&lt;p&gt;Before I finish going completely off track: there is a huge &amp;ldquo;gotcha&amp;rdquo; in publishing .NET Core Console applications that I was completely unaware of and actually had a bit of trouble googling.  When you &lt;code&gt;dotnet publish&lt;/code&gt; or publish a core Console app from Visual Studio, you do not get any &lt;code&gt;.exe&lt;/code&gt; or other executable file from your build.  You do get a &lt;code&gt;.dll&lt;/code&gt; which contains your program, but counterintuitively &lt;code&gt;dotnet run&lt;/code&gt; does not work and results in errors.&lt;/p&gt;
+
+&lt;p&gt;So as I mentioned, I have a fairly basic console application.  To be clear, &lt;img src=&#34;http://i.imgur.com/Fork9W6.png&#34; alt=&#34;Proj Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and that&amp;rsquo;s it.  You can &lt;a href=&#34;https://github.com/nandotechinc/TwilioCallsImporter&#34;&gt;see the code&lt;/a&gt; really doesn&amp;rsquo;t have a ton of stuff in it.  As of this writing, I didn&amp;rsquo;t even bother adding in any logging that could be helpful and basically comes for free. As for the &lt;code&gt;project.json&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;project.json&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;version&amp;quot;: &amp;quot;1.0.0-*&amp;quot;,
+  &amp;quot;buildOptions&amp;quot;: {
+    &amp;quot;emitEntryPoint&amp;quot;: true
+  },
+
+  &amp;quot;dependencies&amp;quot;: {
+    &amp;quot;Microsoft.Extensions.Configuration&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+    &amp;quot;Microsoft.Extensions.Configuration.Abstractions&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+    &amp;quot;Microsoft.Extensions.Configuration.FileExtensions&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+    &amp;quot;Microsoft.Extensions.Configuration.Json&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+    &amp;quot;Microsoft.Extensions.DependencyInjection&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+    &amp;quot;Dapper&amp;quot;: &amp;quot;1.50.2&amp;quot;,
+    &amp;quot;Microsoft.NETCore.App&amp;quot;: {
+      &amp;quot;type&amp;quot;: &amp;quot;platform&amp;quot;,
+      &amp;quot;version&amp;quot;: &amp;quot;1.0.1&amp;quot;
+    },
+    &amp;quot;Microsoft.Extensions.Configuration.EnvironmentVariables&amp;quot;: &amp;quot;1.0.0&amp;quot;
+  },
+
+  &amp;quot;frameworks&amp;quot;: {
+    &amp;quot;netcoreapp1.0&amp;quot;: {
+      &amp;quot;imports&amp;quot;: &amp;quot;dnxcore50&amp;quot;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When we publish this app, whether you follow Visual Studio prompts or the command line, you will end up with this in your folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/rID1iFK.png&#34; alt=&#34;CLI commands&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/9r0Gx55.png&#34; alt=&#34;Folder Dir&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So&amp;hellip;since there&amp;rsquo;s no &lt;code&gt;.exe&lt;/code&gt;&amp;hellip; &lt;code&gt;dotnet run myproj.dll&lt;/code&gt; right?  Immediately, you&amp;rsquo;ll get an error about missing &lt;code&gt;project.json&lt;/code&gt; and &lt;code&gt;appsettings.json&lt;/code&gt;.  I found no documentation on this, however I personally had to manually copy the &lt;code&gt;.json&lt;/code&gt; files directly to my server where this application ran. So we try again.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/HxuR8OC.png&#34; alt=&#34;Huh? .NET Core CLI error&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What gives?  After a bit of googling, I came across &lt;a href=&#34;https://github.com/dotnet/core/issues/77&#34;&gt;this GitHub issue&lt;/a&gt;.  Although the issue is closed, the &amp;ldquo;error&amp;rdquo; still persists and you have to continue using the workaround described there.&lt;/p&gt;
+
+&lt;p&gt;That workaround (after manually copying &lt;code&gt;appsettings.json&lt;/code&gt; and &lt;code&gt;project.json&lt;/code&gt; and manually &lt;code&gt;dotnet restore&lt;/code&gt;), is to use the command &lt;code&gt;dotnet yourapp.dll&lt;/code&gt;. So in the case of our application, &lt;code&gt;dotnet TwilioCallsImporter.dll&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;And that is all.  Your console app should be off and running. Just for posterity, see our completed console app run after pulling down our last 7 days of calls from Twilio:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/9Ci3D6v.png&#34; alt=&#34;Twilo Calls Imported by .NET Core Console&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pretty cool, right?&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

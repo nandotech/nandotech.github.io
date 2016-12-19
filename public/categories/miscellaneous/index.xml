@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Miscellaneous on NandoTech</title>
+    <link>http://blog.nandotech.com/categories/miscellaneous/</link>
+    <description>Recent content in Miscellaneous on NandoTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
+    <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
+    <lastBuildDate>Thu, 20 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://blog.nandotech.com/categories/miscellaneous/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Happy Halloween!</title>
+      <link>http://blog.nandotech.com/post/2016-10-20-happy-halloween/</link>
+      <pubDate>Thu, 20 Oct 2016 00:00:00 +0000</pubDate>
+      <author>info@nandotech.com (Fernando Rodriguez)</author>
+      <guid>http://blog.nandotech.com/post/2016-10-20-happy-halloween/</guid>
+      <description>
+
+&lt;h2 id=&#34;it-has-been-a-little-while-since-our-last-post&#34;&gt;It has been a little while since our last post,&lt;/h2&gt;
+
+&lt;p&gt;and though I am currently working on a long &lt;em&gt;awesome&lt;/em&gt; post that should help out a ton of people (about halfway done), it was feeling lonely and quiet over here.&lt;/p&gt;
+
+&lt;p&gt;So, without any further adieu:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Octocat Pumpkin&lt;/em&gt;&lt;/strong&gt; carved with &amp;lt;3 by &lt;a href=&#34;http://www.nandotech.com&#34;&gt;NandoTech&amp;rsquo;s&lt;/a&gt; VP of Technology &lt;a href=&#34;https://twitter.com/arronmayers&#34;&gt;@ArronMayers&lt;/a&gt; in honor of the &lt;a href=&#34;https://www.github.com&#34;&gt;GitHub&lt;/a&gt; &lt;a href=&#34;https://octodex.github.com/&#34;&gt;Octocat&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;imgur-embed-pub&#34; lang=&#34;en&#34; data-id=&#34;KMZns1w&#34;&gt;&lt;a href=&#34;//imgur.com/KMZns1w&#34;&gt;GitHub Halloween Pumpkin&lt;/a&gt;&lt;/blockquote&gt;&lt;script async src=&#34;//s.imgur.com/min/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;In case you&amp;rsquo;re wondering, the upcoming post will cover Building an API with &lt;a href=&#34;http://dot.net&#34;&gt;.Net Core&lt;/a&gt;, &lt;a href=&#34;http://www.nancyfx.org&#34;&gt;NancyFX 2.0&lt;/a&gt; and &lt;a href=&#34;https://github.com/stackexchange/dapper-dot-net&#34;&gt;Dapper.NET&lt;/a&gt;. I will also try and cover some basic Nancy concepts and how it and &lt;a href=&#34;http://asp.net&#34;&gt;ASP.NET&lt;/a&gt; differ, as well as why I like Nancy so much.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
