@@ -2,7 +2,7 @@ baseurl = "http://blog.nandotech.com/"
 languageCode = "en-us"
 title = "NandoTech"
 name = "NandoTech Blog"
-canonifyurls = false
+canonifyURLs = false
 googleAnalytics = "UA-59045667-5"
 disqusShortname = "nandotech"
 
