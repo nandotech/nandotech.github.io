@@ -2,95 +2,95 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/</loc>
+    <loc>http://blog.nandotech.com/</loc>
     <lastmod>2016-12-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-12-20-dotnet-core-cli-version/</loc>
+    <loc>http://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version/</loc>
     <lastmod>2016-12-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-12-13-holiday-reading-list/</loc>
+    <loc>http://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</loc>
     <lastmod>2016-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-11-21-dotnet-core-resources/</loc>
+    <loc>http://blog.nandotech.com/post/2016-11-21-dotnet-core-resources/</loc>
     <lastmod>2016-11-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-11-10-dot-net-core-nancy-async/</loc>
+    <loc>http://blog.nandotech.com/post/2016-11-10-dot-net-core-nancy-async/</loc>
     <lastmod>2016-11-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-11-02-net-core-console-apps/</loc>
+    <loc>http://blog.nandotech.com/post/2016-11-02-net-core-console-apps/</loc>
     <lastmod>2016-11-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-10-25-nancyfx-webapi-dapper/</loc>
+    <loc>http://blog.nandotech.com/post/2016-10-25-nancyfx-webapi-dapper/</loc>
     <lastmod>2016-10-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-10-20-happy-halloween/</loc>
+    <loc>http://blog.nandotech.com/post/2016-10-20-happy-halloween/</loc>
     <lastmod>2016-10-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-10-07-angular-crash-course/</loc>
+    <loc>http://blog.nandotech.com/post/2016-10-07-angular-crash-course/</loc>
     <lastmod>2016-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-10-02-greenfield-applications/</loc>
+    <loc>http://blog.nandotech.com/post/2016-10-02-greenfield-applications/</loc>
     <lastmod>2016-10-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-09-21-dot-net-core-1_0_1/</loc>
+    <loc>http://blog.nandotech.com/post/2016-09-21-dot-net-core-1_0_1/</loc>
     <lastmod>2016-09-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-09-20-comcast-networking-woes/</loc>
+    <loc>http://blog.nandotech.com/post/2016-09-20-comcast-networking-woes/</loc>
     <lastmod>2016-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-06-11-getting-started-angularjs/</loc>
+    <loc>http://blog.nandotech.com/post/2016-06-11-getting-started-angularjs/</loc>
     <lastmod>2016-06-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-06-10-priorities-over-feelings/</loc>
+    <loc>http://blog.nandotech.com/post/2016-06-10-priorities-over-feelings/</loc>
     <lastmod>2016-06-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-02-27-going-from-zero-to-one/</loc>
+    <loc>http://blog.nandotech.com/post/2016-02-27-going-from-zero-to-one/</loc>
     <lastmod>2016-02-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2015-11-27-first-post/</loc>
+    <loc>http://blog.nandotech.com/post/2015-11-27-first-post/</loc>
     <lastmod>2015-11-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>http://blog.nandotech.com/categories/</loc>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>http://blog.nandotech.com/tags/</loc>
   </url>
   
   <url>
-    <loc>/page/about/</loc>
+    <loc>http://blog.nandotech.com/page/about/</loc>
   </url>
   
 </urlset>

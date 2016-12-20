@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on NandoTech</title>
-    <link>/tags/github/</link>
+    <link>http://blog.nandotech.com/tags/github/</link>
     <description>Recent content in Github on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Thu, 20 Oct 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nandotech.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Happy Halloween!</title>
-      <link>/post/2016-10-20-happy-halloween/</link>
+      <link>http://blog.nandotech.com/post/2016-10-20-happy-halloween/</link>
       <pubDate>Thu, 20 Oct 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>/post/2016-10-20-happy-halloween/</guid>
+      <guid>http://blog.nandotech.com/post/2016-10-20-happy-halloween/</guid>
       <description>
 
 &lt;h2 id=&#34;it-has-been-a-little-while-since-our-last-post&#34;&gt;It has been a little while since our last post,&lt;/h2&gt;
@@ -35,10 +35,10 @@
     
     <item>
       <title>Getting Started with AngularJS 1.x</title>
-      <link>/post/2016-06-11-getting-started-angularjs/</link>
+      <link>http://blog.nandotech.com/post/2016-06-11-getting-started-angularjs/</link>
       <pubDate>Sat, 11 Jun 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>/post/2016-06-11-getting-started-angularjs/</guid>
+      <guid>http://blog.nandotech.com/post/2016-06-11-getting-started-angularjs/</guid>
       <description>&lt;p&gt;I recently took the Pluralsight course AngularJS: Get Started by Scott Allen.&lt;/p&gt;
 
 &lt;p&gt;If you want the tl;dr early, it’s totally worth it and really starts to give you a pretty decent working knowledge of AngularJS, and what’s better yet: you build an actual working application in the process.&lt;/p&gt;

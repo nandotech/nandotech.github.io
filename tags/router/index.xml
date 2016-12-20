@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Router on NandoTech</title>
-    <link>/tags/router/</link>
+    <link>http://blog.nandotech.com/tags/router/</link>
     <description>Recent content in Router on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Tue, 20 Sep 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/router/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nandotech.com/tags/router/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Networking Woes</title>
-      <link>/post/2016-09-20-comcast-networking-woes/</link>
+      <link>http://blog.nandotech.com/post/2016-09-20-comcast-networking-woes/</link>
       <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>/post/2016-09-20-comcast-networking-woes/</guid>
+      <guid>http://blog.nandotech.com/post/2016-09-20-comcast-networking-woes/</guid>
       <description>
 
 &lt;p&gt;Let me start off by saying unequivocally and without any shadow of a doubt: I am not a networking expert.  Although I understand all the constructs of the web and most all of the requisite information pertaining to how computers and the internet communicate as well as the nuances of local and public networks.&lt;/p&gt;
@@ -39,7 +39,7 @@
 
 &lt;p&gt;So to get on with it: naturally the Comcast modem default behavior is to be extremely confusing. Our public, &lt;a href=&#34;http://www.ipchicken.com&#34;&gt;static IP&lt;/a&gt; address from &lt;a href=&#34;http://comcast.com&#34;&gt;Comcast&lt;/a&gt; here is &lt;code&gt;96.xxx.xxx.9&lt;/code&gt; (blocking some for safety/privacy).  One might expect the Comcast firewall to show this IP with the .10 Gateway, or something similar.  Instead, we get this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/comcast_ip.png&#34; alt=&#34;Comcast IP&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://blog.nandotech.com/img/comcast_ip.png&#34; alt=&#34;Comcast IP&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In case anyone missed that: for some reason I am unable to explain, if you have purchased a static IP or a group of IP&amp;rsquo;s from Comcast your router actually gives off your &lt;strong&gt;Default Gateway&lt;/strong&gt; as your &lt;em&gt;Public IP&lt;/em&gt; and your Comcast  Business Router will have a &lt;em&gt;Default Gateway&lt;/em&gt; referencing some other point or thing on their network (presumably where, in this case, our /30 routes through).&lt;/p&gt;
 
@@ -63,7 +63,7 @@
 
 &lt;p&gt;Once you do have the correct information, here is an example of how the network referenced above is set:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/mikrotik-comcast-setup.png&#34; alt=&#34;Mikrotik Setup&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://blog.nandotech.com/img/mikrotik-comcast-setup.png&#34; alt=&#34;Mikrotik Setup&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As you can see and would expect, your &lt;em&gt;static IP&lt;/em&gt; and correct &lt;a href=&#34;https://www.aelius.com/njh/subnet_sheet.html&#34;&gt;&lt;em&gt;subnet mask&lt;/em&gt;&lt;/a&gt; (in this case, /30) need to be in the WAN IP Address field (this may differ or have a different name in other routers).&lt;/p&gt;
 
