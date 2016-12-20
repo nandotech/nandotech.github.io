@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Holiday Reading List</title>
+  <title>Choosing your .NET Core Version CLI</title>
 
   <meta name="author" content="Fernando Rodriguez" />
   
@@ -31,7 +31,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   
-  <meta property="og:title" content="Holiday Reading List" />
+  <meta property="og:title" content="Choosing your .NET Core Version CLI" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/" />
   <meta property="og:image" content="img/nandotech_logo_gray.gif" />
@@ -106,15 +106,15 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>Holiday Reading List</h1>
+          <h1>Choosing your .NET Core Version CLI</h1>
       
         
-      <h2 class="post-subheading">Also, Learning to Code is Easy--Right?</h2>
+      <h2 class="post-subheading">Use your global.json file to specify framework version</h2>
       
       
       
       
-      <span class="post-meta">Posted on December 13, 2016</span>
+      <span class="post-meta">Posted on December 20, 2016</span>
       
         </div>
       </div>
@@ -133,94 +133,86 @@
       <article role="main" class="blog-post">
           
 
-<h1 id="these-days-it-seems-like-there-are-more-and-more-people-out-there-learning-to-code">These days, it seems like there are more and more people out there &ldquo;learning to code&rdquo;.</h1>
+<h2 id="i-recently-downloaded-and-upgraded-to-net-core-1-1-0-which-comes-along-with-updated-cli-tools-1-0-0-preview3-004056">I recently downloaded and upgraded to <code>.NET Core 1.1.0</code> which comes along with updated CLI tools, <code>1.0.0-preview3-004056</code>.</h2>
 
-<h4 id="tl-dr-book-list-is-at-the-bottom">TL;DR - Book list is at the bottom.</h4>
+<p>This new version reflects the CLI tools that are being used for the new <code>.csproj</code> project system which does away with <code>project.json</code> that many of us grew to know and love.</p>
 
-<p>Every day there is another boot camp, code school, or one of many scores of opportunistic business ventures opening up. Many claim to not only teach you this amazing magical skill that is programming, but they will also magically imbue you with the personality needed to get past the HR Manager.</p>
+<p>Of course, this has been a long time coming and the announcement that Microsoft would be moving back to <code>.csproj</code> was announced <a href="https://docs.microsoft.com/en-us/dotnet/articles/core/tutorials/target-dotnetcore-with-msbuild">way back in March or so.</a></p>
 
-<p>Don&rsquo;t fall for the trap. There are <em>so many</em> extremely reputable websites out there, free tutorials available, along with tons and tons of amazing blogs, videos and more that are just itching to teach those willing to learn.</p>
+<p>Anyway&ndash;so if you&rsquo;re like me and you&rsquo;ve downloaded <a href="https://dot.net">.NET Core 1.1</a>, then this is likely what you see:</p>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hearing the WWDC keynote say coding isn&#39;t hard frustrates me. It&#39;s extremely hard. You&#39;re setting beginners up for huge disappointments.</p>&mdash; Tyler McGinnis (@tylermcginnis33) <a href="https://twitter.com/tylermcginnis33/status/742431287684694017">June 13, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p><img src="http://i.imgur.com/Ok6Angi.png" alt=".NET Core CLI 1.0 Preview 3" /></p>
 
-<p>In my experience, it seems like the most likely candidate to attend a &ldquo;Code School&rdquo;&ndash;or any of these 8 to 12 week &ldquo;Bootcamps&rdquo; where you&rsquo;re supposed to learn everything you need about coding to not only get a job but also be a ninja&ndash;is the aspiring coder with 0 experience and sometimes even lacking technical knowledge. This is an issue, and unfortunately not one that is necessarily the business&rsquo; fault or aim to achieve.</p>
+<p>Based on this, you might think that you&rsquo;re stuck on the newest version.  Luckily for us, each version of <code>.NET Core</code> is capable of running side by side and install into different folders for us.</p>
 
-<p>As <a href="https://twitter.com/shanselman">Scott Hanselman</a> recently posted on his blog, <a href="http://www.hanselman.com/blog/StopSayingLearningToCodeIsEasy.aspx">Stop saying learning to code is easy</a>.</p>
+<p><img src="http://i.imgur.com/ywygDfI.png" alt=".NET SDK Folders" /></p>
 
-<p>Why? Because if you&rsquo;re someone who has spent any amount of time programming, <em>you know better.</em> Scott mentions this on his blog: specifically landing the argument that when we tell people that programming is <strong>easy</strong>, what will they think when it gets difficult? And as any <strong>real developer</strong> can flatly tell you: <em>It will get difficult. Your difficult and my difficult may not be the same. In fact, let&rsquo;s hope they&rsquo;re not. However, NOTHING changes the fact that it WILL GET HARD.</em></p>
+<p>As I wondered about this myself, I came across <a href="https://shanselman.com">Scott Hanselman&rsquo;s</a> post about deploying a <code>.NET Core</code> <a href="http://www.hanselman.com/blog/PublishingASPNETCore11ApplicationsToAzureUsingGitDeploy.aspx">app to Azure where he had to roll back the SDK (seems Azure knew about a version he didn&rsquo;t have).</a>  This was the key.</p>
 
-<blockquote>
-<p>When we tell folks - kids or otherwise - that programming is easy, what will they think when it gets difficult? And it will get difficult. That&rsquo;s where people find themselves saying &ldquo;well, I guess I&rsquo;m not wired for coding. It&rsquo;s just not for me.&rdquo;</p>
+<p>So, following much the same process that Scott details on his blog, we are completely capable of telling the <code>.NET Core CLI</code> tools exactly which version of the SDK we would like it to build our project from. In order to do this, all we must do is create a root directory with a <code>global.json</code> file where we tell the framework what to look for.</p>
 
-<p>Now, to be clear, that may be the case. I&rsquo;m arguing that if we as an industry go around telling everyone that &ldquo;coding is easy&rdquo; we are just prepping folks for self-exclusion, rather than enabling a growing and inclusive community. That&rsquo;s the goal right? Let&rsquo;s get more folks into computers, but let&rsquo;s set their expectations.</p>
-</blockquote>
+<p>Also, so you can see the difference, I will first simply scaffold a <code>Web</code> project and then I will add our <code>global.json</code> to demonstrate how <code>.NET Core</code> detects <code>version</code> and then how we can let the framework know what version of the tooling we need for our project.</p>
 
-<p>&ndash; <a href="http://www.hanselman.com/blog/StopSayingLearningToCodeIsEasy.aspx">Scott Hanselman, June 2016</a></p>
+<p>Remember <em>(as shown above)</em> that locally we currently have <code>.NET Core</code> runtime versions <code>1.0.0</code>, <code>1.0.1</code>, and now also <code>1.1.0</code> (as well as another one that I probably missed).  On top of that, each and every install came with its very own <code>1.0.0-preview</code> version of the <a href="https://github.com/dotnet/cli/">.NET Core CLI</a>.</p>
 
-<p>That said, I think the best thing any and all developers can do then is to always <strong>always</strong> <em>always</em> be working on getting better at your craft. This is what will keep you sharp. Caring about your craft and continuously improving upon your skill set are the only tools we have to combat entropy, thus we must use them.</p>
+<p>In case that was unclear for anyone: <strong>don&rsquo;t worry,</strong> because if you do think about it too much, it is actually <strong>INCREDIBLY</strong> confusing and until you just <em>accept it</em> you will live out your remaining days in misery. Jokes aside, this is literally just a nightmare back and forth of version numbers that hardly <em>appear</em> to make any sense (<a href="https://www.semver.org">semantic versioning, anyone?</a>). Hidden just below the surface in plain sight lies understanding, however.</p>
 
-<p>For this, nothing beats reading. And I mean nothing. Sure, there are plenty of situations where perhaps coding a sample teaches me a lot more. Sometimes it seems so much easier to just copy &amp; paste in someone else&rsquo;s solution, or drag in a library we know solves the problem.  The question is: <em>At what cost?</em></p>
+<p>Before I go off on that tangent though: our <code>dotnet --version</code> shows we are on <code>1.0.0-preview3-004056</code>. This is our current version of the <a href="https://github.com/dotnet/cli/"><em>.NET Command Line Tools (a.k.a. the CLI/SDK)</em></a>. This is the new, updated <code>.csproj</code> build system, as we can see here:</p>
 
-<p>Without any further ado <em>(thanks <a href="http://disq.us/p/1eh3ym3">Lizard</a>)</em>, mark rant end, here is my list of <strong>absolutely required reading</strong> for any and <em>every</em> Software Developer out there, in no particular order.  These are all books that I have personally read cover to cover and completely recommend that you do too. Each and every one provided me with new and different insights, all of which have been absolutely invaluable.</p>
+<p><img src="http://i.imgur.com/vZptRhk.png" alt=".NET Core csproj build" /></p>
 
-<h3 id="programming-books">Programming Books</h3>
+<p>Just by taking a look at the folder and file structure here, we can very clearly see we are missing any <code>project.json</code> file and have inherited a <code>new.csproj</code> that if we inspect, we can see that it contains everything our <code>project.json</code> file used to.</p>
 
-<h4 id="almost-every-book-on-this-list-except-last-few-are-100-language-agnostic-as-such-the-advice-in-them-can-be-applied-to-all-programming-languages">Almost every book on this list (except last few) are 100% language agnostic, as such the advice in them can be applied to <em>ALL</em> programming languages.</h4>
+<p>That said, I wasn&rsquo;t quite ready to make the jump&ndash;maybe it&rsquo;s denial, maybe I&rsquo;m hoping the <code>.json</code> project style will stay around forever&ndash;the moral of the story is I needed to tell <code>.NET Core</code> that I did not want to use the newest version of the <code>cli</code>.</p>
 
-<ul>
-<li><a href="http://amzn.to/2hLm0Mg">Clean Code</a> by Robert C. Martin</li>
-<li><a href="http://amzn.to/2hCPK23">The Clean Coder</a> by Robert C. Martin</li>
-<li><a href="http://amzn.to/2hLjl5o">Scrum: The Art of Doing Twice the Work in Half the Time</a> by Jeff Sutherland &amp; Kent Beck</li>
-<li><a href="http://amzn.to/2hLiwt7">The Pragmatic Programmer</a> by Andrew Hunt &amp; David Thomas</li>
-<li><a href="http://amzn.to/2hLgnOl">Code Complete: A Practical Handbook of Software Construction</a> by Steve McConnell</li>
-<li><a href="http://amzn.to/2hLhihM">Code: The Hidden Language of Computer Hardware and Software</a> by Charles Petzold</li>
-<li><a href="http://amzn.to/2hLkXvV">Soft Skills: The software developer&rsquo;s life manual</a> by John Sonmez</li>
-<li><a href="http://amzn.to/2hLmFxi">ADTs, Data Structures and Problem Solving with C++</a> by Larry R Nyhoff</li>
-<li><a href="http://amzn.to/2hCUkNy">Problem Solving with C++</a> by Walter Savitch</li>
-<li><a href="http://amzn.to/2hLm3ba">C# In Depth</a> by Jon Skeet</li>
-</ul>
+<p>Turns out, this is incredibly easy. Here I am in the same <code>Powershell</code> window I was in before. Created a new directory for our new project, and then what we need is a <code>global.json</code> to tell the framework which version of the <code>cli</code> we want.</p>
 
-<h3 id="books-on-management-entrepreneurship">Books on Management &amp; Entrepreneurship</h3>
+<p><em>global.json</em></p>
 
-<ul>
-<li><a href="http://amzn.to/2hLmAcU">The Hard Thing About Hard Things</a> by Ben Horowitz</li>
-<li><a href="http://amzn.to/2hLhBJs">Zero To One: Notes on Startups, or How To Build The Future</a> by Peter Thiel</li>
-<li><a href="http://amzn.to/2hsU8gK">How to Fail at Almost Everything and Still Win Big: Kind of the Story of My Life</a> by Scott Adams</li>
-<li><a href="http://amzn.to/2hCQkNh">Start with Why: How Great Leaders Inspire Everyone to Take Action</a> by Simon Sinek</li>
-<li><a href="http://amzn.to/2hLe0v1">High Output Management</a> by Andrew Grove</li>
-<li><a href="http://amzn.to/2hCNAiN">Deep Work: Rules for Focused Success in a Distracted World</a> by Cal Newport</li>
-<li><a href="http://amzn.to/2hLgTMh">Work Rules!: Insights from Inside Google That Will Transform How You Live and Lead</a> by Laszlo Bock</li>
-<li><a href="http://amzn.to/2hCUOmQ">The Obstacle Is the Way: The Timeless Art of Turning Trials into Triumph</a> by Ryan Holiday</li>
-<li><a href="http://amzn.to/2ht2yEH">Pitch Anything: An Innovative Method for Presenting, Persuading, and Winning the Deal</a> by Oren Klaff</li>
-</ul>
+<pre><code class="language-json">{
+  &quot;projects&quot;: [ &quot;src&quot;, &quot;test&quot; ],
+  &quot;sdk&quot;: {
+    &quot;version&quot;: &quot;1.0.0-preview2-1-003177&quot;
+  }
+}
+</code></pre>
 
-<p>Hope everyone is having a wonderful holiday season! Now that things have calmed down a bit, I will turn back toward blogging as often as possible.  I am very much looking forward to continuing and completing my series of <a href="https://www.nancyfx.org">NancyFX</a>. Beyond that, I take great pleasure in knowing that I may be helping someone solve problems. That being said, <a href="https://dot.net">.NET Core</a> continues development at a breakneck pace and I will do everything I can to keep everyone up to date here.</p>
+<p>Here we are telling <code>.NET Core</code> to look for our projects in the directories <code>src</code> and <code>test</code> and then we specify the <code>sdk</code> version of <code>1.0.0-preview2-1-003177</code> which shipped with version <code>1.0.1</code> of the runtime. Now we simply create the <code>src</code> directory and scaffold our project as per usual.</p>
+
+<p><img src="http://i.imgur.com/hi6gvIF.png" alt=".NET Core Web Project Preview 2 Tooling" /></p>
+
+<p>If you look in our window carefully, we&rsquo;ve added the <code>global.json</code> file shown above into the <code>root</code> directory which allowed us to specify the correct <code>SDK</code> version for our project.</p>
+
+<p>And that&rsquo;s it! You may now create projects using whichever version of the <code>dotnet cli</code> makes your heart content or makes you feel most comfortable. As a final observation, you may also notice the significant difference in the number of folders and files showing from the <code>Web</code> project using the exact same command, that is, <code>dotnet new -t Web</code>.</p>
+
+<p>In <code>preview2</code> we got a nice fully fleshed out application with stubbed out code for an <code>SmsService</code>, <code>EmailService</code> as well as all the required boilerplate and code for simple <code>Accounts</code>/<code>Users</code> in the system. <code>Preview3</code> yanks a lot of this extra boilerplate out and leaves us with just a very barebones web app, only containing a <code>HomeController.cs</code> under <code>Controllers</code>.</p>
+
+<p>Personally, depending on the project, sometimes I want the extra boilerplate code already there for me&ndash;other times I may not.  Either way, more often than not, I end up pulling these things in manually or copying them anyway.</p>
+
+<p>Hope this helps someone out who may have been a little confused regarding the versioning and/or encountered any issues during deployment to Azure or anywhere else.</p>
+
+<p>Feel free to leave any feedback and come back for more soon!</p>
 
       </article>
 <div class="row">
 <div>
 
   <strong>Categories:</strong>
-  <a href="/categories/">Books</a>, <a href="/categories/">Resources</a>
+  <a href="/categories/">.NET Core</a>, <a href="/categories/">CLI</a>
 
 <br />
 
   <strong>Tags:</strong>
-  <a href="/tags/">books</a>, <a href="/tags/">resources</a>
+  <a href="/tags/">cli</a>, <a href="/tags/">.net core</a>
  <br />
 </div>
   </div>
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="http://blog.nandotech.com/post/2016-11-21-dotnet-core-resources/" data-toggle="tooltip" data-placement="top" title=".NET Core Curated Resources List">&larr; Previous Post</a>
+          <a href="http://blog.nandotech.com/post/2016-12-13-holiday-reading-list/" data-toggle="tooltip" data-placement="top" title="Holiday Reading List">&larr; Previous Post</a>
         </li>
         
-        
-        <li class="next">
-          <a href="http://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version/" data-toggle="tooltip" data-placement="top" title="Choosing your .NET Core Version CLI">Next Post &rarr;</a>
-        </li>
         
       </ul>
 
@@ -229,9 +221,9 @@
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'nandotech';
-    var disqus_identifier = 'http:\/\/blog.nandotech.com\/post\/2016-12-13-holiday-reading-list\/';
-    var disqus_title = 'Holiday Reading List';
-    var disqus_url = 'http:\/\/blog.nandotech.com\/post\/2016-12-13-holiday-reading-list\/';
+    var disqus_identifier = 'http:\/\/blog.nandotech.com\/post\/2016-12-20-dotnet-core-cli-version\/';
+    var disqus_title = 'Choosing your .NET Core Version CLI';
+    var disqus_url = 'http:\/\/blog.nandotech.com\/post\/2016-12-20-dotnet-core-cli-version\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
