@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Miscellaneous on NandoTech</title>
-    <link>http://blog.nandotech.com/categories/miscellaneous/</link>
+    <link>/categories/miscellaneous/</link>
     <description>Recent content in Miscellaneous on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Thu, 20 Oct 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://blog.nandotech.com/categories/miscellaneous/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/miscellaneous/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Happy Halloween!</title>
-      <link>http://blog.nandotech.com/post/2016-10-20-happy-halloween/</link>
+      <link>/post/2016-10-20-happy-halloween/</link>
       <pubDate>Thu, 20 Oct 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-10-20-happy-halloween/</guid>
+      <guid>/post/2016-10-20-happy-halloween/</guid>
       <description>
 
 &lt;h2 id=&#34;it-has-been-a-little-while-since-our-last-post&#34;&gt;It has been a little while since our last post,&lt;/h2&gt;

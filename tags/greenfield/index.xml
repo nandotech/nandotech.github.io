@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Greenfield on NandoTech</title>
-    <link>http://blog.nandotech.com/tags/greenfield/</link>
+    <link>/tags/greenfield/</link>
     <description>Recent content in Greenfield on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Sun, 02 Oct 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://blog.nandotech.com/tags/greenfield/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/greenfield/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Greenfield Applications (Part 1, Project Armadillo)</title>
-      <link>http://blog.nandotech.com/post/2016-10-02-greenfield-applications/</link>
+      <link>/post/2016-10-02-greenfield-applications/</link>
       <pubDate>Sun, 02 Oct 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-10-02-greenfield-applications/</guid>
+      <guid>/post/2016-10-02-greenfield-applications/</guid>
       <description>
 
 &lt;h4 id=&#34;there-s-something-whimsical-about-greenfield-applications&#34;&gt;There&amp;rsquo;s something whimsical about Greenfield applications.&lt;/h4&gt;

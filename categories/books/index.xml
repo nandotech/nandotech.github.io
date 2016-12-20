@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Books on NandoTech</title>
-    <link>http://blog.nandotech.com/categories/books/</link>
+    <link>/categories/books/</link>
     <description>Recent content in Books on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Tue, 13 Dec 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://blog.nandotech.com/categories/books/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/books/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Holiday Reading List</title>
-      <link>http://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</link>
+      <link>/post/2016-12-13-holiday-reading-list/</link>
       <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</guid>
+      <guid>/post/2016-12-13-holiday-reading-list/</guid>
       <description>
 
 &lt;h1 id=&#34;these-days-it-seems-like-there-are-more-and-more-people-out-there-learning-to-code&#34;&gt;These days, it seems like there are more and more people out there &amp;ldquo;learning to code&amp;rdquo;.&lt;/h1&gt;
@@ -87,10 +87,10 @@
     
     <item>
       <title>Going From Zero to One</title>
-      <link>http://blog.nandotech.com/post/2016-02-27-going-from-zero-to-one/</link>
+      <link>/post/2016-02-27-going-from-zero-to-one/</link>
       <pubDate>Sat, 27 Feb 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-02-27-going-from-zero-to-one/</guid>
+      <guid>/post/2016-02-27-going-from-zero-to-one/</guid>
       <description>&lt;p&gt;Chances are I’m also not the first person you’ve heard this from, either. This is one of the very few books that truly is a must-read for anyone who calls themselves a business owner, entrepreneur or anyone even considering the prospect of it.&lt;/p&gt;
 
 &lt;p&gt;Turns out my Amazon Prime subscription came with a free few Audible credits. Naturally, the temptation of free being too much to resist, I grabbed a copy of Peter Thiel’s Zero to One.

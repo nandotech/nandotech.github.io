@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dapper on NandoTech</title>
-    <link>http://blog.nandotech.com/tags/dapper/</link>
+    <link>/tags/dapper/</link>
     <description>Recent content in Dapper on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Thu, 10 Nov 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://blog.nandotech.com/tags/dapper/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/dapper/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Exploring Asynchronous Modules with NancyFX 2.0 &amp; .NET Core</title>
-      <link>http://blog.nandotech.com/post/2016-11-10-dot-net-core-nancy-async/</link>
+      <link>/post/2016-11-10-dot-net-core-nancy-async/</link>
       <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-11-10-dot-net-core-nancy-async/</guid>
+      <guid>/post/2016-11-10-dot-net-core-nancy-async/</guid>
       <description>
 
-&lt;h2 id=&#34;this-post-will-serve-as-a-follow-up-to-our-earlier-nancyfx-exploration-a-few-weeks-ago-i-posted-building-an-awesome-api-with-nancyfx-2-0-dapper-post-2016-10-25-nancyfx-webapi-dapper-where-we-covered-all-the-basics-of-nancy-https-www-nancyfx-org-and-running-on-net-core-https-dot-net&#34;&gt;This post will serve as a follow-up to our earlier NancyFX exploration.  A few weeks ago, I posted &lt;a href=&#34;http://blog.nandotech.com/post/2016-10-25-nancyfx-webapi-dapper/&#34;&gt;Building an (awesome) API with NancyFX 2.0 + Dapper&lt;/a&gt; where we covered all the basics of &lt;a href=&#34;https://www.nancyfx.org&#34;&gt;Nancy&lt;/a&gt; and running on &lt;a href=&#34;https://dot.net&#34;&gt;.NET Core&lt;/a&gt;.&lt;/h2&gt;
+&lt;h2 id=&#34;this-post-will-serve-as-a-follow-up-to-our-earlier-nancyfx-exploration-a-few-weeks-ago-i-posted-building-an-awesome-api-with-nancyfx-2-0-dapper-post-2016-10-25-nancyfx-webapi-dapper-where-we-covered-all-the-basics-of-nancy-https-www-nancyfx-org-and-running-on-net-core-https-dot-net&#34;&gt;This post will serve as a follow-up to our earlier NancyFX exploration.  A few weeks ago, I posted &lt;a href=&#34;/post/2016-10-25-nancyfx-webapi-dapper/&#34;&gt;Building an (awesome) API with NancyFX 2.0 + Dapper&lt;/a&gt; where we covered all the basics of &lt;a href=&#34;https://www.nancyfx.org&#34;&gt;Nancy&lt;/a&gt; and running on &lt;a href=&#34;https://dot.net&#34;&gt;.NET Core&lt;/a&gt;.&lt;/h2&gt;
 
-&lt;p&gt;If you have not &lt;a href=&#34;http://blog.nandotech.com/post/2016-10-25-nancyfx-webapi-dapper/&#34;&gt;read our previous post&lt;/a&gt;, not to worry, there will be very little to no overlap between the 2 posts.  Here, we will focus in on and deep dive into the use of &lt;code&gt;Async&lt;/code&gt; Modules in &lt;em&gt;NancyFX&lt;/em&gt; as well as how the &lt;code&gt;Before&lt;/code&gt; and &lt;code&gt;After&lt;/code&gt; action method hooks work.  Since there is not much additional code, we will use the same repository to demonstrate usage.&lt;/p&gt;
+&lt;p&gt;If you have not &lt;a href=&#34;/post/2016-10-25-nancyfx-webapi-dapper/&#34;&gt;read our previous post&lt;/a&gt;, not to worry, there will be very little to no overlap between the 2 posts.  Here, we will focus in on and deep dive into the use of &lt;code&gt;Async&lt;/code&gt; Modules in &lt;em&gt;NancyFX&lt;/em&gt; as well as how the &lt;code&gt;Before&lt;/code&gt; and &lt;code&gt;After&lt;/code&gt; action method hooks work.  Since there is not much additional code, we will use the same repository to demonstrate usage.&lt;/p&gt;
 
 &lt;h3 id=&#34;github-repo-https-github-com-nandotech-vsnancydemo-https-github-com-nandotech-vsnancydemo&#34;&gt;Github Repo: &lt;a href=&#34;https://github.com/nandotech/VSNancyDemo&#34;&gt;https://github.com/nandotech/VSNancyDemo&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;If you are unfamiliar with &lt;a href=&#34;http://dot.net&#34;&gt;.NET Core&lt;/a&gt; or &lt;a href=&#34;http://www.nancyfx.org&#34;&gt;Nancy&lt;/a&gt;, then I do reccomend checking out some of the other posts available on this blog related to .NET Core and specifically our post on &lt;a href=&#34;http://blog.nandotech.com/post/2016-10-25-nancyfx-webapi-dapper/&#34;&gt;Building an API w/ NancyFX 2.0 &amp;amp; Dapper&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you are unfamiliar with &lt;a href=&#34;http://dot.net&#34;&gt;.NET Core&lt;/a&gt; or &lt;a href=&#34;http://www.nancyfx.org&#34;&gt;Nancy&lt;/a&gt;, then I do reccomend checking out some of the other posts available on this blog related to .NET Core and specifically our post on &lt;a href=&#34;/post/2016-10-25-nancyfx-webapi-dapper/&#34;&gt;Building an API w/ NancyFX 2.0 &amp;amp; Dapper&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately, there are not a ton of resources covering NancyFX 2.0 just yet, so here I am doing my part. &lt;a href=&#34;https://twitter.com/shanselman&#34;&gt;Scott Hanselman&lt;/a&gt; recently also wrote a similar post (but using  &lt;a href=&#34;https://docs.efproject.org&#34;&gt;Entity Framework Core 1.0&lt;/a&gt;) available &lt;a href=&#34;http://www.hanselman.com/blog/ExploringAMinimalWebAPIWithNETCoreAndNancyFX.aspx&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
@@ -106,7 +106,7 @@
     }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;If you read our &lt;a href=&#34;http://blog.nandotech.com/post/2016-10-25-nancyfx-webapi-dapper/&#34;&gt;other post&lt;/a&gt; this probably looks very familiar&amp;ndash;it is the module that allows &lt;code&gt;GET&lt;/code&gt; and &lt;code&gt;POST&lt;/code&gt; requests to accomplish different things.  For further clarification, feel free to &lt;a href=&#34;https://github.com/nandotech/VSNancyDemo&#34;&gt;check out the Github repo here&lt;/a&gt;.  So what if we wanted to run a &lt;code&gt;Before&lt;/code&gt; hook that intercepted the request under certain circumstances?&lt;/p&gt;
+&lt;p&gt;If you read our &lt;a href=&#34;/post/2016-10-25-nancyfx-webapi-dapper/&#34;&gt;other post&lt;/a&gt; this probably looks very familiar&amp;ndash;it is the module that allows &lt;code&gt;GET&lt;/code&gt; and &lt;code&gt;POST&lt;/code&gt; requests to accomplish different things.  For further clarification, feel free to &lt;a href=&#34;https://github.com/nandotech/VSNancyDemo&#34;&gt;check out the Github repo here&lt;/a&gt;.  So what if we wanted to run a &lt;code&gt;Before&lt;/code&gt; hook that intercepted the request under certain circumstances?&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;DispoModule.cs&lt;/em&gt;&lt;/p&gt;
 
@@ -288,10 +288,10 @@ After += async (ctx, ct) =&amp;gt;
     
     <item>
       <title>.NET Core Console Apps (Twilio API)</title>
-      <link>http://blog.nandotech.com/post/2016-11-02-net-core-console-apps/</link>
+      <link>/post/2016-11-02-net-core-console-apps/</link>
       <pubDate>Wed, 02 Nov 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-11-02-net-core-console-apps/</guid>
+      <guid>/post/2016-11-02-net-core-console-apps/</guid>
       <description>
 
 &lt;h3 id=&#34;in-the-spirit-of-open-source-and-to-pay-it-something-better-than-lip-service&#34;&gt;In the spirit of open source (and to pay it something better than lip service)&lt;/h3&gt;
@@ -378,10 +378,10 @@ After += async (ctx, ct) =&amp;gt;
     
     <item>
       <title>Building an (awesome) API with NancyFX 2.0 &#43; Dapper</title>
-      <link>http://blog.nandotech.com/post/2016-10-25-nancyfx-webapi-dapper/</link>
+      <link>/post/2016-10-25-nancyfx-webapi-dapper/</link>
       <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-10-25-nancyfx-webapi-dapper/</guid>
+      <guid>/post/2016-10-25-nancyfx-webapi-dapper/</guid>
       <description>
 
 &lt;h2 id=&#34;nancyfx-dapper-are-so-hot-right-now-naturally-i-had-to-put-them-together&#34;&gt;NancyFX &amp;amp; Dapper are so hot right now. Naturally, I had to put them together.&lt;/h2&gt;
@@ -945,10 +945,10 @@ CREATE TABLE [dbo].[Sales](
     
     <item>
       <title>Greenfield Applications (Part 1, Project Armadillo)</title>
-      <link>http://blog.nandotech.com/post/2016-10-02-greenfield-applications/</link>
+      <link>/post/2016-10-02-greenfield-applications/</link>
       <pubDate>Sun, 02 Oct 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-10-02-greenfield-applications/</guid>
+      <guid>/post/2016-10-02-greenfield-applications/</guid>
       <description>
 
 &lt;h4 id=&#34;there-s-something-whimsical-about-greenfield-applications&#34;&gt;There&amp;rsquo;s something whimsical about Greenfield applications.&lt;/h4&gt;

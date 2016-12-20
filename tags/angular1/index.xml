@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angular1 on NandoTech</title>
-    <link>http://blog.nandotech.com/tags/angular1/</link>
+    <link>/tags/angular1/</link>
     <description>Recent content in Angular1 on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Sat, 11 Jun 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://blog.nandotech.com/tags/angular1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/angular1/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Getting Started with AngularJS 1.x</title>
-      <link>http://blog.nandotech.com/post/2016-06-11-getting-started-angularjs/</link>
+      <link>/post/2016-06-11-getting-started-angularjs/</link>
       <pubDate>Sat, 11 Jun 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-06-11-getting-started-angularjs/</guid>
+      <guid>/post/2016-06-11-getting-started-angularjs/</guid>
       <description>&lt;p&gt;I recently took the Pluralsight course AngularJS: Get Started by Scott Allen.&lt;/p&gt;
 
 &lt;p&gt;If you want the tl;dr early, it’s totally worth it and really starts to give you a pretty decent working knowledge of AngularJS, and what’s better yet: you build an actual working application in the process.&lt;/p&gt;
