@@ -1,11 +1,11 @@
 ---
 contentdir: "content"
 layoutdir: "layouts"
-publishdir: "public"
+publishdir: "docs"
 indexes:
   category: "categories"
   tag: "tags"
-baseurl: "/"
+baseurl: "http://blog.nandotech.com"
 title: "NandoTech Blog"
 canonifyurls: false
 enableRobotsTXT: true
