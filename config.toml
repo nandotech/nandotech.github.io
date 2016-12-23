@@ -1,4 +1,4 @@
-baseurl = "http://blog.nandotech.com/"
+baseurl = "https://blog.nandotech.com/"
 languageCode = "en-us"
 title = "NandoTech"
 name = "NandoTech Blog"
@@ -7,7 +7,7 @@ googleAnalytics = "UA-59045667-5"
 disqusShortname = "nandotech"
 
 [Params]
-  logo = "img/nandotech_logo_gray.gif"
+  logo = "/img/nandotech_logo_gray.gif"
   subtitle = "Welcome to our Blog: All things related to programming, technology and entrepreneurship. Read, enjoy & share. Occassional SIP gems."
   description = "Blog posts on programming, technology and entrepreneurship. A true polyglot, Software Developer and CEO of NandoTech Inc, Fernando Rodriguez, blogging on how & where we cater custom software & SIP solutions for small to medium sized businesses."
   keywords = "nancyfx, asp.net, company, .net, .net core, software engineer, web development, microsoft, consultant"
