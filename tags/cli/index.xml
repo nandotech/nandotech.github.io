@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cli on NandoTech</title>
-    <link>http://blog.nandotech.com/tags/cli/</link>
+    <link>https://blog.nandotech.com/tags/cli/</link>
     <description>Recent content in Cli on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Tue, 20 Dec 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://blog.nandotech.com/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.nandotech.com/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Choosing your .NET Core Version CLI</title>
-      <link>http://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version/</link>
+      <link>https://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version/</link>
       <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version/</guid>
+      <guid>https://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version/</guid>
       <description>
 
 &lt;h2 id=&#34;i-recently-downloaded-and-upgraded-to-net-core-1-1-0-which-comes-along-with-updated-cli-tools-1-0-0-preview3-004056&#34;&gt;I recently downloaded and upgraded to &lt;code&gt;.NET Core 1.1.0&lt;/code&gt; which comes along with updated CLI tools, &lt;code&gt;1.0.0-preview3-004056&lt;/code&gt;.&lt;/h2&gt;
