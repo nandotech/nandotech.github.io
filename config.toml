@@ -27,7 +27,7 @@ disqusShortname = "nandotech"
 
   [[menu.main]]
   name = "Company Website"
-  url = "http://nandotech.com"
+  url = "https://nandotech.com"
   weight = 0
 
   [[menu.main]]

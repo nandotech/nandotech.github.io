@@ -5,7 +5,7 @@ publishdir: "docs"
 indexes:
   category: "categories"
   tag: "tags"
-baseurl: "http://blog.nandotech.com/"
+baseurl: "https://blog.nandotech.com/"
 title: "NandoTech Blog"
 canonifyurls: false
 enableRobotsTXT: true
