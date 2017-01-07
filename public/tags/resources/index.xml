@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resources on NandoTech</title>
-    <link>http://blog.nandotech.com/tags/resources/</link>
+    <link>https://blog.nandotech.com/tags/resources/</link>
     <description>Recent content in Resources on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Tue, 13 Dec 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://blog.nandotech.com/tags/resources/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.nandotech.com/tags/resources/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Holiday Reading List</title>
-      <link>http://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</link>
+      <link>https://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</link>
       <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</guid>
+      <guid>https://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</guid>
       <description>
 
 &lt;h1 id=&#34;these-days-it-seems-like-there-are-more-and-more-people-out-there-learning-to-code&#34;&gt;These days, it seems like there are more and more people out there &amp;ldquo;learning to code&amp;rdquo;.&lt;/h1&gt;
@@ -87,10 +87,10 @@
     
     <item>
       <title>.NET Core Curated Resources List</title>
-      <link>http://blog.nandotech.com/post/2016-11-21-dotnet-core-resources/</link>
+      <link>https://blog.nandotech.com/post/2016-11-21-dotnet-core-resources/</link>
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-11-21-dotnet-core-resources/</guid>
+      <guid>https://blog.nandotech.com/post/2016-11-21-dotnet-core-resources/</guid>
       <description>
 
 &lt;h2 id=&#34;next-week-i-hope-to-continue-our-series-on-the-nancyfx-http-www-nancyfx-org-framework-for-building-web-applications-for-our-next-post-i-hope-to-cover-routing-as-well-as-passing-arguments-via-query-string-body-and-how-that-all-works-within-nancy&#34;&gt;Next week I hope to continue our series on the &lt;a href=&#34;http://www.nancyfx.org&#34;&gt;NancyFX&lt;/a&gt; framework for building web applications.  For our next post I hope to cover &lt;em&gt;Routing&lt;/em&gt; as well as passing arguments via query string, body and how that all works within &lt;code&gt;Nancy&lt;/code&gt;.&lt;/h2&gt;
@@ -233,10 +233,10 @@
     
     <item>
       <title>Angular 2 Crash Course</title>
-      <link>http://blog.nandotech.com/post/2016-10-07-angular-crash-course/</link>
+      <link>https://blog.nandotech.com/post/2016-10-07-angular-crash-course/</link>
       <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-10-07-angular-crash-course/</guid>
+      <guid>https://blog.nandotech.com/post/2016-10-07-angular-crash-course/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;PSA: Skip to the &lt;strong&gt;TL;DR&lt;/strong&gt; for list of resources&lt;/em&gt;&lt;/p&gt;

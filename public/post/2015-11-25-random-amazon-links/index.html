@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Networking Woes</title>
+  <title>Random Amazon Links</title>
 
   <meta name="author" content="Fernando Rodriguez" />
   
@@ -31,7 +31,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   
-  <meta property="og:title" content="Networking Woes" />
+  <meta property="og:title" content="Random Amazon Links" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/" />
   <meta property="og:image" content="/img/nandotech_logo_gray.gif" />
@@ -98,47 +98,23 @@
 
 
 
-  <div id="header-big-imgs" data-num-img=1 data-img-src-1="/img/comcast.png"></div>
 
-
-<header class="header-section has-img">
-
-<div class="big-img intro-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-heading">
-          <h1>Networking Woes</h1>
-      
-        
-      <h2 class="post-subheading">The art of setting up Comcast</h2>
-      
-      
-      
-      
-      <span class="post-meta">Posted on September 20, 2016</span>
-      
-        </div>
-      </div>
-    </div>
-  </div>
-  <span class='img-desc'></span>
-</div>
+<header class="header-section ">
 
 <div class="intro-header no-img">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>Networking Woes</h1>
+          <h1>Random Amazon Links</h1>
       
         
-      <h2 class="post-subheading">The art of setting up Comcast</h2>
+      <h2 class="post-subheading">Stuff we probably needed to buy</h2>
       
       
       
       
-      <span class="post-meta">Posted on September 20, 2016</span>
+      <span class="post-meta">Posted on November 25, 2015</span>
       
         </div>
       </div>
@@ -157,96 +133,31 @@
       <article role="main" class="blog-post">
           
 
-<p>Let me start off by saying unequivocally and without any shadow of a doubt: I am not a networking expert.  Although I understand all the constructs of the web and most all of the requisite information pertaining to how computers and the internet communicate as well as the nuances of local and public networks.</p>
+<h1 id="random-amazon-links-i-needed-to-save">Random Amazon Links I Needed to Save</h1>
 
-<p>My real deep protocol knowledge extends mostly into the realm of software development and how bits/bytes are consumed over the wire. I, for one, found it <em>absolutely fascinating</em> how <a href="http://www.microsoft.com">Microsoft</a> and the <a href="http://www.dot.net">.NET team</a> built the kestrel http server. There is an awesome video where <a href="https://twitter.com/damianedwards">Damian Edwards</a> <a href="https://vimeo.com/172009499">discusses it here</a>.</p>
+<ul>
+<li><a href="http://amzn.to/2iU6qlO">BLU R1 HD</a></li>
+<li><a href="http://amzn.to/2iPNzWL">Georgia Pacific Paper</a></li>
+<li><a href="http://amzn.to/2iOfic9">Moto G Play 4th Edition</a></li>
+<li><a href="http://amzn.to/2iPQDCe">Moto G</a></li>
+</ul>
 
-<p>That, however, is a discussion slated for another day. Truly fascinating though how they&rsquo;ve basically chosen to look at any given http request like a sequence of <code>float</code> values to avoid <code>string</code> allocations.</p>
-
-<p>However, I digress, Today is mainly about 2 things:</p>
-
-<ol>
-<li>Venting</li>
-<li>Helping guide anyone who is running into the same/similar issues with Comcast.</li>
-<li>Venting</li>
-</ol>
-
-<p><a href="http://martinfowler.com/bliki/TwoHardThings.html">(Lest we forget one of the hardest problems in Computer Science&ndash;Off By One errors)</a></p>
-
-<h2 id="comcast-default-behavior">Comcast Default Behavior</h2>
-
-<p>So to get on with it: naturally the Comcast modem default behavior is to be extremely confusing. Our public, <a href="http://www.ipchicken.com">static IP</a> address from <a href="http://comcast.com">Comcast</a> here is <code>96.xxx.xxx.9</code> (blocking some for safety/privacy).  One might expect the Comcast firewall to show this IP with the .10 Gateway, or something similar.  Instead, we get this:</p>
-
-<p><img src="/img/comcast_ip.png" alt="Comcast IP" /></p>
-
-<p>In case anyone missed that: for some reason I am unable to explain, if you have purchased a static IP or a group of IP&rsquo;s from Comcast your router actually gives off your <strong>Default Gateway</strong> as your <em>Public IP</em> and your Comcast  Business Router will have a <em>Default Gateway</em> referencing some other point or thing on their network (presumably where, in this case, our /30 routes through).</p>
-
-<p>After several visits and phone calls with Comcast, no engineer was able to reliably explain it to me either.  I&rsquo;ve moved on to the <a href="https://media2.giphy.com/media/hIavT8NX1SE4E/200.gif">acceptance stage of my grief</a>.</p>
-
-<h2 id="setting-up-your-own-router">Setting up your own Router</h2>
-
-<p>All that said, this seemingly small thing has an interesting and convenient side effect.</p>
-
-<p>Since none of the public IP&rsquo;s are in use, any new router you may want to plug in on the inside of it can use <em>any</em> of your available static IP addresses and the Comcast modem is able to stay up and 100% functioning if you so choose (to partition your network, for example).</p>
-
-<p>Now this is where it gets confusing, especially for me&ndash;this is because very often we are being dragged into an environment that we are not familiar with, did not set up, and/or there is no one available with the technical information (static IP range, subnet mask, etc) you actually need to set it up.</p>
-
-<p>To make matters worse, you always run the risk of receiving bad information from Comcast should you decide to call for information (Has happened to me, <em>more than once</em>!).</p>
-
-<h3 id="sidebar-which-router"><em>Sidebar: Which Router?</em></h3>
-
-<p>As an FYI, the router referenced and used in the specific configuration shown here is a <a href="https://www.amazon.com/MikroTik-CRS125-24G-1S-RM-rackmount-enclosure-manageable/dp/B00I4QJSIM">Mikrotik Cloud Router Switch CRS125-24G</a> which is also available in a <a href="https://routerboard.com/CRS125-24G-1S-IN">Non-Rackmount Version</a>.</p>
-
-<p>For much more extreme loads, the <a href="https://www.amazon.com/MikroTik-Cloud-Core-Router-1009-8G-1S-1S/dp/B00KVFLKHG">Mikrotik Cloud Core Router 1009-8G-1S+</a> is recommended.  (<em>NOTE: This particular version requires much more granular setup &amp; understanding of some networking beyond the scope of this article to complete setup</em>.)</p>
-
-<p>Once you do have the correct information, here is an example of how the network referenced above is set:</p>
-
-<p><img src="/img/mikrotik-comcast-setup.png" alt="Mikrotik Setup" /></p>
-
-<p>As you can see and would expect, your <em>static IP</em> and correct <a href="https://www.aelius.com/njh/subnet_sheet.html"><em>subnet mask</em></a> (in this case, /30) need to be in the WAN IP Address field (this may differ or have a different name in other routers).</p>
-
-<p>The <em>default gateway</em> which the Comcast router uses as its IP, in turn, should be the <em>Gateway</em>.</p>
-
-<p>We choose to utilize <a href="http://google.com">Google</a> and <a href="http://opendns.com">OpenDNS</a> public DNS servers rather than Comcast&rsquo;s usual defaults of <code>75.75.75.75</code> and <code>75.75.76.76</code>, though in some cases using the defaults helps to avoid some issues.</p>
-
-<h2 id="wrapping-it-up">Wrapping It Up</h2>
-
-<p>Like I mentioned before; if you follow the strategy outlined above you&rsquo;ll be able to set up your new router/firewall inside of the Comcast network, utilize any one of your static IP addresses as a public, and all the while leave the Comcast Router up &amp; running/functioning perfectly.</p>
-
-<p>For security reasons, I personally turned off just about every single feature &amp; network available on the default Comcast box once I got our <a href="http://www.mikrotik.com">Mikrotik</a> working properly. This includes turning off all DHCP &amp; Wireless on the Comcast modem.</p>
-
-<p>In my case, I can actually get to <code>10.1.10.1</code> (Comcast Router Default IP) while on my other local network of <code>192.168.88.xxx</code>.</p>
-
-<p>While convenient, once you have your firewall/router properly configured inside of your Comcast box, you should have very little reason to ever need to log into it.</p>
-
-<p>Your other option is if you want to partition your network into different &ldquo;areas&rsquo;, you could easily utilize both your Mikrotik Firewall network <strong>AND</strong> your Comcast Firewall network in tandem even if you have only <em>one</em> static IP address.</p>
-
-<p>The Comcast Firewall will broadcast your <em>Gateway IP</em> while your own Firewall will broadcast your assigned <em>Static IP</em>.</p>
+<h2 id="you-can-safely-ignore-this-post">You can safely ignore this post. :)</h2>
 
       </article>
 <div class="row">
 <div>
 
-  <strong>Categories:</strong>
-  <a href="/categories/">Networking</a>
-
 <br />
-
-  <strong>Tags:</strong>
-  <a href="/tags/">comcast</a>, <a href="/tags/">router</a>, <a href="/tags/">mikrotik</a>, <a href="/tags/">network setup</a>
  <br />
 </div>
   </div>
   
       <ul class="pager blog-pager">
         
-        <li class="previous">
-          <a href="https://blog.nandotech.com/post/2016-06-11-getting-started-angularjs/" data-toggle="tooltip" data-placement="top" title="Getting Started with AngularJS 1.x">&larr; Previous Post</a>
-        </li>
-        
         
         <li class="next">
-          <a href="https://blog.nandotech.com/post/2016-09-21-dot-net-core-1_0_1/" data-toggle="tooltip" data-placement="top" title="Dot Net Core 1.0.1 &amp; Semantic Versioning">Next Post &rarr;</a>
+          <a href="https://blog.nandotech.com/post/2015-11-27-first-post/" data-toggle="tooltip" data-placement="top" title="A little bit about us.">Next Post &rarr;</a>
         </li>
         
       </ul>
@@ -270,9 +181,9 @@
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'nandotech';
-    var disqus_identifier = 'https:\/\/blog.nandotech.com\/post\/2016-09-20-comcast-networking-woes\/';
-    var disqus_title = 'Networking Woes';
-    var disqus_url = 'https:\/\/blog.nandotech.com\/post\/2016-09-20-comcast-networking-woes\/';
+    var disqus_identifier = 'https:\/\/blog.nandotech.com\/post\/2015-11-25-random-amazon-links\/';
+    var disqus_title = 'Random Amazon Links';
+    var disqus_url = 'https:\/\/blog.nandotech.com\/post\/2015-11-25-random-amazon-links\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

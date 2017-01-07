@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Networking Woes</title>
+  <title>Choosing your .NET Core Version CLI</title>
 
   <meta name="author" content="Fernando Rodriguez" />
   
@@ -31,7 +31,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   
-  <meta property="og:title" content="Networking Woes" />
+  <meta property="og:title" content="Choosing your .NET Core Version CLI" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/" />
   <meta property="og:image" content="/img/nandotech_logo_gray.gif" />
@@ -98,47 +98,23 @@
 
 
 
-  <div id="header-big-imgs" data-num-img=1 data-img-src-1="/img/comcast.png"></div>
 
-
-<header class="header-section has-img">
-
-<div class="big-img intro-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-heading">
-          <h1>Networking Woes</h1>
-      
-        
-      <h2 class="post-subheading">The art of setting up Comcast</h2>
-      
-      
-      
-      
-      <span class="post-meta">Posted on September 20, 2016</span>
-      
-        </div>
-      </div>
-    </div>
-  </div>
-  <span class='img-desc'></span>
-</div>
+<header class="header-section ">
 
 <div class="intro-header no-img">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>Networking Woes</h1>
+          <h1>Choosing your .NET Core Version CLI</h1>
       
         
-      <h2 class="post-subheading">The art of setting up Comcast</h2>
+      <h2 class="post-subheading">Use your global.json file to specify framework version</h2>
       
       
       
       
-      <span class="post-meta">Posted on September 20, 2016</span>
+      <span class="post-meta">Posted on December 20, 2016</span>
       
         </div>
       </div>
@@ -157,83 +133,77 @@
       <article role="main" class="blog-post">
           
 
-<p>Let me start off by saying unequivocally and without any shadow of a doubt: I am not a networking expert.  Although I understand all the constructs of the web and most all of the requisite information pertaining to how computers and the internet communicate as well as the nuances of local and public networks.</p>
+<h2 id="i-recently-downloaded-and-upgraded-to-net-core-1-1-0-which-comes-along-with-updated-cli-tools-1-0-0-preview3-004056">I recently downloaded and upgraded to <code>.NET Core 1.1.0</code> which comes along with updated CLI tools, <code>1.0.0-preview3-004056</code>.</h2>
 
-<p>My real deep protocol knowledge extends mostly into the realm of software development and how bits/bytes are consumed over the wire. I, for one, found it <em>absolutely fascinating</em> how <a href="http://www.microsoft.com">Microsoft</a> and the <a href="http://www.dot.net">.NET team</a> built the kestrel http server. There is an awesome video where <a href="https://twitter.com/damianedwards">Damian Edwards</a> <a href="https://vimeo.com/172009499">discusses it here</a>.</p>
+<p>This new version reflects the CLI tools that are being used for the new <code>.csproj</code> project system which does away with <code>project.json</code> that many of us grew to know and love.</p>
 
-<p>That, however, is a discussion slated for another day. Truly fascinating though how they&rsquo;ve basically chosen to look at any given http request like a sequence of <code>float</code> values to avoid <code>string</code> allocations.</p>
+<p>Of course, this has been a long time coming and the announcement that Microsoft would be moving back to <code>.csproj</code> was announced <a href="https://docs.microsoft.com/en-us/dotnet/articles/core/tutorials/target-dotnetcore-with-msbuild">way back in March or so.</a></p>
 
-<p>However, I digress, Today is mainly about 2 things:</p>
+<p>Anyway&ndash;so if you&rsquo;re like me and you&rsquo;ve downloaded <a href="https://dot.net">.NET Core 1.1</a>, then this is likely what you see:</p>
 
-<ol>
-<li>Venting</li>
-<li>Helping guide anyone who is running into the same/similar issues with Comcast.</li>
-<li>Venting</li>
-</ol>
+<p><img src="http://i.imgur.com/Ok6Angi.png" alt=".NET Core CLI 1.0 Preview 3" /></p>
 
-<p><a href="http://martinfowler.com/bliki/TwoHardThings.html">(Lest we forget one of the hardest problems in Computer Science&ndash;Off By One errors)</a></p>
+<p>Based on this, you might think that you&rsquo;re stuck on the newest version.  Luckily for us, each version of <code>.NET Core</code> is capable of running side by side and install into different folders for us.</p>
 
-<h2 id="comcast-default-behavior">Comcast Default Behavior</h2>
+<p><img src="http://i.imgur.com/ywygDfI.png" alt=".NET SDK Folders" /></p>
 
-<p>So to get on with it: naturally the Comcast modem default behavior is to be extremely confusing. Our public, <a href="http://www.ipchicken.com">static IP</a> address from <a href="http://comcast.com">Comcast</a> here is <code>96.xxx.xxx.9</code> (blocking some for safety/privacy).  One might expect the Comcast firewall to show this IP with the .10 Gateway, or something similar.  Instead, we get this:</p>
+<p>As I wondered about this myself, I came across <a href="https://shanselman.com">Scott Hanselman&rsquo;s</a> post about deploying a <code>.NET Core</code> <a href="http://www.hanselman.com/blog/PublishingASPNETCore11ApplicationsToAzureUsingGitDeploy.aspx">app to Azure where he had to roll back the SDK (seems Azure knew about a version he didn&rsquo;t have).</a>  This was the key.</p>
 
-<p><img src="/img/comcast_ip.png" alt="Comcast IP" /></p>
+<p>So, following much the same process that Scott details on his blog, we are completely capable of telling the <code>.NET Core CLI</code> tools exactly which version of the SDK we would like it to build our project from. In order to do this, all we must do is create a root directory with a <code>global.json</code> file where we tell the framework what to look for.</p>
 
-<p>In case anyone missed that: for some reason I am unable to explain, if you have purchased a static IP or a group of IP&rsquo;s from Comcast your router actually gives off your <strong>Default Gateway</strong> as your <em>Public IP</em> and your Comcast  Business Router will have a <em>Default Gateway</em> referencing some other point or thing on their network (presumably where, in this case, our /30 routes through).</p>
+<p>Also, so you can see the difference, I will first simply scaffold a <code>Web</code> project and then I will add our <code>global.json</code> to demonstrate how <code>.NET Core</code> detects <code>version</code> and then how we can let the framework know what version of the tooling we need for our project.</p>
 
-<p>After several visits and phone calls with Comcast, no engineer was able to reliably explain it to me either.  I&rsquo;ve moved on to the <a href="https://media2.giphy.com/media/hIavT8NX1SE4E/200.gif">acceptance stage of my grief</a>.</p>
+<p>Remember <em>(as shown above)</em> that locally we currently have <code>.NET Core</code> runtime versions <code>1.0.0</code>, <code>1.0.1</code>, and now also <code>1.1.0</code> (as well as another one that I probably missed).  On top of that, each and every install came with its very own <code>1.0.0-preview</code> version of the <a href="https://github.com/dotnet/cli/">.NET Core CLI</a>.</p>
 
-<h2 id="setting-up-your-own-router">Setting up your own Router</h2>
+<p>In case that was unclear for anyone: <strong>don&rsquo;t worry,</strong> because if you do think about it too much, it is actually <strong>INCREDIBLY</strong> confusing and until you just <em>accept it</em> you will live out your remaining days in misery. Jokes aside, this is literally just a nightmare back and forth of version numbers that hardly <em>appear</em> to make any sense (<a href="https://www.semver.org">semantic versioning, anyone?</a>). Hidden just below the surface in plain sight lies understanding, however.</p>
 
-<p>All that said, this seemingly small thing has an interesting and convenient side effect.</p>
+<p>Before I go off on that tangent though: our <code>dotnet --version</code> shows we are on <code>1.0.0-preview3-004056</code>. This is our current version of the <a href="https://github.com/dotnet/cli/"><em>.NET Command Line Tools (a.k.a. the CLI/SDK)</em></a>. This is the new, updated <code>.csproj</code> build system, as we can see here:</p>
 
-<p>Since none of the public IP&rsquo;s are in use, any new router you may want to plug in on the inside of it can use <em>any</em> of your available static IP addresses and the Comcast modem is able to stay up and 100% functioning if you so choose (to partition your network, for example).</p>
+<p><img src="http://i.imgur.com/vZptRhk.png" alt=".NET Core csproj build" /></p>
 
-<p>Now this is where it gets confusing, especially for me&ndash;this is because very often we are being dragged into an environment that we are not familiar with, did not set up, and/or there is no one available with the technical information (static IP range, subnet mask, etc) you actually need to set it up.</p>
+<p>Just by taking a look at the folder and file structure here, we can very clearly see we are missing any <code>project.json</code> file and have inherited a <code>new.csproj</code> that if we inspect, we can see that it contains everything our <code>project.json</code> file used to.</p>
 
-<p>To make matters worse, you always run the risk of receiving bad information from Comcast should you decide to call for information (Has happened to me, <em>more than once</em>!).</p>
+<p>That said, I wasn&rsquo;t quite ready to make the jump&ndash;maybe it&rsquo;s denial, maybe I&rsquo;m hoping the <code>.json</code> project style will stay around forever&ndash;the moral of the story is I needed to tell <code>.NET Core</code> that I did not want to use the newest version of the <code>cli</code>.</p>
 
-<h3 id="sidebar-which-router"><em>Sidebar: Which Router?</em></h3>
+<p>Turns out, this is incredibly easy. Here I am in the same <code>Powershell</code> window I was in before. Created a new directory for our new project, and then what we need is a <code>global.json</code> to tell the framework which version of the <code>cli</code> we want.</p>
 
-<p>As an FYI, the router referenced and used in the specific configuration shown here is a <a href="https://www.amazon.com/MikroTik-CRS125-24G-1S-RM-rackmount-enclosure-manageable/dp/B00I4QJSIM">Mikrotik Cloud Router Switch CRS125-24G</a> which is also available in a <a href="https://routerboard.com/CRS125-24G-1S-IN">Non-Rackmount Version</a>.</p>
+<p><em>global.json</em></p>
 
-<p>For much more extreme loads, the <a href="https://www.amazon.com/MikroTik-Cloud-Core-Router-1009-8G-1S-1S/dp/B00KVFLKHG">Mikrotik Cloud Core Router 1009-8G-1S+</a> is recommended.  (<em>NOTE: This particular version requires much more granular setup &amp; understanding of some networking beyond the scope of this article to complete setup</em>.)</p>
+<pre><code class="language-json">{
+  &quot;projects&quot;: [ &quot;src&quot;, &quot;test&quot; ],
+  &quot;sdk&quot;: {
+    &quot;version&quot;: &quot;1.0.0-preview2-1-003177&quot;
+  }
+}
+</code></pre>
 
-<p>Once you do have the correct information, here is an example of how the network referenced above is set:</p>
+<p>Here we are telling <code>.NET Core</code> to look for our projects in the directories <code>src</code> and <code>test</code> and then we specify the <code>sdk</code> version of <code>1.0.0-preview2-1-003177</code> which shipped with version <code>1.0.1</code> of the runtime. Now we simply create the <code>src</code> directory and scaffold our project as per usual.</p>
 
-<p><img src="/img/mikrotik-comcast-setup.png" alt="Mikrotik Setup" /></p>
+<p><img src="http://i.imgur.com/hi6gvIF.png" alt=".NET Core Web Project Preview 2 Tooling" /></p>
 
-<p>As you can see and would expect, your <em>static IP</em> and correct <a href="https://www.aelius.com/njh/subnet_sheet.html"><em>subnet mask</em></a> (in this case, /30) need to be in the WAN IP Address field (this may differ or have a different name in other routers).</p>
+<p>If you look in our window carefully, we&rsquo;ve added the <code>global.json</code> file shown above into the <code>root</code> directory which allowed us to specify the correct <code>SDK</code> version for our project.</p>
 
-<p>The <em>default gateway</em> which the Comcast router uses as its IP, in turn, should be the <em>Gateway</em>.</p>
+<p>And that&rsquo;s it! You may now create projects using whichever version of the <code>dotnet cli</code> makes your heart content or makes you feel most comfortable. As a final observation, you may also notice the significant difference in the number of folders and files showing from the <code>Web</code> project using the exact same command, that is, <code>dotnet new -t Web</code>.</p>
 
-<p>We choose to utilize <a href="http://google.com">Google</a> and <a href="http://opendns.com">OpenDNS</a> public DNS servers rather than Comcast&rsquo;s usual defaults of <code>75.75.75.75</code> and <code>75.75.76.76</code>, though in some cases using the defaults helps to avoid some issues.</p>
+<p>In <code>preview2</code> we got a nice fully fleshed out application with stubbed out code for an <code>SmsService</code>, <code>EmailService</code> as well as all the required boilerplate and code for simple <code>Accounts</code>/<code>Users</code> in the system. <code>Preview3</code> yanks a lot of this extra boilerplate out and leaves us with just a very barebones web app, only containing a <code>HomeController.cs</code> under <code>Controllers</code>.</p>
 
-<h2 id="wrapping-it-up">Wrapping It Up</h2>
+<p>Personally, depending on the project, sometimes I want the extra boilerplate code already there for me&ndash;other times I may not.  Either way, more often than not, I end up pulling these things in manually or copying them anyway.</p>
 
-<p>Like I mentioned before; if you follow the strategy outlined above you&rsquo;ll be able to set up your new router/firewall inside of the Comcast network, utilize any one of your static IP addresses as a public, and all the while leave the Comcast Router up &amp; running/functioning perfectly.</p>
+<p>Hope this helps someone out who may have been a little confused regarding the versioning and/or encountered any issues during deployment to Azure or anywhere else.</p>
 
-<p>For security reasons, I personally turned off just about every single feature &amp; network available on the default Comcast box once I got our <a href="http://www.mikrotik.com">Mikrotik</a> working properly. This includes turning off all DHCP &amp; Wireless on the Comcast modem.</p>
-
-<p>In my case, I can actually get to <code>10.1.10.1</code> (Comcast Router Default IP) while on my other local network of <code>192.168.88.xxx</code>.</p>
-
-<p>While convenient, once you have your firewall/router properly configured inside of your Comcast box, you should have very little reason to ever need to log into it.</p>
-
-<p>Your other option is if you want to partition your network into different &ldquo;areas&rsquo;, you could easily utilize both your Mikrotik Firewall network <strong>AND</strong> your Comcast Firewall network in tandem even if you have only <em>one</em> static IP address.</p>
-
-<p>The Comcast Firewall will broadcast your <em>Gateway IP</em> while your own Firewall will broadcast your assigned <em>Static IP</em>.</p>
+<p>Feel free to leave any feedback and come back for more soon!</p>
 
       </article>
 <div class="row">
 <div>
 
   <strong>Categories:</strong>
-  <a href="/categories/">Networking</a>
+  <a href="/categories/">.NET Core</a>, <a href="/categories/">CLI</a>
 
 <br />
 
   <strong>Tags:</strong>
-  <a href="/tags/">comcast</a>, <a href="/tags/">router</a>, <a href="/tags/">mikrotik</a>, <a href="/tags/">network setup</a>
+  <a href="/tags/">cli</a>, <a href="/tags/">.net core</a>
  <br />
 </div>
   </div>
@@ -241,13 +211,9 @@
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="https://blog.nandotech.com/post/2016-06-11-getting-started-angularjs/" data-toggle="tooltip" data-placement="top" title="Getting Started with AngularJS 1.x">&larr; Previous Post</a>
+          <a href="https://blog.nandotech.com/post/2016-12-13-holiday-reading-list/" data-toggle="tooltip" data-placement="top" title="Holiday Reading List">&larr; Previous Post</a>
         </li>
         
-        
-        <li class="next">
-          <a href="https://blog.nandotech.com/post/2016-09-21-dot-net-core-1_0_1/" data-toggle="tooltip" data-placement="top" title="Dot Net Core 1.0.1 &amp; Semantic Versioning">Next Post &rarr;</a>
-        </li>
         
       </ul>
               <div>
@@ -270,9 +236,9 @@
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'nandotech';
-    var disqus_identifier = 'https:\/\/blog.nandotech.com\/post\/2016-09-20-comcast-networking-woes\/';
-    var disqus_title = 'Networking Woes';
-    var disqus_url = 'https:\/\/blog.nandotech.com\/post\/2016-09-20-comcast-networking-woes\/';
+    var disqus_identifier = 'https:\/\/blog.nandotech.com\/post\/2016-12-20-dotnet-core-cli-version\/';
+    var disqus_title = 'Choosing your .NET Core Version CLI';
+    var disqus_url = 'https:\/\/blog.nandotech.com\/post\/2016-12-20-dotnet-core-cli-version\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

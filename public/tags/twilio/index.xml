@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Twilio on NandoTech</title>
-    <link>http://blog.nandotech.com/tags/twilio/</link>
+    <link>https://blog.nandotech.com/tags/twilio/</link>
     <description>Recent content in Twilio on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Wed, 02 Nov 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://blog.nandotech.com/tags/twilio/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.nandotech.com/tags/twilio/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>.NET Core Console Apps (Twilio API)</title>
-      <link>http://blog.nandotech.com/post/2016-11-02-net-core-console-apps/</link>
+      <link>https://blog.nandotech.com/post/2016-11-02-net-core-console-apps/</link>
       <pubDate>Wed, 02 Nov 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>http://blog.nandotech.com/post/2016-11-02-net-core-console-apps/</guid>
+      <guid>https://blog.nandotech.com/post/2016-11-02-net-core-console-apps/</guid>
       <description>
 
 &lt;h3 id=&#34;in-the-spirit-of-open-source-and-to-pay-it-something-better-than-lip-service&#34;&gt;In the spirit of open source (and to pay it something better than lip service)&lt;/h3&gt;
