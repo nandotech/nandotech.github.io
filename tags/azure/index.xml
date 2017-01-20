@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cli on NandoTech</title>
-    <link>https://blog.nandotech.com/tags/cli/</link>
-    <description>Recent content in Cli on NandoTech</description>
+    <title>Azure on NandoTech</title>
+    <link>https://blog.nandotech.com/tags/azure/</link>
+    <description>Recent content in Azure on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Thu, 19 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.nandotech.com/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.nandotech.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A File Upload API with Nancy, .NET Core in a Shockingly Small Amount of Code</title>
@@ -448,76 +448,6 @@ namespace NancyAzureFileUpload.Modules
 &lt;p&gt;Feel free to test it out and use the demo site while we have it up. As I mentioned before, since our &lt;code&gt;UploadModule&lt;/code&gt; is expecting a &lt;code&gt;multipart-form&lt;/code&gt; any requests there have to be done with a utility like Postman or Fiddler.&lt;/p&gt;
 
 &lt;p&gt;Happy hacking everyone!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Choosing your .NET Core Version CLI</title>
-      <link>https://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version.1/</link>
-      <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
-      <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>https://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version.1/</guid>
-      <description>
-
-&lt;h2 id=&#34;i-recently-downloaded-and-upgraded-to-net-core-1-1-0-which-comes-along-with-updated-cli-tools-1-0-0-preview3-004056&#34;&gt;I recently downloaded and upgraded to &lt;code&gt;.NET Core 1.1.0&lt;/code&gt; which comes along with updated CLI tools, &lt;code&gt;1.0.0-preview3-004056&lt;/code&gt;.&lt;/h2&gt;
-
-&lt;p&gt;This new version reflects the CLI tools that are being used for the new &lt;code&gt;.csproj&lt;/code&gt; project system which does away with &lt;code&gt;project.json&lt;/code&gt; that many of us grew to know and love.&lt;/p&gt;
-
-&lt;p&gt;Of course, this has been a long time coming and the announcement that Microsoft would be moving back to &lt;code&gt;.csproj&lt;/code&gt; was announced &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/articles/core/tutorials/target-dotnetcore-with-msbuild&#34;&gt;way back in March or so.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Anyway&amp;ndash;so if you&amp;rsquo;re like me and you&amp;rsquo;ve downloaded &lt;a href=&#34;https://dot.net&#34;&gt;.NET Core 1.1&lt;/a&gt;, then this is likely what you see:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/Ok6Angi.png&#34; alt=&#34;.NET Core CLI 1.0 Preview 3&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Based on this, you might think that you&amp;rsquo;re stuck on the newest version.  Luckily for us, each version of &lt;code&gt;.NET Core&lt;/code&gt; is capable of running side by side and install into different folders for us.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/ywygDfI.png&#34; alt=&#34;.NET SDK Folders&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As I wondered about this myself, I came across &lt;a href=&#34;https://shanselman.com&#34;&gt;Scott Hanselman&amp;rsquo;s&lt;/a&gt; post about deploying a &lt;code&gt;.NET Core&lt;/code&gt; &lt;a href=&#34;http://www.hanselman.com/blog/PublishingASPNETCore11ApplicationsToAzureUsingGitDeploy.aspx&#34;&gt;app to Azure where he had to roll back the SDK (seems Azure knew about a version he didn&amp;rsquo;t have).&lt;/a&gt;  This was the key.&lt;/p&gt;
-
-&lt;p&gt;So, following much the same process that Scott details on his blog, we are completely capable of telling the &lt;code&gt;.NET Core CLI&lt;/code&gt; tools exactly which version of the SDK we would like it to build our project from. In order to do this, all we must do is create a root directory with a &lt;code&gt;global.json&lt;/code&gt; file where we tell the framework what to look for.&lt;/p&gt;
-
-&lt;p&gt;Also, so you can see the difference, I will first simply scaffold a &lt;code&gt;Web&lt;/code&gt; project and then I will add our &lt;code&gt;global.json&lt;/code&gt; to demonstrate how &lt;code&gt;.NET Core&lt;/code&gt; detects &lt;code&gt;version&lt;/code&gt; and then how we can let the framework know what version of the tooling we need for our project.&lt;/p&gt;
-
-&lt;p&gt;Remember &lt;em&gt;(as shown above)&lt;/em&gt; that locally we currently have &lt;code&gt;.NET Core&lt;/code&gt; runtime versions &lt;code&gt;1.0.0&lt;/code&gt;, &lt;code&gt;1.0.1&lt;/code&gt;, and now also &lt;code&gt;1.1.0&lt;/code&gt; (as well as another one that I probably missed).  On top of that, each and every install came with its very own &lt;code&gt;1.0.0-preview&lt;/code&gt; version of the &lt;a href=&#34;https://github.com/dotnet/cli/&#34;&gt;.NET Core CLI&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In case that was unclear for anyone: &lt;strong&gt;don&amp;rsquo;t worry,&lt;/strong&gt; because if you do think about it too much, it is actually &lt;strong&gt;INCREDIBLY&lt;/strong&gt; confusing and until you just &lt;em&gt;accept it&lt;/em&gt; you will live out your remaining days in misery. Jokes aside, this is literally just a nightmare back and forth of version numbers that hardly &lt;em&gt;appear&lt;/em&gt; to make any sense (&lt;a href=&#34;https://www.semver.org&#34;&gt;semantic versioning, anyone?&lt;/a&gt;). Hidden just below the surface in plain sight lies understanding, however.&lt;/p&gt;
-
-&lt;p&gt;Before I go off on that tangent though: our &lt;code&gt;dotnet --version&lt;/code&gt; shows we are on &lt;code&gt;1.0.0-preview3-004056&lt;/code&gt;. This is our current version of the &lt;a href=&#34;https://github.com/dotnet/cli/&#34;&gt;&lt;em&gt;.NET Command Line Tools (a.k.a. the CLI/SDK)&lt;/em&gt;&lt;/a&gt;. This is the new, updated &lt;code&gt;.csproj&lt;/code&gt; build system, as we can see here:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/vZptRhk.png&#34; alt=&#34;.NET Core csproj build&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Just by taking a look at the folder and file structure here, we can very clearly see we are missing any &lt;code&gt;project.json&lt;/code&gt; file and have inherited a &lt;code&gt;new.csproj&lt;/code&gt; that if we inspect, we can see that it contains everything our &lt;code&gt;project.json&lt;/code&gt; file used to.&lt;/p&gt;
-
-&lt;p&gt;That said, I wasn&amp;rsquo;t quite ready to make the jump&amp;ndash;maybe it&amp;rsquo;s denial, maybe I&amp;rsquo;m hoping the &lt;code&gt;.json&lt;/code&gt; project style will stay around forever&amp;ndash;the moral of the story is I needed to tell &lt;code&gt;.NET Core&lt;/code&gt; that I did not want to use the newest version of the &lt;code&gt;cli&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Turns out, this is incredibly easy. Here I am in the same &lt;code&gt;Powershell&lt;/code&gt; window I was in before. Created a new directory for our new project, and then what we need is a &lt;code&gt;global.json&lt;/code&gt; to tell the framework which version of the &lt;code&gt;cli&lt;/code&gt; we want.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;global.json&lt;/em&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;projects&amp;quot;: [ &amp;quot;src&amp;quot;, &amp;quot;test&amp;quot; ],
-  &amp;quot;sdk&amp;quot;: {
-    &amp;quot;version&amp;quot;: &amp;quot;1.0.0-preview2-1-003177&amp;quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here we are telling &lt;code&gt;.NET Core&lt;/code&gt; to look for our projects in the directories &lt;code&gt;src&lt;/code&gt; and &lt;code&gt;test&lt;/code&gt; and then we specify the &lt;code&gt;sdk&lt;/code&gt; version of &lt;code&gt;1.0.0-preview2-1-003177&lt;/code&gt; which shipped with version &lt;code&gt;1.0.1&lt;/code&gt; of the runtime. Now we simply create the &lt;code&gt;src&lt;/code&gt; directory and scaffold our project as per usual.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/hi6gvIF.png&#34; alt=&#34;.NET Core Web Project Preview 2 Tooling&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you look in our window carefully, we&amp;rsquo;ve added the &lt;code&gt;global.json&lt;/code&gt; file shown above into the &lt;code&gt;root&lt;/code&gt; directory which allowed us to specify the correct &lt;code&gt;SDK&lt;/code&gt; version for our project.&lt;/p&gt;
-
-&lt;p&gt;And that&amp;rsquo;s it! You may now create projects using whichever version of the &lt;code&gt;dotnet cli&lt;/code&gt; makes your heart content or makes you feel most comfortable. As a final observation, you may also notice the significant difference in the number of folders and files showing from the &lt;code&gt;Web&lt;/code&gt; project using the exact same command, that is, &lt;code&gt;dotnet new -t Web&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;In &lt;code&gt;preview2&lt;/code&gt; we got a nice fully fleshed out application with stubbed out code for an &lt;code&gt;SmsService&lt;/code&gt;, &lt;code&gt;EmailService&lt;/code&gt; as well as all the required boilerplate and code for simple &lt;code&gt;Accounts&lt;/code&gt;/&lt;code&gt;Users&lt;/code&gt; in the system. &lt;code&gt;Preview3&lt;/code&gt; yanks a lot of this extra boilerplate out and leaves us with just a very barebones web app, only containing a &lt;code&gt;HomeController.cs&lt;/code&gt; under &lt;code&gt;Controllers&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Personally, depending on the project, sometimes I want the extra boilerplate code already there for me&amp;ndash;other times I may not.  Either way, more often than not, I end up pulling these things in manually or copying them anyway.&lt;/p&gt;
-
-&lt;p&gt;Hope this helps someone out who may have been a little confused regarding the versioning and/or encountered any issues during deployment to Azure or anywhere else.&lt;/p&gt;
-
-&lt;p&gt;Feel free to leave any feedback and come back for more soon!&lt;/p&gt;
 </description>
     </item>
     

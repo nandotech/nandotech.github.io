@@ -13,10 +13,10 @@
     
     <item>
       <title>Choosing your .NET Core Version CLI</title>
-      <link>https://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version/</link>
+      <link>https://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version.1/</link>
       <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>https://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version/</guid>
+      <guid>https://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version.1/</guid>
       <description>
 
 &lt;h2 id=&#34;i-recently-downloaded-and-upgraded-to-net-core-1-1-0-which-comes-along-with-updated-cli-tools-1-0-0-preview3-004056&#34;&gt;I recently downloaded and upgraded to &lt;code&gt;.NET Core 1.1.0&lt;/code&gt; which comes along with updated CLI tools, &lt;code&gt;1.0.0-preview3-004056&lt;/code&gt;.&lt;/h2&gt;
