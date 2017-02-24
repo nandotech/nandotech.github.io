@@ -8,8 +8,56 @@
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
-    <lastBuildDate>Thu, 19 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Feb 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.nandotech.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Learning From Failure</title>
+      <link>https://blog.nandotech.com/post/2017-02-23-learning-from-failure/</link>
+      <pubDate>Thu, 23 Feb 2017 00:00:00 +0000</pubDate>
+      <author>info@nandotech.com (Fernando Rodriguez)</author>
+      <guid>https://blog.nandotech.com/post/2017-02-23-learning-from-failure/</guid>
+      <description>
+
+&lt;h2 id=&#34;the-last-month-or-so-has-easily-been-the-most-challenging-trying-time-of-my-life&#34;&gt;The last month or so has easily been the most challenging, trying time of my life.&lt;/h2&gt;
+
+&lt;p&gt;I think I saw the writing on the wall long ago, I just refused to accept it. After almost 2 years being a completely independent entity (without me consulting full-time), I had to make the incredibly difficult decision of shuttering &lt;a href=&#34;https://www.nandotech.com&#34;&gt;NandoTech, Inc&lt;/a&gt; operations (new business/projects) and taken on a new full-time consulting position for who was already our largest client by size &amp;amp; volume.&lt;/p&gt;
+
+&lt;p&gt;Long story short, it became quite clear that our business plan was not working. I dug myself deeper and deeper into a hole of personal debt that I invested into the business because I always expected we would finally be able to turn that corner into significant profitability.  I kept assuming we would get that big client or new contract that ultimately brought us out of the red.&lt;/p&gt;
+
+&lt;p&gt;As we all know, assumptions and expectations that are not anchored in fact are truly better described as &amp;ldquo;wishful thinking&amp;rdquo;. Beyond all this, we also had a sort of &amp;ldquo;pivot&amp;rdquo; that we never fully committed to, yet we did essentially abandon our previous model. It seems like over time rather than increase our sources of income, we managed to decrease the number of paying customers. Another pretty well known fact: if your startup stops growing, &lt;em&gt;then you&amp;rsquo;re not really a startup anymore&lt;/em&gt; and you might be well served reevaluating your position.&lt;/p&gt;
+
+&lt;p&gt;Once again, none of this came as an easy decision or no-brainer. First of all, admitting failure and being able to pick yourself back up takes some backbone. Especially when the admission means people will lose jobs and you haven&amp;rsquo;t really figured out what it means to you personally. The time when it was all too heavy to shoulder though.&lt;/p&gt;
+
+&lt;p&gt;This post won&amp;rsquo;t be a breakdown of any business model or even a cursory analysis of the business and what happened. This is really more of an announcement post and perhaps even a little catharsis for me. Moreover, none of that above really matters.&lt;/p&gt;
+
+&lt;p&gt;What really matters is that we treated our outgoing employees with respect. It really matters that I embrace this &lt;em&gt;failure&lt;/em&gt; for what it is and most importantly &lt;strong&gt;learn from it&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Speaking of learning: I think the single greatest lesson I learned as CEO of NandoTech is a very simple one, maybe even one that I should have foreseen and we wouldn&amp;rsquo;t be in this position. I&amp;rsquo;ve learned that &lt;em&gt;you can&amp;rsquo;t run a startup by yourself&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sure, it was easy to be a 1 man consulting firm and running my business by myself.  The moment you bring other people into it and start taking on clients and attempting to grow, you need to be prepared to ask for and receive help.  Not to mention, pay for it.&lt;/p&gt;
+
+&lt;p&gt;As the CEO I tried to do entirely too much, when my greatest asset and ability was hiring people smarter than myself that I could delegate tasks to.  At the same time, I did not want to be the travelling CEO that just sells the product&amp;ndash;I still wanted to get my hands dirty programming.&lt;/p&gt;
+
+&lt;p&gt;The second single huge mistake that affected us negatively was my (incredibly stupid) decision to bootstrap the business completely while the revenue did not cover expenses.  This meant I was taking on significant personal debt just in order to keep the business afloat.  Naturally this caused incredible stress and eventually the house of cards collapsed in on itself. If I&amp;rsquo;m ever in the position to start a startup again, there&amp;rsquo;s a few things I&amp;rsquo;d recommend to any would be CEO:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ask for help if you need it.  Get a mentor.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t (unless you&amp;rsquo;re rich) attempt to run the business out of your own pocket.&lt;/li&gt;
+&lt;li&gt;Delegate. As a manager, dealing with people and getting them to work for you is key.&lt;/li&gt;
+&lt;li&gt;Hire people to fill the roles where you are weak and trust them to do their jobs&lt;/li&gt;
+&lt;li&gt;Have at least 6 months of runway in the bank.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Luckily, our industry remains in extremely high demand and there is no shortage of companies searching for talented developers.  I am personally going back to being the 1-man consulting firm legally&amp;ndash;but technically I am taking a &amp;ldquo;full-time&amp;rdquo; position with one of our clients. I&amp;rsquo;ve been here 2 weeks and am just settling in; I must say though, my stress level right now is at an all-time low. Even though we have &lt;em&gt;several&lt;/em&gt; projects in the works and I&amp;rsquo;ve put myself back in a position where I am the only &amp;ldquo;go-to&amp;rdquo; tech person&amp;hellip;that&amp;rsquo;s exactly it&amp;hellip;I am the tech person. My role is clearly defined and I know what to expect. As the CEO of my startup this was hardly ever the case.&lt;/p&gt;
+
+&lt;p&gt;To quote &lt;a href=&#34;http://amzn.to/2lfBTNh&#34;&gt;Ben Horowitz&amp;rsquo;s&lt;/a&gt; &lt;a href=&#34;http://amzn.to/2mjdc3p&#34;&gt;The Hard Thing About Hard Things&lt;/a&gt;, &amp;ldquo;Just when you think that there are things you can count on in the business, you will quickly find that the sky is purple. Deal with it.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Perhaps next time I will be prepared. Until then, a lesson learned.&lt;/p&gt;
+
+&lt;p&gt;Keep coming back for more blog posts ;).&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>A File Upload API with Nancy, .NET Core in a Shockingly Small Amount of Code</title>
@@ -2209,32 +2257,6 @@ CREATE TABLE [dbo].[Sales](
 &lt;p&gt;You might be wondering, what changed?  I put my PRIORITIES over my FEELINGS.  Thanks to the wonders of technology: &lt;em&gt;I shut down the Slack channel and deactivated my friend&amp;rsquo;s slack account&lt;/em&gt;.  He no longer has the ability to distract us while we&amp;rsquo;re working or frustrate me with questions that I must impulsively answer.  Impulsive in that I tended to overreact, so I  had to change the dynamic of communication.&lt;/p&gt;
 
 &lt;p&gt;Our relationship has never been better.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Going From Zero to One</title>
-      <link>https://blog.nandotech.com/post/2016-02-27-going-from-zero-to-one/</link>
-      <pubDate>Sat, 27 Feb 2016 00:00:00 +0000</pubDate>
-      <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>https://blog.nandotech.com/post/2016-02-27-going-from-zero-to-one/</guid>
-      <description>&lt;p&gt;Chances are I’m also not the first person you’ve heard this from, either. This is one of the very few books that truly is a must-read for anyone who calls themselves a business owner, entrepreneur or anyone even considering the prospect of it.&lt;/p&gt;
-
-&lt;p&gt;Turns out my Amazon Prime subscription came with a free few Audible credits. Naturally, the temptation of free being too much to resist, I grabbed a copy of Peter Thiel’s Zero to One.
-Peter Thiel co-founded PayPal in 1998 with Max Levchin and later Elon Musk and served as its CEO before going on to co-found Palantir and many other successful investments and ventures.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1600/0*xYzzIwDiflb5ndSD.jpg&#34; alt=&#34;Zero to One&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I listened to the entire book in the last 30 hours and am preparing myself for a second listen. To say that Mr. Thiel provides sage advice to any entrepreneur or businessperson considering it is a gross understatement. Some of what you read (hear?) may sound a bit grandiose, but the author manages to have these great visions always be firmly rooted in really simple fundamental truths.&lt;/p&gt;
-
-&lt;p&gt;The book opens posing the contrarian question that he poses at every interview he has, “What very important truth do very few people agree with you on?”&lt;/p&gt;
-
-&lt;p&gt;Think about it. At once, the question asks you to identify an important truth (daunting, on its own) while adding that very few people agree with you on it. Outright asking someone to voice what is inherently an unpopular opinion by definition can be an uncomfortable question to ask. But an important one nonetheless.
-Peter Thiel and Blake Masters provide us examples of good and bad answers to this question, as well as their own responses. Mr. Thiel postulates that monopolies are good for business while perfect competition stifles it. Something naturally opposed to what we are taught our entire lives.&lt;/p&gt;
-
-&lt;p&gt;My answer? We are on the verge of having a technically illiterate generation if we do not begin to close the tech skills gap immediately and teach computer programming as a core subject beginning in grade school. I haven’t exactly polled it. Does that qualify as unpopular? Is the idea that today’s system of education is failing our youth not something many people would agree with me on? I’m not sure.&lt;/p&gt;
-
-&lt;p&gt;There’s one thing I am sure of. We must go from Zero to One.&lt;/p&gt;
 </description>
     </item>
     
