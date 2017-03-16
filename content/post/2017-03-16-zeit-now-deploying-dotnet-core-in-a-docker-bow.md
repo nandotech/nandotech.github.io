@@ -18,7 +18,7 @@ To make matters worse, the industry definition of [_"DevOps"_](https://en.wikipe
 
 Like a breath of fresh air, [ZEIT](https://zeit.co) is a cloud service that allows near-mindless deployment of `javascript` & `node.js` apps.  Much thanks probably also belongs to [Scott Hanselman](https://twitter.com/shanselman) and his ever-tinkering soul who published ["ZEIT now deployments of open source ASP.NET Core web apps with Docker"](https://www.hanselman.com/blog/ZEITNowDeploymentsOfOpenSourceASPNETCoreWebAppsWithDocker.aspx) yesterday and I was immediately intrigued.  Since Zeit Now supports [Docker](https://docker.com), then why not [.NET Core](https://dot.net)?
 
-In the blog post, Scott (with help from friend [Glenn Cordron](https://twitter.com/condrong?lang=en)) walks you through from creating a fresh ASP.NET Core Web App using the `dotnet cli`.  Next, it is almost embarassingly simple to see him 
+In the blog post, Scott (with help from friend [Glenn Condron](https://twitter.com/condrong?lang=en)) walks you through from creating a fresh ASP.NET Core Web App using the `dotnet cli`.  Next, it is almost embarassingly simple to see him 
 
 * run a `dotnet restore`
 * create a valid `Dockerfile`
@@ -104,6 +104,6 @@ Here is the exact same app again, but debugging locally (ignoring our `Dockerfil
 
 ### Now go on, hack and be Merry.
 
-I hope some part of this was helpful, I personally want to thank [Scott Hanselman](https://twitter.com/shanselman) and [Glenn Cordron](https://twitter.com/condrong) for their tinkering and getting this to work! This has not only helped me overall understand the concept and inner workings with regard to [Docker](https://docker.com), but it also exposed me to an awesome service & host in [ZEIT](https://zeit.co) that I immediately fell in love with!
+I hope some part of this was helpful, I personally want to thank [Scott Hanselman](https://twitter.com/shanselman) and [Glenn Condron](https://twitter.com/condrong) for their tinkering and getting this to work! This has not only helped me overall understand the concept and inner workings with regard to [Docker](https://docker.com), but it also exposed me to an awesome service & host in [ZEIT](https://zeit.co) that I immediately fell in love with!
 
 Now that I've completed that diversion--back to writing the **core functionality** for this API & app I'm supposed to be working on.
