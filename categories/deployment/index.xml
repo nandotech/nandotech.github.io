@@ -25,7 +25,7 @@
 
 &lt;p&gt;Like a breath of fresh air, &lt;a href=&#34;https://zeit.co&#34;&gt;ZEIT&lt;/a&gt; is a cloud service that allows near-mindless deployment of &lt;code&gt;javascript&lt;/code&gt; &amp;amp; &lt;code&gt;node.js&lt;/code&gt; apps.  Much thanks probably also belongs to &lt;a href=&#34;https://twitter.com/shanselman&#34;&gt;Scott Hanselman&lt;/a&gt; and his ever-tinkering soul who published &lt;a href=&#34;https://www.hanselman.com/blog/ZEITNowDeploymentsOfOpenSourceASPNETCoreWebAppsWithDocker.aspx&#34;&gt;&amp;ldquo;ZEIT now deployments of open source ASP.NET Core web apps with Docker&amp;rdquo;&lt;/a&gt; yesterday and I was immediately intrigued.  Since Zeit Now supports &lt;a href=&#34;https://docker.com&#34;&gt;Docker&lt;/a&gt;, then why not &lt;a href=&#34;https://dot.net&#34;&gt;.NET Core&lt;/a&gt;?&lt;/p&gt;
 
-&lt;p&gt;In the blog post, Scott (with help from friend &lt;a href=&#34;https://twitter.com/condrong?lang=en&#34;&gt;Glenn Cordron&lt;/a&gt;) walks you through from creating a fresh ASP.NET Core Web App using the &lt;code&gt;dotnet cli&lt;/code&gt;.  Next, it is almost embarassingly simple to see him&lt;/p&gt;
+&lt;p&gt;In the blog post, Scott (with help from friend &lt;a href=&#34;https://twitter.com/condrong?lang=en&#34;&gt;Glenn Condron&lt;/a&gt;) walks you through from creating a fresh ASP.NET Core Web App using the &lt;code&gt;dotnet cli&lt;/code&gt;.  Next, it is almost embarassingly simple to see him&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;run a &lt;code&gt;dotnet restore&lt;/code&gt;&lt;/li&gt;
@@ -110,7 +110,7 @@ COPY $source .
 
 &lt;h3 id=&#34;now-go-on-hack-and-be-merry&#34;&gt;Now go on, hack and be Merry.&lt;/h3&gt;
 
-&lt;p&gt;I hope some part of this was helpful, I personally want to thank &lt;a href=&#34;https://twitter.com/shanselman&#34;&gt;Scott Hanselman&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/condrong&#34;&gt;Glenn Cordron&lt;/a&gt; for their tinkering and getting this to work! This has not only helped me overall understand the concept and inner workings with regard to &lt;a href=&#34;https://docker.com&#34;&gt;Docker&lt;/a&gt;, but it also exposed me to an awesome service &amp;amp; host in &lt;a href=&#34;https://zeit.co&#34;&gt;ZEIT&lt;/a&gt; that I immediately fell in love with!&lt;/p&gt;
+&lt;p&gt;I hope some part of this was helpful, I personally want to thank &lt;a href=&#34;https://twitter.com/shanselman&#34;&gt;Scott Hanselman&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/condrong&#34;&gt;Glenn Condron&lt;/a&gt; for their tinkering and getting this to work! This has not only helped me overall understand the concept and inner workings with regard to &lt;a href=&#34;https://docker.com&#34;&gt;Docker&lt;/a&gt;, but it also exposed me to an awesome service &amp;amp; host in &lt;a href=&#34;https://zeit.co&#34;&gt;ZEIT&lt;/a&gt; that I immediately fell in love with!&lt;/p&gt;
 
 &lt;p&gt;Now that I&amp;rsquo;ve completed that diversion&amp;ndash;back to writing the &lt;strong&gt;core functionality&lt;/strong&gt; for this API &amp;amp; app I&amp;rsquo;m supposed to be working on.&lt;/p&gt;
 </description>
