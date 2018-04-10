@@ -27,17 +27,21 @@ So, I went ahead with searching for resources that provide some more practical e
 
 All that being said, without further adieu, below is a listing of [Go](https://golang.org) resources.  Books, blogs, conference talks, videos and some practical coding exercises (some with and without solutions) that I have found helpful, are all included.
 
+## P.S. I will periodically update this list as I come across other resources available for Go and find other things that have helped me in my quest.
+
 ### Books:
 
 1. [Go In Action](https://amzn.to/2H79KGp) by [William Kennedy](https://twitter.com/wkennedy)
 2. [Go Web Programminmg](https://amzn.to/2JyzREG) by Sau Cheong Chang
 3. [The Little Go Book](https://amzn.to/2JyzREG) by Karl Seguin
+4. [An Introduction to Programming in Go](https://www.golang-book.com/books/intro) by [Caleb Doxsey](https://github.com/calebdoxsey)
+5. [Go Internals](https://github.com/teh-cmc/go-internals) by [Clement Rey](https://github.com/teh-cmc)
 
 ### Blogs:
 
 1. [The Go Programming Language](https://blog.golang.org/) 
 2. [The Acme of Foolishness](https://dave.cheney.net) by [Dave Cheney](https://twitter.com/davecheney)
-3. [GO, The Unwritten Parts](https://rakyll.org/) by [Rakyll](https://twitter.com/rakyll)
+3. [Go, The Unwritten Parts](https://rakyll.org/) by [Rakyll](https://twitter.com/rakyll)
 4. [Ardan Labs Blog](https://www.ardanlabs.com/blog/)
 
 ### Videos (Series & Conference Talks)
@@ -51,3 +55,7 @@ All that being said, without further adieu, below is a listing of [Go](https://g
 
 1. [Gophercises](https://gophercises.com) by [Jon Calhoun](https://twitter.com/@joncalhoun)
 2. [GoTime FM Podcast](https://gotime.fm) with [Carlisia Pinto](https://twitter.com/carlisia), [Brian Ketelsen](https://twitter.com/bketelsen), [Erik St Martin](https://twitter.com/erikstmartin) and [Adam Stacoviak](https://twitter.com/adamstac)
+3. [Go Data Structures and Algorithms](https://github.com/floyernick/Data-Structures-and-Algorithms) by [Mykyta Paliienko](https://github.com/floyernick)
+4. [Go Playground](https://play.golang.org/)
+5. [A Tour of Go](https://tour.golang.org/welcome/1)
+6. [Exercism.io Go Exercises](http://exercism.io/languages/go/exercises)
