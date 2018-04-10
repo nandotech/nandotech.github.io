@@ -32,7 +32,7 @@ All that being said, without further adieu, below is a listing of [Go](https://g
 ### Books:
 
 1. [Go In Action](https://amzn.to/2H79KGp) by [William Kennedy](https://twitter.com/wkennedy)
-2. [Go Web Programminmg](https://amzn.to/2JyzREG) by Sau Cheong Chang
+2. [Go Web Programming](https://amzn.to/2JyzREG) by Sau Cheong Chang
 3. [The Little Go Book](https://amzn.to/2JyzREG) by Karl Seguin
 4. [An Introduction to Programming in Go](https://www.golang-book.com/books/intro) by [Caleb Doxsey](https://github.com/calebdoxsey)
 5. [Go Internals](https://github.com/teh-cmc/go-internals) by [Clement Rey](https://github.com/teh-cmc)
