@@ -9,7 +9,9 @@
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Fri, 07 Oct 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.nandotech.com/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.nandotech.com/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Angular 2 Crash Course</title>
@@ -17,140 +19,8 @@
       <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2016-10-07-angular-crash-course/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;PSA: Skip to the &lt;strong&gt;TL;DR&lt;/strong&gt; for list of resources&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;so-due-to-forces-of-nature-beyond-our-control-specifically-hurricane-matthew&#34;&gt;So, due to forces of nature beyond our control (specifically Hurricane Matthew),&lt;/h2&gt;
-
-&lt;p&gt;the &lt;a href=&#34;http://ftlauderdale.ng-learn.com&#34;&gt;Angular 2 Workshop&lt;/a&gt; we were registered for this Thursday &amp;amp; Friday, October 6th &amp;amp; 7th with both &lt;a href=&#34;https://johnpapa.net/&#34;&gt;John Papa&lt;/a&gt; and &lt;a href=&#34;https://www.codewithdan.com&#34;&gt;Dan Wahlin&lt;/a&gt; was cancelled. Thankfully for us South Floridians, &lt;a href=&#34;http://www.nytimes.com/2016/10/07/us/hurricane-matthew.html?_r=0&#34;&gt;Hurricane Matthew&lt;/a&gt; narrowly avoided a direct hit with us southernmost residents and the tri-county area of Dade, Broward &amp;amp; Palm Beach was mostly unaffected.&lt;/p&gt;
-
-&lt;h4 id=&#34;that-said-we-were-incredibly-lucky-and-many-residents-in-the-central-and-northern-regions-of-our-state-are-not-nearly-as-lucky-areas-near-and-around-daytona-beach-fl-i-believe-suffered-the-brunt-of-it-and-our-best-wishes-are-with-the-most-affected-communities&#34;&gt;That said, we were incredibly lucky, and many residents in the central and northern regions of our state are not nearly as lucky.  Areas near and around Daytona Beach, FL I believe suffered the brunt of it and our best wishes are with the most affected communities.&lt;/h4&gt;
-
-&lt;p&gt;That&amp;rsquo;s not even saying anything in regards to the rest of the Carribean like Cuba, Haiti &amp;amp; Jamaica who suffered through the grand &lt;a href=&#34;https://weather.com/news/news/hurricane-matthew-haiti-latest-news&#34;&gt;majority of Matthew&amp;rsquo;s wrath&lt;/a&gt; and will be in recovery mode for quite a while.  I wish I knew a good charity, because this is where I would link and recommend some.  If someone cares to enlighten me, I will update this post.&lt;/p&gt;
-
-&lt;h2 id=&#34;workshop-or-not&#34;&gt;&lt;strong&gt;Workshop Or Not:&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;Our &lt;em&gt;biggest issue&lt;/em&gt; and concern with missing out on this conference is really that we were 100% &lt;strong&gt;planning on using &lt;a href=&#34;https://angular.io&#34;&gt;Angular 2&lt;/a&gt; as the front end framework&lt;/strong&gt; for our &lt;em&gt;Project Armadillo&lt;/em&gt;.  I also even have a couple of small WebAPI apps fleshed out with no front end in &lt;em&gt;anticipation&lt;/em&gt;, awaiting our 2nd such workshop with John &amp;amp; Dan (we saw them during Fall 2015 &lt;a href=&#34;http://www.DevIntersection.com&#34;&gt;DevIntersection&lt;/a&gt;) before getting started and really digging into the framework.&lt;/p&gt;
-
-&lt;p&gt;The aforementioned cancellation due to &lt;em&gt;Hurricane Matthew&lt;/em&gt; has now put us at quite a crossroads with a bit of a decision to make.  To a certain degree, absolutely nothing has changed and we could still use Angular 2. An alternative (which appeals less to me, but more to my coding partner) is to simply use the &lt;a href=&#34;https://dot.net&#34;&gt;ASP.NET Core&lt;/a&gt; Razor View Engine and avoid messing with more new frameworks, technologies as well as moving parts.&lt;/p&gt;
-
-&lt;p&gt;We were extremely excited (especially with Angular 2 Final&amp;rsquo;s recent release) to get Dan &amp;amp; John&amp;rsquo;s crash course, and more importantly, have access to these two of the community&amp;rsquo;s foremost experts on our entire technology stack. This made us confident that even with my partner&amp;rsquo;s minimal Angular exposure we would be able to quickly get it together.&lt;/p&gt;
-
-&lt;p&gt;Now this all isn&amp;rsquo;t going to happen, and it does no one any good to cry over spilled milk&amp;hellip;So the crash course is up to us. What follows is my &lt;strong&gt;&amp;ldquo;Getting Started w/ Angular 2 Crash Course&amp;rdquo;&lt;/strong&gt;, or my compilation of resources, walkthroughs, blog posts &amp;amp; some paid content like &lt;a href=&#34;https://www.pluralsight.com&#34;&gt;Pluralsight Videos&lt;/a&gt;, &lt;a href=&#34;http://www.codeschool.com&#34;&gt;Code School&lt;/a&gt; and anything else I could find to help get started with Angular 2&amp;rsquo;s Final release.&lt;/p&gt;
-
-&lt;h1 id=&#34;tl-dr&#34;&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;h2 id=&#34;getting-started-w-angular-2-crash-course&#34;&gt;&lt;strong&gt;&lt;strong&gt;Getting Started w/ Angular 2 Crash Course&lt;/strong&gt;&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;ultimate-compilation&#34;&gt;&lt;strong&gt;Ultimate compilation&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;The Basics/Getting Started&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;As web developers, we will assume some familiarity with JavaScript&lt;/li&gt;
-&lt;li&gt;Angular 2 has gone the way of many frameworks and chosen to leverage &lt;a href=&#34;http://typescriptlang.org&#34;&gt;TypeScript&lt;/a&gt;, encouraging you to use it to build your ng2 apps.&lt;/li&gt;
-&lt;li&gt;First order of business is familiarizing yourself with TypeScript, which I will not detail too much here, but the main documentation @ &lt;a href=&#34;http://www.typescriptlang.org/docs/tutorial.html&#34;&gt;http://www.typescriptlang.org/docs/tutorial.html&lt;/a&gt; is very good and thorough&lt;/li&gt;
-&lt;li&gt;Get your feet wet and use the &lt;a href=&#34;http://www.typescriptlang.org/play/index.html&#34;&gt;TypeScript Playground&lt;/a&gt; to see how some TypeScript will transpile down into ES5 JavaScript.&lt;/li&gt;
-&lt;li&gt;If you know some TypeScript and are familiar with web constructs, start below&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Introducing Angular 2&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Again here we&amp;rsquo;ll start at the &lt;a href=&#34;https://angular.io/docs/ts/latest/quickstart.html#!#prereq&#34;&gt;Official Angular 2 Site&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The link above is to the Angular 2 quickstart
-
-&lt;ul&gt;
-&lt;li&gt;This guide takes you through Creating your project, your first component, bootstrapping your application, installing all your dependencies and getting up and running&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;This is an awesome start, but for a deeper understanding of the concepts and the framework as a whole, check these out:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Pluralsight&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://app.pluralsight.com/library/courses/angular-2-getting-started/table-of-contents&#34;&gt;Angular 2: Getting Started&lt;/a&gt; by &lt;a href=&#34;https://www.twitter.com/DeborahKurata&#34;&gt;Deborah Kurata&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://app.pluralsight.com/library/courses/angular-2-first-look/table-of-contents&#34;&gt;Angular 2 First Look&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/JohnPapa&#34;&gt;John Papa&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://app.pluralsight.com/library/courses/angular-2-first-look/table-of-contents&#34;&gt;Play By Play: Angular2/RxJS/HTTP&lt;/a&gt; by John Papa &amp;amp; &lt;a href=&#34;https://twitter.com/DanWahlin&#34;&gt;Dan Wahlin&lt;/a&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Code School&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.codeschool.com/courses/accelerating-through-angular-2&#34;&gt;Accelerating Through Angular 2&lt;/a&gt; by &lt;a href=&#34;https://www.twitter.com/greggpollack&#34;&gt;Gregg Pollack&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Egghead.io&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://egghead.io/technologies/angular2&#34;&gt;Angular 2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Blogs/Resources&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://vsavkin.com/writing-angular-2-in-typescript-1fa77c78d8e8#.szbkd4gw4&#34;&gt;Why TypeScript?&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/victorsavkin&#34;&gt;Victor Savkin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://vsavkin.com/the-core-concepts-of-angular-2-c3d6cbe04d04#.mcjjar9sc&#34;&gt;Core Concepts of Angular 2&lt;/a&gt; by Victor Savkin&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.thoughtram.io/angular/2016/09/15/angular-2-final-is-out.html&#34;&gt;Angular 2 Final Resource List&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/PascalPrecht&#34;&gt;Pascal Precht&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/timjacobi/angular2-education&#34;&gt;Angular 2 Education Curated List&lt;/a&gt; by &lt;a href=&#34;https://github.com/timjacobi/&#34;&gt;Tim Jacobi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://angular.io/docs/ts/latest/guide/style-guide.html&#34;&gt;Angular 2 Style Guide&lt;/a&gt; by John Papa&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2&#34;&gt;Angular 2 Snippets by John Papa&lt;/a&gt; or &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=danwahlin.angular2-snippets&#34;&gt;by Dan Wahlin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Blogs with consistently awesome ng2 content:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.vsavkin.com&#34;&gt;Victor Savkin&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://johnpapa.net&#34;&gt;John Papa&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.thoughtram.io/&#34;&gt;Pascal Precht&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.codewithdan.com&#34;&gt;Dan Wahlin&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://angularjs.blogspot.com/&#34;&gt;AngularJS Blog&lt;/a&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Putting it all together&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://angular.io/docs/ts/latest/tutorial/&#34;&gt;Tutorial: Angular 2 Docs Tour of Heroes&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Directly from the ng2 team, this tutorial moves pretty quick but covers all the basics you need to get up and running up through some Routing and calling HTTP services.&lt;/li&gt;
-&lt;li&gt;This does expect you have some prior knowledge of &lt;a href=&#34;https://typescriptlang.org&#34;&gt;TypeScript&lt;/a&gt; and at have gotten through the &lt;a href=&#34;https://angular.io/docs/ts/latest/quickstart.html&#34;&gt;Angular 2 Quick Start&lt;/a&gt; picking up where it left off&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Slides: &lt;a href=&#34;http://codewithdan.me/angular2-aspnet-core&#34;&gt;Angular 2 and ASP.NET Core&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Many thanks and praises to the awesome &lt;a href=&#34;https://twitter.com/DanWahlin&#34;&gt;Dan Wahlin&lt;/a&gt; for these Slides&lt;/li&gt;
-&lt;li&gt;Helps to understand some of the &amp;ldquo;guts&amp;rdquo; or innards of Angular 2 in a basic visual way as well as providing real-world example and use creating an app that calls a real web service&lt;/li&gt;
-&lt;li&gt;Along with his quickstart projects, I found most useful his repo (fully updated to latest versions) of an &lt;a href=&#34;https://dot.net&#34;&gt;ASP.NET Core&lt;/a&gt; WebAPI and fully functional Angular 2 front end that includes examples of all types of requests&lt;/li&gt;
-&lt;li&gt;Full repo: &lt;a href=&#34;https://github.com/DanWahlin/CoreWebAPIAndAngular&#34;&gt;https://github.com/DanWahlin/CoreWebAPIAndAngular&lt;/a&gt; and just follow the instructions he&amp;rsquo;s provided.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/johnpapa/angular2-go&#34;&gt;Angular2-Go&lt;/a&gt;, a super-simple barebones Angular2 App by John Papa featuring 1 module with 2 routes&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;John Papa&amp;rsquo;s &lt;a href=&#34;https://github.com/johnpapa/angular2-tour-of-heroes&#34;&gt;Tour of Heroes Repo&lt;/a&gt; which has his implementation of the Official Docs Tutorial&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;For those migrating existing 1.x apps, &lt;a href=&#34;https://twitter.com/josepheames&#34;&gt;Joseph Eames&lt;/a&gt; Pluralsight course on &lt;a href=&#34;https://app.pluralsight.com/courses/migrating-applications-angular-2&#34;&gt;Migrating to Angular 2&lt;/a&gt; is probably the best resource I have come across.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Also, &lt;a href=&#34;https://dev.to/adventuresinangular/112-aia-upgrading-from-angular-1x-to-angular-2&#34;&gt;Adventures in Angular Podcast&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.sitepoint.com/angular-2-tutorial/&#34;&gt;Creating a CRUD App with Angular CLI&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/toddmotto&#34;&gt;Todd Motto&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/jvandemo&#34;&gt;Jurgen Van der Moere&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;phew-that-was-longer-than-expected&#34;&gt;Phew, That was longer than expected.&lt;/h1&gt;
-
-&lt;p&gt;Nonetheless, I feel like you can never have too many &lt;strong&gt;good examples&lt;/strong&gt; or posts showing different styles of implementations of Angular 2. For our part, we will likely read Victor Savkin&amp;rsquo;s listed post above and then cherry-pick some of the resources in the &amp;ldquo;resource list&amp;rdquo;-style blog posts to round out our knowledge.&lt;/p&gt;
-
-&lt;p&gt;From there, we move into the &lt;strong&gt;&amp;ldquo;Putting it All Together&amp;rdquo;&lt;/strong&gt; section and go through some of the code samples and best practices. If you&amp;rsquo;ve taken the time to understand all the Angular 2 concepts thus far you will be well on your way. Part of &lt;em&gt;putting it all together&lt;/em&gt; also means starting to put together your own modules/components and just jumping in to get your feet wet.&lt;/p&gt;
-
-&lt;p&gt;I am a strong proponent of clean coding and best practices, but I have also found that the greatest value and the most deeply ingrained learning takes place when you are implementing your own solutions.&lt;/p&gt;
-
-&lt;p&gt;Immediately after getting what I think I need from the &lt;strong&gt;Putting it All Together&lt;/strong&gt; section&amp;ndash;next step is we plan to use Angular 2 to build a simple front end dashboard for an &lt;a href=&#34;https://dot.net&#34;&gt;ASP.NET Core&lt;/a&gt; API project running with the &lt;a href=&#34;http://www.nancyfx.org&#34;&gt;NancyFx&lt;/a&gt; framework.  Using RxJS &amp;amp; Observables + Http in Angular 2 (as per some of the resources above) I&amp;rsquo;m hoping to provide a rich SPA showing some key performance indicators in real time, polling data from 2 disparate web-based systems.&lt;/p&gt;
-</description>
+      <description>PSA: Skip to the TL;DR for list of resources
+So, due to forces of nature beyond our control (specifically Hurricane Matthew), the Angular 2 Workshop we were registered for this Thursday &amp;amp; Friday, October 6th &amp;amp; 7th with both John Papa and Dan Wahlin was cancelled. Thankfully for us South Floridians, Hurricane Matthew narrowly avoided a direct hit with us southernmost residents and the tri-county area of Dade, Broward &amp;amp; Palm Beach was mostly unaffected.</description>
     </item>
     
   </channel>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Books on NandoTech</title>
-    <link>https://blog.nandotech.com/tags/books/</link>
-    <description>Recent content in Books on NandoTech</description>
+    <title>Go on NandoTech</title>
+    <link>https://blog.nandotech.com/tags/go/</link>
+    <description>Recent content in Go on NandoTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://blog.nandotech.com/tags/books/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.nandotech.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,15 +20,6 @@
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2018-04-09-learning-go-resources-and-my-journey/</guid>
       <description>It has been an awfully long time in between blog posts. The past year has resulted in a slew of unforeseen changes that I would never have imagined. After my post regarding Learning From Failure, I was ultimately forced to make an extremely tough decision and effectively shutter NandoTech, Inc. as an independent entity. The company was absorbed by a client whom also provided me with full-time work. Since then, life has been quite the whirlwind and rollercoaster ride&amp;ndash;such that I realize my last blog post was over a year ago.</description>
-    </item>
-    
-    <item>
-      <title>Holiday Reading List</title>
-      <link>https://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</link>
-      <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
-      <author>info@nandotech.com (Fernando Rodriguez)</author>
-      <guid>https://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</guid>
-      <description>These days, it seems like there are more and more people out there &amp;ldquo;learning to code&amp;rdquo;. TL;DR - Book list is at the bottom. Every day there is another boot camp, code school, or one of many scores of opportunistic business ventures opening up. Many claim to not only teach you this amazing magical skill that is programming, but they will also magically imbue you with the personality needed to get past the HR Manager.</description>
     </item>
     
   </channel>

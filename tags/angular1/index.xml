@@ -9,7 +9,9 @@
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Sat, 11 Jun 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.nandotech.com/tags/angular1/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.nandotech.com/tags/angular1/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Getting Started with AngularJS 1.x</title>
@@ -17,24 +19,9 @@
       <pubDate>Sat, 11 Jun 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2016-06-11-getting-started-angularjs/</guid>
-      <description>&lt;p&gt;I recently took the Pluralsight course AngularJS: Get Started by Scott Allen.&lt;/p&gt;
-
-&lt;p&gt;If you want the tl;dr early, it’s totally worth it and really starts to give you a pretty decent working knowledge of AngularJS, and what’s better yet: you build an actual working application in the process.&lt;/p&gt;
-
-&lt;p&gt;I did my own tweaks with the UI, minor deviations as well as selecting my own theme, but otherwise it’s pretty cool to see just how easy it is to create beautiful AngularJS apps tied to an API that turns standard JSON responses with little heavy lifting. Powerful built-in data binding and directives like ng-repeat have me sold on Angular.&lt;/p&gt;
-
-&lt;p&gt;Check out my Plunker with the working “Github Viewer” application. &lt;a href=&#34;http://plnkr.co/vmqj8K&#34;&gt;Link to plnkr.co&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Also available on GitHub, &lt;a href=&#34;https://github.com/nandotech/umgbeta&#34;&gt;https://github.com/nandotech/umgbeta&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Launches a page where you type any github username you’d like to look up and returns projects sorted by stars along with the user’s avatar.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1600/0*7h_r_uTlUc68krRf.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You should also be able to view the source code. Feel free to make any comments! Special thanks again to Scott Allen &amp;amp; Pluralsight.&lt;/p&gt;
-
-&lt;p&gt;Even with Angular 2.0 coming, I’ll bear with the growing pains. There’s a bright future ahead for this stack and developing with it is a joy.&lt;/p&gt;
-</description>
+      <description>I recently took the Pluralsight course AngularJS: Get Started by Scott Allen.
+If you want the tl;dr early, it’s totally worth it and really starts to give you a pretty decent working knowledge of AngularJS, and what’s better yet: you build an actual working application in the process.
+I did my own tweaks with the UI, minor deviations as well as selecting my own theme, but otherwise it’s pretty cool to see just how easy it is to create beautiful AngularJS apps tied to an API that turns standard JSON responses with little heavy lifting.</description>
     </item>
     
   </channel>

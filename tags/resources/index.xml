@@ -8,8 +8,19 @@
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
-    <lastBuildDate>Tue, 13 Dec 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.nandotech.com/tags/resources/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.nandotech.com/tags/resources/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning Go--Resources and My Journey</title>
+      <link>https://blog.nandotech.com/post/2018-04-09-learning-go-resources-and-my-journey/</link>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+      <author>info@nandotech.com (Fernando Rodriguez)</author>
+      <guid>https://blog.nandotech.com/post/2018-04-09-learning-go-resources-and-my-journey/</guid>
+      <description>It has been an awfully long time in between blog posts. The past year has resulted in a slew of unforeseen changes that I would never have imagined. After my post regarding Learning From Failure, I was ultimately forced to make an extremely tough decision and effectively shutter NandoTech, Inc. as an independent entity. The company was absorbed by a client whom also provided me with full-time work. Since then, life has been quite the whirlwind and rollercoaster ride&amp;ndash;such that I realize my last blog post was over a year ago.</description>
+    </item>
     
     <item>
       <title>Holiday Reading List</title>
@@ -17,72 +28,7 @@
       <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2016-12-13-holiday-reading-list/</guid>
-      <description>
-
-&lt;h1 id=&#34;these-days-it-seems-like-there-are-more-and-more-people-out-there-learning-to-code&#34;&gt;These days, it seems like there are more and more people out there &amp;ldquo;learning to code&amp;rdquo;.&lt;/h1&gt;
-
-&lt;h4 id=&#34;tl-dr-book-list-is-at-the-bottom&#34;&gt;TL;DR - Book list is at the bottom.&lt;/h4&gt;
-
-&lt;p&gt;Every day there is another boot camp, code school, or one of many scores of opportunistic business ventures opening up. Many claim to not only teach you this amazing magical skill that is programming, but they will also magically imbue you with the personality needed to get past the HR Manager.&lt;/p&gt;
-
-&lt;p&gt;Don&amp;rsquo;t fall for the trap. There are &lt;em&gt;so many&lt;/em&gt; extremely reputable websites out there, free tutorials available, along with tons and tons of amazing blogs, videos and more that are just itching to teach those willing to learn.&lt;/p&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Hearing the WWDC keynote say coding isn&amp;#39;t hard frustrates me. It&amp;#39;s extremely hard. You&amp;#39;re setting beginners up for huge disappointments.&lt;/p&gt;&amp;mdash; Tyler McGinnis (@tylermcginnis33) &lt;a href=&#34;https://twitter.com/tylermcginnis33/status/742431287684694017&#34;&gt;June 13, 2016&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;In my experience, it seems like the most likely candidate to attend a &amp;ldquo;Code School&amp;rdquo;&amp;ndash;or any of these 8 to 12 week &amp;ldquo;Bootcamps&amp;rdquo; where you&amp;rsquo;re supposed to learn everything you need about coding to not only get a job but also be a ninja&amp;ndash;is the aspiring coder with 0 experience and sometimes even lacking technical knowledge. This is an issue, and unfortunately not one that is necessarily the business&amp;rsquo; fault or aim to achieve.&lt;/p&gt;
-
-&lt;p&gt;As &lt;a href=&#34;https://twitter.com/shanselman&#34;&gt;Scott Hanselman&lt;/a&gt; recently posted on his blog, &lt;a href=&#34;http://www.hanselman.com/blog/StopSayingLearningToCodeIsEasy.aspx&#34;&gt;Stop saying learning to code is easy&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Why? Because if you&amp;rsquo;re someone who has spent any amount of time programming, &lt;em&gt;you know better.&lt;/em&gt; Scott mentions this on his blog: specifically landing the argument that when we tell people that programming is &lt;strong&gt;easy&lt;/strong&gt;, what will they think when it gets difficult? And as any &lt;strong&gt;real developer&lt;/strong&gt; can flatly tell you: &lt;em&gt;It will get difficult. Your difficult and my difficult may not be the same. In fact, let&amp;rsquo;s hope they&amp;rsquo;re not. However, NOTHING changes the fact that it WILL GET HARD.&lt;/em&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;When we tell folks - kids or otherwise - that programming is easy, what will they think when it gets difficult? And it will get difficult. That&amp;rsquo;s where people find themselves saying &amp;ldquo;well, I guess I&amp;rsquo;m not wired for coding. It&amp;rsquo;s just not for me.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;Now, to be clear, that may be the case. I&amp;rsquo;m arguing that if we as an industry go around telling everyone that &amp;ldquo;coding is easy&amp;rdquo; we are just prepping folks for self-exclusion, rather than enabling a growing and inclusive community. That&amp;rsquo;s the goal right? Let&amp;rsquo;s get more folks into computers, but let&amp;rsquo;s set their expectations.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&amp;ndash; &lt;a href=&#34;http://www.hanselman.com/blog/StopSayingLearningToCodeIsEasy.aspx&#34;&gt;Scott Hanselman, June 2016&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;That said, I think the best thing any and all developers can do then is to always &lt;strong&gt;always&lt;/strong&gt; &lt;em&gt;always&lt;/em&gt; be working on getting better at your craft. This is what will keep you sharp. Caring about your craft and continuously improving upon your skill set are the only tools we have to combat entropy, thus we must use them.&lt;/p&gt;
-
-&lt;p&gt;For this, nothing beats reading. And I mean nothing. Sure, there are plenty of situations where perhaps coding a sample teaches me a lot more. Sometimes it seems so much easier to just copy &amp;amp; paste in someone else&amp;rsquo;s solution, or drag in a library we know solves the problem.  The question is: &lt;em&gt;At what cost?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Without any further ado &lt;em&gt;(thanks &lt;a href=&#34;http://disq.us/p/1eh3ym3&#34;&gt;Lizard&lt;/a&gt;)&lt;/em&gt;, mark rant end, here is my list of &lt;strong&gt;absolutely required reading&lt;/strong&gt; for any and &lt;em&gt;every&lt;/em&gt; Software Developer out there, in no particular order.  These are all books that I have personally read cover to cover and completely recommend that you do too. Each and every one provided me with new and different insights, all of which have been absolutely invaluable.&lt;/p&gt;
-
-&lt;h3 id=&#34;programming-books&#34;&gt;Programming Books&lt;/h3&gt;
-
-&lt;h4 id=&#34;almost-every-book-on-this-list-except-last-few-are-100-language-agnostic-as-such-the-advice-in-them-can-be-applied-to-all-programming-languages&#34;&gt;Almost every book on this list (except last few) are 100% language agnostic, as such the advice in them can be applied to &lt;em&gt;ALL&lt;/em&gt; programming languages.&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLm0Mg&#34;&gt;Clean Code&lt;/a&gt; by Robert C. Martin&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCPK23&#34;&gt;The Clean Coder&lt;/a&gt; by Robert C. Martin&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLjl5o&#34;&gt;Scrum: The Art of Doing Twice the Work in Half the Time&lt;/a&gt; by Jeff Sutherland &amp;amp; Kent Beck&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLiwt7&#34;&gt;The Pragmatic Programmer&lt;/a&gt; by Andrew Hunt &amp;amp; David Thomas&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLgnOl&#34;&gt;Code Complete: A Practical Handbook of Software Construction&lt;/a&gt; by Steve McConnell&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLhihM&#34;&gt;Code: The Hidden Language of Computer Hardware and Software&lt;/a&gt; by Charles Petzold&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLkXvV&#34;&gt;Soft Skills: The software developer&amp;rsquo;s life manual&lt;/a&gt; by John Sonmez&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLmFxi&#34;&gt;ADTs, Data Structures and Problem Solving with C++&lt;/a&gt; by Larry R Nyhoff&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCUkNy&#34;&gt;Problem Solving with C++&lt;/a&gt; by Walter Savitch&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLm3ba&#34;&gt;C# In Depth&lt;/a&gt; by Jon Skeet&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;books-on-management-entrepreneurship&#34;&gt;Books on Management &amp;amp; Entrepreneurship&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLmAcU&#34;&gt;The Hard Thing About Hard Things&lt;/a&gt; by Ben Horowitz&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLhBJs&#34;&gt;Zero To One: Notes on Startups, or How To Build The Future&lt;/a&gt; by Peter Thiel&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hsU8gK&#34;&gt;How to Fail at Almost Everything and Still Win Big: Kind of the Story of My Life&lt;/a&gt; by Scott Adams&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCQkNh&#34;&gt;Start with Why: How Great Leaders Inspire Everyone to Take Action&lt;/a&gt; by Simon Sinek&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLe0v1&#34;&gt;High Output Management&lt;/a&gt; by Andrew Grove&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCNAiN&#34;&gt;Deep Work: Rules for Focused Success in a Distracted World&lt;/a&gt; by Cal Newport&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hLgTMh&#34;&gt;Work Rules!: Insights from Inside Google That Will Transform How You Live and Lead&lt;/a&gt; by Laszlo Bock&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCUOmQ&#34;&gt;The Obstacle Is the Way: The Timeless Art of Turning Trials into Triumph&lt;/a&gt; by Ryan Holiday&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2ht2yEH&#34;&gt;Pitch Anything: An Innovative Method for Presenting, Persuading, and Winning the Deal&lt;/a&gt; by Oren Klaff&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hope everyone is having a wonderful holiday season! Now that things have calmed down a bit, I will turn back toward blogging as often as possible.  I am very much looking forward to continuing and completing my series of &lt;a href=&#34;https://www.nancyfx.org&#34;&gt;NancyFX&lt;/a&gt;. Beyond that, I take great pleasure in knowing that I may be helping someone solve problems. That being said, &lt;a href=&#34;https://dot.net&#34;&gt;.NET Core&lt;/a&gt; continues development at a breakneck pace and I will do everything I can to keep everyone up to date here.&lt;/p&gt;
-</description>
+      <description>These days, it seems like there are more and more people out there &amp;ldquo;learning to code&amp;rdquo;. TL;DR - Book list is at the bottom. Every day there is another boot camp, code school, or one of many scores of opportunistic business ventures opening up. Many claim to not only teach you this amazing magical skill that is programming, but they will also magically imbue you with the personality needed to get past the HR Manager.</description>
     </item>
     
     <item>
@@ -91,144 +37,7 @@
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2016-11-21-dotnet-core-resources/</guid>
-      <description>
-
-&lt;h2 id=&#34;next-week-i-hope-to-continue-our-series-on-the-nancyfx-http-www-nancyfx-org-framework-for-building-web-applications-for-our-next-post-i-hope-to-cover-routing-as-well-as-passing-arguments-via-query-string-body-and-how-that-all-works-within-nancy&#34;&gt;Next week I hope to continue our series on the &lt;a href=&#34;http://www.nancyfx.org&#34;&gt;NancyFX&lt;/a&gt; framework for building web applications.  For our next post I hope to cover &lt;em&gt;Routing&lt;/em&gt; as well as passing arguments via query string, body and how that all works within &lt;code&gt;Nancy&lt;/code&gt;.&lt;/h2&gt;
-
-&lt;p&gt;As a quick break, this week I&amp;rsquo;ve decided to put together a compilation of &lt;a href=&#34;http://dot.net&#34;&gt;.NET Core resources&lt;/a&gt; that may help anyone at any .NET skill level jump in and find the information they are looking for.  I&amp;rsquo;ll try to cover and include all types of projects, scenarios as well as include a few full-fledged production .NET Core applications that are currently out in the wild &lt;a href=&#34;http://github.com&#34;&gt;and open-source&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;That said, there was &lt;strong&gt;big&lt;/strong&gt; news on the &lt;code&gt;Nancy&lt;/code&gt; front this week, with &lt;a href=&#34;https://twitter.com/NancyFx/status/798953256273772544&#34;&gt;the announcement&lt;/a&gt; coming out that they&amp;rsquo;ve joined the &lt;a href=&#34;https://www.dotnetfoundation.org/&#34;&gt;.NET Foundation&lt;/a&gt;. This is &lt;em&gt;HUGE&lt;/em&gt; and important as it will help push more adoption of the NancyFX library as it provides a level of &amp;ldquo;official&amp;rdquo;-ness with being supported by the foundation.  Otherwise, the .NET Foundation does help projects out some with organization as well as cloud resources, so hopefully this is great news all the way around.&lt;/p&gt;
-
-&lt;h2 id=&#34;this-week-also-brought-us-net-core-1-1-announced-on-the-blog-https-blogs-msdn-microsoft-com-dotnet-2016-11-16-announcing-net-core-1-1&#34;&gt;This week also brought us &lt;code&gt;.NET Core 1.1&lt;/code&gt;, &lt;a href=&#34;https://blogs.msdn.microsoft.com/dotnet/2016/11/16/announcing-net-core-1-1/&#34;&gt;announced on the blog&lt;/a&gt;.&lt;/h2&gt;
-
-&lt;p&gt;Lots of updates and further support added for the runtime, along with some more announcements of groups like &lt;a href=&#34;https://cloudplatform.googleblog.com/2016/11/Google-Cloud-to-join-NET-Foundation-Technical-Steering-Group.html&#34;&gt;Google Cloud&lt;/a&gt; joining the .NET Foundation.&lt;/p&gt;
-
-&lt;h2 id=&#34;all-that-said-on-to-the-resources&#34;&gt;All that said, on to the resources:&lt;/h2&gt;
-
-&lt;h4 id=&#34;first-and-foremost-this-list-borrowed-heavily-from-the-awesome-dotnet-core-https-github-com-thangchung-awesome-dotnet-core-repository-available-on-github-right-now&#34;&gt;First and foremost: this list borrowed heavily from the &lt;a href=&#34;https://github.com/thangchung/awesome-dotnet-core&#34;&gt;awesome-dotnet-core&lt;/a&gt; repository available on github right now.&lt;/h4&gt;
-
-&lt;p&gt;That curated list is maintained by &lt;a href=&#34;https://github.com/thangchung&#34;&gt;Thang Chung&lt;/a&gt; and since I have found many tools and links from that list which is constantly updated, I wanted to provide proper credit.&lt;/p&gt;
-
-&lt;p&gt;Here, I will only include some services, resources &amp;amp; frameworks I am extremely familiar with only, rather than every package possible.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://dot.net&#34;&gt;Microsoft .NET Core Website&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/articles/welcome&#34;&gt;.NET Core Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.asp.net/en/latest/&#34;&gt;ASP.NET Core Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/dotnet/standard&#34;&gt;.NET Standard Repository&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;people-to-follow&#34;&gt;People to follow&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://ardalis.com/blog&#34;&gt;Steve Smith&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.hanselman.com/blog/&#34;&gt;Scott Hanselman&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/DamianEdwards&#34;&gt;Damian Edwards&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/DavidFowl&#34;&gt;David Fowler&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://weblog.west-wind.com/&#34;&gt;Rick Strahl&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.jonathanchannon.com/&#34;&gt;Jonathan Channon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Along with many, many more I&amp;rsquo;ve missed, this is just a cursory list off the top of my head.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;application-frameworks&#34;&gt;Application Frameworks&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/aspnet/core/&#34;&gt;ASP.NET MVC / WebAPI&lt;/a&gt; - ASP.NET Core MVC is a rich framework for building web apps and APIs using the Model-View-Controller design pattern.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.nancyfx.org&#34;&gt;NancyFX&lt;/a&gt; - Nancy is a lightweight, low-ceremony, framework for building HTTP based services on .NET Framework/Core and Mono.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.servicestack.net&#34;&gt;ServiceStack&lt;/a&gt; - Thoughtfully architected, obscenely fast, thoroughly enjoyable web services for all &lt;a href=&#34;https://servicestack.net&#34;&gt;https://servicestack.net&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/OrchardCMS/Orchard2&#34;&gt;Orchard vNext&lt;/a&gt; - Orchard 2, a re-implementation of Orchard CMS in ASP.NET Core.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.nandotech.com/post/2016-10-25-nancyfx-webapi-dapper/&#34;&gt;Building an (awesome) API with NancyFX 2.0 + Dapper&lt;/a&gt; - Plus, dependency injection explained and everything you need to get up and running.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.hanselman.com/blog/ExploringServiceStacksSimpleAndFastWebServicesOnNETCore.aspx&#34;&gt;Exploring ServiceStack&amp;rsquo;s simple and fast web services on .NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.hanselman.com/blog/ExploringAMinimalWebAPIWithNETCoreAndNancyFX.aspx&#34;&gt;Exploring a Minimal WebAPI with .NET Core and NancyFX&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;authentication-authorization&#34;&gt;Authentication &amp;amp; Authorization&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aspnet/Identity&#34;&gt;ASP.NET Identity&lt;/a&gt; - ASP.NET Core Identity is the membership system for building ASP.NET Core web applications, including membership, login, and user data. ASP.NET Core Identity allows you to add login features to your application and makes it easy to customize data about the logged in user.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://identityserver4.readthedocs.io/en/release/&#34;&gt;Identity Server 4&lt;/a&gt; - IdentityServer4 is an OpenID Connect and OAuth 2.0 framework for ASP.NET Core.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/openiddict/openiddict-core&#34;&gt;OpenIdDict&lt;/a&gt; - Easy-to-use OpenID Connect server for ASP.NET Core&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/openiddict/openiddict-samples&#34;&gt;OpenIdDict Samples&lt;/a&gt; - Sample projects using OpenIdDict&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;orm-database-access-utilities&#34;&gt;ORM &amp;amp; Database Access Utilities&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/StackExchange/dapper-dot-net&#34;&gt;Dapper Dot Net&lt;/a&gt; - Dapper - a simple object mapper for .Net&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/ef/core/index&#34;&gt;Entity Framework&lt;/a&gt; - Entity Framework (EF) Core is a lightweight, extensible, and cross-platform version of the popular Entity Framework data access technology.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/RendleLabs/Simple.Data.Core&#34;&gt;Simple.Data Core&lt;/a&gt; - Simple.Data, the next generation&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.talkingdotnet.com/use-dapper-orm-with-asp-net-core/&#34;&gt;Using Dapper ORM With ASP.NET Core&lt;/a&gt; - Blog post detailing how to create API with ASP.NET/Dapper&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.blinkingcaret.com/2016/11/01/cross-platform-database-walk-through-using-asp-net-mvc-and-entity-framework-core/&#34;&gt;Cross platform database walk-through using ASP.NET MVC and EF Core&lt;/a&gt; - This post is a walk-through of how to set up a simple ASP.NET MVC Core project using three available options with Entity Framework Core: Sqlite, MySql and Postgres.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blogs.msdn.microsoft.com/dotnet/2016/11/09/net-core-data-access/&#34;&gt;.NET Core Data Access&lt;/a&gt; - Blog post from .NET team, very thoroughly covers all types of data access.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;logging&#34;&gt;Logging&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging&#34;&gt;Built-in Logging Provider&lt;/a&gt; - ASP.NET Core has built-in support for logging, and allows developers to easily leverage their preferred logging framework&amp;rsquo;s functionality as well. Implementing logging in your application requires a minimal amount of setup code. Once this is in place, logging can be added wherever it is desired.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://serilog.net/&#34;&gt;Serilog&lt;/a&gt; - like many other libraries for .NET, Serilog provides diagnostic logging to files, the console, and elsewhere. It is easy to set up, has a clean API, and is portable between recent .NET platforms.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://nlog-project.org/&#34;&gt;NLog&lt;/a&gt; - NLog is a free logging platform for .NET (works with Core)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aspnet/Docs/tree/master/aspnetcore/fundamentals/logging/sample&#34;&gt;Sample Code using Built-In Provider&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://carlos.mendible.com/2016/09/19/step-step-serilog-asp-net-core/&#34;&gt;Step by Step: Serilog with ASP.NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;testing&#34;&gt;Testing&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;As far as I know, at this point Microsoft officially adopted &lt;a href=&#34;https://xunit.github.io/&#34;&gt;xUnit&lt;/a&gt;. I do know they are still working on MSTest and there may be others, but I&amp;rsquo;m only really familiar with xUnit.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://xunit.github.io/&#34;&gt;xUnit&lt;/a&gt; - xUnit.net is a free, open source, community-focused unit testing tool for the .NET Framework&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://xunit.github.io/docs/getting-started-dotnet-core.html&#34;&gt;Getting Started with xUnit and ASP.NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/articles/core/testing/unit-testing-with-dotnet-test&#34;&gt;Unit Testing with Dotnet test&lt;/a&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;dependency-injection&#34;&gt;Dependency Injection&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Here is another case, where MS has provided a built in &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/ff921087.aspx&#34;&gt;Inversion of Control&lt;/a&gt; container, but you are free to use what you prefer.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection&#34;&gt;Built-In Provider&lt;/a&gt; - ASP.NET Core is designed from the ground up to support and leverage dependency injection. ASP.NET Core applications can leverage built-in framework services by having them injected into methods in the Startup class, and application services can be configured for injection as well. The default services container provided by ASP.NET Core provides a minimal feature set and is not intended to replace other containers.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/autofac/Autofac&#34;&gt;Autofac&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://bitbucket.org/dadhi/dryioc&#34;&gt;DryIoc&lt;/a&gt; - DryIoc is fast, small, full-featured IoC Container for .NET&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/structuremap/StructureMap.Microsoft.DependencyInjection&#34;&gt;StructureMap&lt;/a&gt; - The package contains a single, public extension method, Populate. It&amp;rsquo;s used to populate a StructureMap container using a set of ServiceDescriptors or an &lt;code&gt;IServiceCollection&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/grumpydev/TinyIoC&#34;&gt;TinyIoC&lt;/a&gt; - IoC container built-in to &lt;a href=&#34;https://www.nancyfx.org&#34;&gt;NancyFX&lt;/a&gt;, not sure about standard .NET Core support.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aspnet/Docs/tree/master/aspnetcore/fundamentals/dependency-injection/sample&#34;&gt;Sample Project using Built-In DI Provider&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://benjii.me/2016/01/getting-started-autofac-and-asp-net-core/&#34;&gt;Getting Started with Autofac and MVC6 + ASP.NET Core&lt;/a&gt; - May have slightly outdated bits&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.nandotech.com/post/2016-10-25-nancyfx-webapi-dapper/&#34;&gt;Building an (awesome) API with NancyFX 2.0 + Dapper&lt;/a&gt; - Plus, dependency injection explained and everything you need to get up and running.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;miscellaneous-links&#34;&gt;Miscellaneous Links&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blogs.msdn.microsoft.com/dotnet/&#34;&gt;.NET Blog&lt;/a&gt; - Your authoritative place for all .NET news and information&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://dotnetfoundation.org&#34;&gt;.NET Foundation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/thangchung/awesome-dotnet-core&#34;&gt;Awesome-Dot-Net&lt;/a&gt; - Comprehensive listing of .NET Core libraries&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wildermuth.com/&#34;&gt;Shawn Wildermuth&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://thedatafarm.com/blog/&#34;&gt;Julie Lerman&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;sample-net-core-projects-production-web-apps&#34;&gt;Sample .NET Core Projects (Production Web Apps)&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/HTBox/allReady&#34;&gt;HTBox AllReady&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/shawnwildermuth/wilderblog/&#34;&gt;WilderBlog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/shawnwildermuth/CoreCodeCamp&#34;&gt;Core Code Camp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/dodyg/practical-aspnetcore&#34;&gt;Practical ASP.NET Core&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;that-s-all-i-got-for-now-folks&#34;&gt;That&amp;rsquo;s all I got for now folks.&lt;/h2&gt;
-
-&lt;p&gt;Tried to provide a relatively short list of very useful utilities that I have personally used and/or come across in my short time dealing with ASP.NET Core, Nancy and other related frameworks. Also, given the fact that the &lt;a href=&#34;https://github.com/thangchung/awesome-dotnet-core&#34;&gt;more comprehensive listing&lt;/a&gt; of resources isn&amp;rsquo;t going anywhere&amp;ndash;this works well as a nice, curated list of libraries to use.&lt;/p&gt;
-
-&lt;p&gt;Eventually, there may be a part 2 and/or an update to this post where we add a ton of categories &amp;amp; links that we&amp;rsquo;ve come across since this time. There are several categories I left off just for the sake of brevity and also not wanting to provide descriptions for another 100 libraries.&lt;/p&gt;
-
-&lt;p&gt;Nonetheless, I hope this serves as a helpful resource!  Please comment below if you wish or reach out to us directly if you have any questions or concerns.&lt;/p&gt;
-
-&lt;p&gt;Happy Coding!&lt;/p&gt;
-</description>
+      <description>Next week I hope to continue our series on the NancyFX framework for building web applications. For our next post I hope to cover Routing as well as passing arguments via query string, body and how that all works within Nancy. As a quick break, this week I&amp;rsquo;ve decided to put together a compilation of .NET Core resources that may help anyone at any .NET skill level jump in and find the information they are looking for.</description>
     </item>
     
     <item>
@@ -237,140 +46,8 @@
       <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2016-10-07-angular-crash-course/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;PSA: Skip to the &lt;strong&gt;TL;DR&lt;/strong&gt; for list of resources&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;so-due-to-forces-of-nature-beyond-our-control-specifically-hurricane-matthew&#34;&gt;So, due to forces of nature beyond our control (specifically Hurricane Matthew),&lt;/h2&gt;
-
-&lt;p&gt;the &lt;a href=&#34;http://ftlauderdale.ng-learn.com&#34;&gt;Angular 2 Workshop&lt;/a&gt; we were registered for this Thursday &amp;amp; Friday, October 6th &amp;amp; 7th with both &lt;a href=&#34;https://johnpapa.net/&#34;&gt;John Papa&lt;/a&gt; and &lt;a href=&#34;https://www.codewithdan.com&#34;&gt;Dan Wahlin&lt;/a&gt; was cancelled. Thankfully for us South Floridians, &lt;a href=&#34;http://www.nytimes.com/2016/10/07/us/hurricane-matthew.html?_r=0&#34;&gt;Hurricane Matthew&lt;/a&gt; narrowly avoided a direct hit with us southernmost residents and the tri-county area of Dade, Broward &amp;amp; Palm Beach was mostly unaffected.&lt;/p&gt;
-
-&lt;h4 id=&#34;that-said-we-were-incredibly-lucky-and-many-residents-in-the-central-and-northern-regions-of-our-state-are-not-nearly-as-lucky-areas-near-and-around-daytona-beach-fl-i-believe-suffered-the-brunt-of-it-and-our-best-wishes-are-with-the-most-affected-communities&#34;&gt;That said, we were incredibly lucky, and many residents in the central and northern regions of our state are not nearly as lucky.  Areas near and around Daytona Beach, FL I believe suffered the brunt of it and our best wishes are with the most affected communities.&lt;/h4&gt;
-
-&lt;p&gt;That&amp;rsquo;s not even saying anything in regards to the rest of the Carribean like Cuba, Haiti &amp;amp; Jamaica who suffered through the grand &lt;a href=&#34;https://weather.com/news/news/hurricane-matthew-haiti-latest-news&#34;&gt;majority of Matthew&amp;rsquo;s wrath&lt;/a&gt; and will be in recovery mode for quite a while.  I wish I knew a good charity, because this is where I would link and recommend some.  If someone cares to enlighten me, I will update this post.&lt;/p&gt;
-
-&lt;h2 id=&#34;workshop-or-not&#34;&gt;&lt;strong&gt;Workshop Or Not:&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;Our &lt;em&gt;biggest issue&lt;/em&gt; and concern with missing out on this conference is really that we were 100% &lt;strong&gt;planning on using &lt;a href=&#34;https://angular.io&#34;&gt;Angular 2&lt;/a&gt; as the front end framework&lt;/strong&gt; for our &lt;em&gt;Project Armadillo&lt;/em&gt;.  I also even have a couple of small WebAPI apps fleshed out with no front end in &lt;em&gt;anticipation&lt;/em&gt;, awaiting our 2nd such workshop with John &amp;amp; Dan (we saw them during Fall 2015 &lt;a href=&#34;http://www.DevIntersection.com&#34;&gt;DevIntersection&lt;/a&gt;) before getting started and really digging into the framework.&lt;/p&gt;
-
-&lt;p&gt;The aforementioned cancellation due to &lt;em&gt;Hurricane Matthew&lt;/em&gt; has now put us at quite a crossroads with a bit of a decision to make.  To a certain degree, absolutely nothing has changed and we could still use Angular 2. An alternative (which appeals less to me, but more to my coding partner) is to simply use the &lt;a href=&#34;https://dot.net&#34;&gt;ASP.NET Core&lt;/a&gt; Razor View Engine and avoid messing with more new frameworks, technologies as well as moving parts.&lt;/p&gt;
-
-&lt;p&gt;We were extremely excited (especially with Angular 2 Final&amp;rsquo;s recent release) to get Dan &amp;amp; John&amp;rsquo;s crash course, and more importantly, have access to these two of the community&amp;rsquo;s foremost experts on our entire technology stack. This made us confident that even with my partner&amp;rsquo;s minimal Angular exposure we would be able to quickly get it together.&lt;/p&gt;
-
-&lt;p&gt;Now this all isn&amp;rsquo;t going to happen, and it does no one any good to cry over spilled milk&amp;hellip;So the crash course is up to us. What follows is my &lt;strong&gt;&amp;ldquo;Getting Started w/ Angular 2 Crash Course&amp;rdquo;&lt;/strong&gt;, or my compilation of resources, walkthroughs, blog posts &amp;amp; some paid content like &lt;a href=&#34;https://www.pluralsight.com&#34;&gt;Pluralsight Videos&lt;/a&gt;, &lt;a href=&#34;http://www.codeschool.com&#34;&gt;Code School&lt;/a&gt; and anything else I could find to help get started with Angular 2&amp;rsquo;s Final release.&lt;/p&gt;
-
-&lt;h1 id=&#34;tl-dr&#34;&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;h2 id=&#34;getting-started-w-angular-2-crash-course&#34;&gt;&lt;strong&gt;&lt;strong&gt;Getting Started w/ Angular 2 Crash Course&lt;/strong&gt;&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;ultimate-compilation&#34;&gt;&lt;strong&gt;Ultimate compilation&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;The Basics/Getting Started&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;As web developers, we will assume some familiarity with JavaScript&lt;/li&gt;
-&lt;li&gt;Angular 2 has gone the way of many frameworks and chosen to leverage &lt;a href=&#34;http://typescriptlang.org&#34;&gt;TypeScript&lt;/a&gt;, encouraging you to use it to build your ng2 apps.&lt;/li&gt;
-&lt;li&gt;First order of business is familiarizing yourself with TypeScript, which I will not detail too much here, but the main documentation @ &lt;a href=&#34;http://www.typescriptlang.org/docs/tutorial.html&#34;&gt;http://www.typescriptlang.org/docs/tutorial.html&lt;/a&gt; is very good and thorough&lt;/li&gt;
-&lt;li&gt;Get your feet wet and use the &lt;a href=&#34;http://www.typescriptlang.org/play/index.html&#34;&gt;TypeScript Playground&lt;/a&gt; to see how some TypeScript will transpile down into ES5 JavaScript.&lt;/li&gt;
-&lt;li&gt;If you know some TypeScript and are familiar with web constructs, start below&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Introducing Angular 2&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Again here we&amp;rsquo;ll start at the &lt;a href=&#34;https://angular.io/docs/ts/latest/quickstart.html#!#prereq&#34;&gt;Official Angular 2 Site&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The link above is to the Angular 2 quickstart
-
-&lt;ul&gt;
-&lt;li&gt;This guide takes you through Creating your project, your first component, bootstrapping your application, installing all your dependencies and getting up and running&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;This is an awesome start, but for a deeper understanding of the concepts and the framework as a whole, check these out:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Pluralsight&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://app.pluralsight.com/library/courses/angular-2-getting-started/table-of-contents&#34;&gt;Angular 2: Getting Started&lt;/a&gt; by &lt;a href=&#34;https://www.twitter.com/DeborahKurata&#34;&gt;Deborah Kurata&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://app.pluralsight.com/library/courses/angular-2-first-look/table-of-contents&#34;&gt;Angular 2 First Look&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/JohnPapa&#34;&gt;John Papa&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://app.pluralsight.com/library/courses/angular-2-first-look/table-of-contents&#34;&gt;Play By Play: Angular2/RxJS/HTTP&lt;/a&gt; by John Papa &amp;amp; &lt;a href=&#34;https://twitter.com/DanWahlin&#34;&gt;Dan Wahlin&lt;/a&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Code School&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.codeschool.com/courses/accelerating-through-angular-2&#34;&gt;Accelerating Through Angular 2&lt;/a&gt; by &lt;a href=&#34;https://www.twitter.com/greggpollack&#34;&gt;Gregg Pollack&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Egghead.io&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://egghead.io/technologies/angular2&#34;&gt;Angular 2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Blogs/Resources&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://vsavkin.com/writing-angular-2-in-typescript-1fa77c78d8e8#.szbkd4gw4&#34;&gt;Why TypeScript?&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/victorsavkin&#34;&gt;Victor Savkin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://vsavkin.com/the-core-concepts-of-angular-2-c3d6cbe04d04#.mcjjar9sc&#34;&gt;Core Concepts of Angular 2&lt;/a&gt; by Victor Savkin&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.thoughtram.io/angular/2016/09/15/angular-2-final-is-out.html&#34;&gt;Angular 2 Final Resource List&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/PascalPrecht&#34;&gt;Pascal Precht&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/timjacobi/angular2-education&#34;&gt;Angular 2 Education Curated List&lt;/a&gt; by &lt;a href=&#34;https://github.com/timjacobi/&#34;&gt;Tim Jacobi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://angular.io/docs/ts/latest/guide/style-guide.html&#34;&gt;Angular 2 Style Guide&lt;/a&gt; by John Papa&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2&#34;&gt;Angular 2 Snippets by John Papa&lt;/a&gt; or &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=danwahlin.angular2-snippets&#34;&gt;by Dan Wahlin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Blogs with consistently awesome ng2 content:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.vsavkin.com&#34;&gt;Victor Savkin&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://johnpapa.net&#34;&gt;John Papa&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.thoughtram.io/&#34;&gt;Pascal Precht&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.codewithdan.com&#34;&gt;Dan Wahlin&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://angularjs.blogspot.com/&#34;&gt;AngularJS Blog&lt;/a&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Putting it all together&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://angular.io/docs/ts/latest/tutorial/&#34;&gt;Tutorial: Angular 2 Docs Tour of Heroes&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Directly from the ng2 team, this tutorial moves pretty quick but covers all the basics you need to get up and running up through some Routing and calling HTTP services.&lt;/li&gt;
-&lt;li&gt;This does expect you have some prior knowledge of &lt;a href=&#34;https://typescriptlang.org&#34;&gt;TypeScript&lt;/a&gt; and at have gotten through the &lt;a href=&#34;https://angular.io/docs/ts/latest/quickstart.html&#34;&gt;Angular 2 Quick Start&lt;/a&gt; picking up where it left off&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Slides: &lt;a href=&#34;http://codewithdan.me/angular2-aspnet-core&#34;&gt;Angular 2 and ASP.NET Core&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Many thanks and praises to the awesome &lt;a href=&#34;https://twitter.com/DanWahlin&#34;&gt;Dan Wahlin&lt;/a&gt; for these Slides&lt;/li&gt;
-&lt;li&gt;Helps to understand some of the &amp;ldquo;guts&amp;rdquo; or innards of Angular 2 in a basic visual way as well as providing real-world example and use creating an app that calls a real web service&lt;/li&gt;
-&lt;li&gt;Along with his quickstart projects, I found most useful his repo (fully updated to latest versions) of an &lt;a href=&#34;https://dot.net&#34;&gt;ASP.NET Core&lt;/a&gt; WebAPI and fully functional Angular 2 front end that includes examples of all types of requests&lt;/li&gt;
-&lt;li&gt;Full repo: &lt;a href=&#34;https://github.com/DanWahlin/CoreWebAPIAndAngular&#34;&gt;https://github.com/DanWahlin/CoreWebAPIAndAngular&lt;/a&gt; and just follow the instructions he&amp;rsquo;s provided.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/johnpapa/angular2-go&#34;&gt;Angular2-Go&lt;/a&gt;, a super-simple barebones Angular2 App by John Papa featuring 1 module with 2 routes&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;John Papa&amp;rsquo;s &lt;a href=&#34;https://github.com/johnpapa/angular2-tour-of-heroes&#34;&gt;Tour of Heroes Repo&lt;/a&gt; which has his implementation of the Official Docs Tutorial&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;For those migrating existing 1.x apps, &lt;a href=&#34;https://twitter.com/josepheames&#34;&gt;Joseph Eames&lt;/a&gt; Pluralsight course on &lt;a href=&#34;https://app.pluralsight.com/courses/migrating-applications-angular-2&#34;&gt;Migrating to Angular 2&lt;/a&gt; is probably the best resource I have come across.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Also, &lt;a href=&#34;https://dev.to/adventuresinangular/112-aia-upgrading-from-angular-1x-to-angular-2&#34;&gt;Adventures in Angular Podcast&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.sitepoint.com/angular-2-tutorial/&#34;&gt;Creating a CRUD App with Angular CLI&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/toddmotto&#34;&gt;Todd Motto&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/jvandemo&#34;&gt;Jurgen Van der Moere&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;phew-that-was-longer-than-expected&#34;&gt;Phew, That was longer than expected.&lt;/h1&gt;
-
-&lt;p&gt;Nonetheless, I feel like you can never have too many &lt;strong&gt;good examples&lt;/strong&gt; or posts showing different styles of implementations of Angular 2. For our part, we will likely read Victor Savkin&amp;rsquo;s listed post above and then cherry-pick some of the resources in the &amp;ldquo;resource list&amp;rdquo;-style blog posts to round out our knowledge.&lt;/p&gt;
-
-&lt;p&gt;From there, we move into the &lt;strong&gt;&amp;ldquo;Putting it All Together&amp;rdquo;&lt;/strong&gt; section and go through some of the code samples and best practices. If you&amp;rsquo;ve taken the time to understand all the Angular 2 concepts thus far you will be well on your way. Part of &lt;em&gt;putting it all together&lt;/em&gt; also means starting to put together your own modules/components and just jumping in to get your feet wet.&lt;/p&gt;
-
-&lt;p&gt;I am a strong proponent of clean coding and best practices, but I have also found that the greatest value and the most deeply ingrained learning takes place when you are implementing your own solutions.&lt;/p&gt;
-
-&lt;p&gt;Immediately after getting what I think I need from the &lt;strong&gt;Putting it All Together&lt;/strong&gt; section&amp;ndash;next step is we plan to use Angular 2 to build a simple front end dashboard for an &lt;a href=&#34;https://dot.net&#34;&gt;ASP.NET Core&lt;/a&gt; API project running with the &lt;a href=&#34;http://www.nancyfx.org&#34;&gt;NancyFx&lt;/a&gt; framework.  Using RxJS &amp;amp; Observables + Http in Angular 2 (as per some of the resources above) I&amp;rsquo;m hoping to provide a rich SPA showing some key performance indicators in real time, polling data from 2 disparate web-based systems.&lt;/p&gt;
-</description>
+      <description>PSA: Skip to the TL;DR for list of resources
+So, due to forces of nature beyond our control (specifically Hurricane Matthew), the Angular 2 Workshop we were registered for this Thursday &amp;amp; Friday, October 6th &amp;amp; 7th with both John Papa and Dan Wahlin was cancelled. Thankfully for us South Floridians, Hurricane Matthew narrowly avoided a direct hit with us southernmost residents and the tri-county area of Dade, Broward &amp;amp; Palm Beach was mostly unaffected.</description>
     </item>
     
   </channel>

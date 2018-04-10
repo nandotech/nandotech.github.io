@@ -9,7 +9,9 @@
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Wed, 21 Sep 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.nandotech.com/tags/semver/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.nandotech.com/tags/semver/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Dot Net Core 1.0.1 &amp; Semantic Versioning</title>
@@ -17,155 +19,8 @@
       <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2016-09-21-dot-net-core-1_0_1/</guid>
-      <description>
-
-&lt;p&gt;This past week &lt;a href=&#34;https://www.youtube.com/watch?v=7vKfhe6Zs_s&#34;&gt;marked the first official patch update&lt;/a&gt; since &lt;a href=&#34;http://dot.net&#34;&gt;.NET Core&lt;/a&gt;&amp;rsquo;s initial release.  Naturally, the version number we have jumped up to is &lt;code&gt;1.0.1&lt;/code&gt;.  If you spent any time with the beta&amp;rsquo;s and rc1-8, let me forewarn you now: &lt;strong&gt;DO NOT go open &lt;code&gt;project.json&lt;/code&gt; and edit every single reference up to &lt;code&gt;1.0.1&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Firstly, in a basic &lt;em&gt;Hello World&lt;/em&gt; or a &lt;em&gt;Console App&lt;/em&gt;, the declaration the &lt;code&gt;.NET Core&lt;/code&gt; version has changed very slightly.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;quot;frameworks&amp;quot;: {
-  &amp;quot;netcoreapp1.0&amp;quot;: {
-    &amp;quot;dependencies&amp;quot;: {
-      &amp;quot;Microsoft.NETCore.App&amp;quot;: {
-        &amp;quot;version&amp;quot;: &amp;quot;1.0.1&amp;quot;
-      }
-    }
-  } 
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For a while now (let&amp;rsquo;s say since the release of &lt;code&gt;1.0.0&lt;/code&gt;) we have known that Microsoft &lt;a href=&#34;https://docs.microsoft.com/en-us/dotnet/articles/core/versions/&#34;&gt;plans on using Semantic Versioning&lt;/a&gt; in order to simplify and further adopt some software best practices into their own package. See Microsoft&amp;rsquo;s explanation above or visit &lt;a href=&#34;http://semver.org&#34;&gt;semver.org&lt;/a&gt; to learn more about it.&lt;/p&gt;
-
-&lt;p&gt;In short, the idea of Semantic Versioning is all packages are versioned as follows: &lt;code&gt;major.minor.patch&lt;/code&gt;.  In the case of .NET Core, this was a patch update (&lt;em&gt;mainly&lt;/em&gt; to patch a vulnerability in System.Mvc).  You can see the issue and advisory &lt;a href=&#34;https://github.com/aspnet/Announcements/issues/203&#34;&gt;on GitHub&lt;/a&gt; and affected packages.&lt;/p&gt;
-
-&lt;p&gt;It is extremely recommended to update the necessary packages and runtime, as there are a few other &lt;a href=&#34;https://blogs.msdn.microsoft.com/dotnet/2016/09/13/announcing-september-2016-updates-for-net-core-1-0/&#34;&gt;minor updates&lt;/a&gt; including fixing &lt;a href=&#34;https://github.com/dotnet/coreclr/issues/6016&#34;&gt;some Linux&lt;/a&gt; &lt;a href=&#34;https://github.com/dotnet/coreclr/issues/5837&#34;&gt;4.6 segfaults&lt;/a&gt;. Beyond that, the  most release notes seem to belong to EF Core which has several packages updated to version &lt;code&gt;1.0.1&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;One important thing to know and understand, however: you are in no way &lt;em&gt;REQUIRED&lt;/em&gt; to upgrade. The actual &lt;em&gt;idea&lt;/em&gt; behind the power of semantic versioning is that these patch upgrades (any update in the 1.0.&lt;em&gt;x&lt;/em&gt; portion) should contain &lt;strong&gt;ZERO&lt;/strong&gt; breaking changes.  In fact, if you have a working application that &lt;code&gt;1.0.1&lt;/code&gt; breaks, then you should absolutely submit an issue on &lt;a href=&#34;https://github.com/dotnet/&#34;&gt;GitHub&lt;/a&gt; as this should not be the case.&lt;/p&gt;
-
-&lt;p&gt;This is where things get interesting.  Remember when I said  &amp;ldquo;do not edit every single reference in &lt;code&gt;project.json&lt;/code&gt; to &lt;code&gt;1.0.1&lt;/code&gt;&amp;rdquo;? Well, apparently &lt;a href=&#34;https://blogs.msdn.microsoft.com/dotnet/2016/07/26/net-support-and-versioning/&#34;&gt;Semantic Versioning&lt;/a&gt; has its pros and cons (see that link for Microsoft&amp;rsquo;s explanation).&lt;/p&gt;
-
-&lt;p&gt;Interestingly (and awesome-ly) you are also perfectly capable of running .NET &lt;code&gt;1.0.0&lt;/code&gt; and &lt;code&gt;1.0.1&lt;/code&gt; side by side.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/9rIac3O.png&#34; alt=&#34;NETCoreApp&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can see installing 1.0.1 does not wipe out 1.0.0, but my &amp;ldquo;active&amp;rdquo; runtime has been updated, visible from running &lt;code&gt;dotnet --info&lt;/code&gt; in my command line.  So in reality here, we have an update to the &lt;em&gt;runtime&lt;/em&gt; &lt;strong&gt;and&lt;/strong&gt; the &lt;em&gt;SDK&lt;/em&gt;&amp;ndash;which, note, is &lt;a href=&#34;https://github.com/dotnet/cli/releases&#34;&gt;still in preview&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Seems simple enough, right?  Here comes the confusion.&lt;/p&gt;
-
-&lt;p&gt;If you are in your command line after upgrading to &lt;code&gt;1.0.1&lt;/code&gt; with tooling &lt;code&gt;1.0.0-preview2-003131&lt;/code&gt;, you can scaffold a web app using &lt;code&gt;dotnet new -t web&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Your process should look something like this:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Command Line&lt;/th&gt;
-&lt;th&gt;Web Browser&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/VHYCIMm.png&#34; alt=&#34;Core 1.0.1 WebApp&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/256fvZ0.png&#34; alt=&#34;ASP.NET Core Debug&#34; /&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Or in order for your cmd line arguments:&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;mkdir NewDotNet101&lt;/code&gt; then&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;cd NewDotNew101&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;dotnet new -t web&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;You now should see the full directory structure as shown above.&lt;/td&gt;
-&lt;td&gt;Almost ready to run.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;dotnet restore&lt;/code&gt; (this may take a few minutes)&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;dotnet run&lt;/code&gt; then will run the app by default on &lt;em&gt;Port 5000&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;So let&amp;rsquo;s take a look at the full &lt;code&gt;project.json&lt;/code&gt; file (shortened for readability) that we see now. Ironically, this is also exactly where the confusion comes in.  After seeing the full platform version change to &lt;code&gt;&amp;quot;version&amp;quot;: &amp;quot;1.0.1&amp;quot;&lt;/code&gt;, as you begin to scroll you may happen upon some confusion.&lt;/p&gt;
-
-&lt;p&gt;While the full framework and runtime has received a &lt;em&gt;patch upgrade&lt;/em&gt;, as we read through the packages below you can see that &lt;strong&gt;NOT EVERY PACKAGE&lt;/strong&gt; has been upgraded to &lt;code&gt;1.0.1&lt;/code&gt;.  In fact, only a small subset of all the .NET Core &amp;amp; &lt;a href=&#34;http://asp.net&#34;&gt;ASP.NET&lt;/a&gt; Core libraries have updated to &lt;code&gt;1.0.1&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;userSecretsId&amp;quot;: &amp;quot;aspnet-WebApplication-0799fe3e-6eaf-4c5f-b40e-7c6bfd5dfa9a&amp;quot;,
-
-  &amp;quot;dependencies&amp;quot;: {
-    &amp;quot;Microsoft.NETCore.App&amp;quot;: {
-      &amp;quot;version&amp;quot;: &amp;quot;1.0.1&amp;quot;,
-      &amp;quot;type&amp;quot;: &amp;quot;platform&amp;quot;
-    },
-    &amp;quot;Microsoft.AspNetCore.Authentication.Cookies&amp;quot;: &amp;quot;1.0.0&amp;quot;,
-    &amp;quot;Microsoft.AspNetCore.Diagnostics&amp;quot;: &amp;quot;1.0.0&amp;quot;,
-    &amp;quot;Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore&amp;quot;: &amp;quot;1.0.0&amp;quot;,
-    &amp;quot;Microsoft.AspNetCore.Identity.EntityFrameworkCore&amp;quot;: &amp;quot;1.0.0&amp;quot;,
-    &amp;quot;Microsoft.AspNetCore.Mvc&amp;quot;: &amp;quot;1.0.1&amp;quot;,
-    &amp;quot;Microsoft.AspNetCore.Razor.Tools&amp;quot;: {
-      &amp;quot;version&amp;quot;: &amp;quot;1.0.0-preview2-final&amp;quot;,
-      &amp;quot;type&amp;quot;: &amp;quot;build&amp;quot;
-    },
-    &amp;quot;Microsoft.AspNetCore.Routing&amp;quot;: &amp;quot;1.0.1&amp;quot;,
-    &amp;quot;Microsoft.AspNetCore.Server.IISIntegration&amp;quot;: &amp;quot;1.0.0&amp;quot;,
-    &amp;quot;Microsoft.AspNetCore.Server.Kestrel&amp;quot;: &amp;quot;1.0.1&amp;quot;,
-    &amp;quot;Microsoft.AspNetCore.StaticFiles&amp;quot;: &amp;quot;1.0.0&amp;quot;,
-    &amp;quot;Microsoft.EntityFrameworkCore.Sqlite&amp;quot;: &amp;quot;1.0.1&amp;quot;,
-    &amp;quot;Microsoft.EntityFrameworkCore.Tools&amp;quot;: {
-      &amp;quot;version&amp;quot;: &amp;quot;1.0.0-preview2-final&amp;quot;,
-      &amp;quot;type&amp;quot;: &amp;quot;build&amp;quot;
-    },
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now, honestly, I initially read/saw this and I basically just said &amp;ldquo;OK&amp;rdquo;. These days, with the trends in web dev, plus being somewhat accustomed to npm package versioning, NuGet, etc&amp;ndash;it really didn&amp;rsquo;t sound all that crazy to me.  Thankfully for us developers, there are people looking out for and advocating for developers and developer productivity. In this case, I&amp;rsquo;m referring to &lt;a href=&#34;http://www.hanselman.com/&#34;&gt;Scott Hanselman&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/shanselman&#34;&gt;@shanselman&lt;/a&gt; on Twitter) from the Microsoft ASP.NET team.&lt;/p&gt;
-
-&lt;p&gt;In the &lt;a href=&#34;https://youtu.be/7vKfhe6Zs_s?t=40m00s&#34;&gt;September 13th ASP.NET Community Standup&lt;/a&gt;, Scott makes the argument that we as developers need this type of upgrade automated or at least an ability to just type/hit a button and &amp;ldquo;Upgrade to LTS&amp;rdquo; or &amp;ldquo;Upgrade to FTS&amp;rdquo; or &amp;ldquo;Upgrade to Latest&amp;rdquo; (bleeding edge).  In short, Scott makes 3 quick &amp;amp; simple points that landed me squarely on his side of the fence.&lt;/p&gt;
-
-&lt;p&gt;Scott argues that this style of &lt;em&gt;manually upgrading&lt;/em&gt; (e.g., editing .json files extremely carefully) is completely untenable. Specifically, he feels that it is something that must be figured out because currently the process is:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Manual&lt;/li&gt;
-&lt;li&gt;Complicated&lt;/li&gt;
-&lt;li&gt;Problematic for humans&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Regardless of my finding this particular upgrade fairly painless, I absolutely see his point and understand exactly how quickly version numbers will begin to climb out of hand becomining impossible to keep track or remember which patch what package should be on.&lt;/p&gt;
-
-&lt;p&gt;I don&amp;rsquo;t think I can point to anyone who has solved this problem in any sort of decent manner.  Scott also mentions how this is a real non-trivial issue. If you have any experience in the &lt;a href=&#34;http://nodejs.org&#34;&gt;Node ecosystem&lt;/a&gt;, you can understand how problematic this can get, and just how quickly.&lt;/p&gt;
-
-&lt;p&gt;It will be very interesting to see what the Microsoft .NET Core team comes up with. On the same standup, &lt;a href=&#34;https://github.com/Eilon&#34;&gt;Eilon Lipton&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/condrong&#34;&gt;Glenn Condron&lt;/a&gt; accompany Scott &amp;amp; &lt;a href=&#34;https://twitter.com/jongalloway&#34;&gt;Jon Galloway&lt;/a&gt; whilst &lt;a href=&#34;https://twitter.com/DamianEdwards&#34;&gt;Damian Edwards&lt;/a&gt; is on vacation (though he does appear to still be watching the Community Standups ;)).&lt;/p&gt;
-
-&lt;p&gt;Eilon actually mentions a tool they had attempted to write to do &lt;em&gt;exactly&lt;/em&gt; what Scott was alluding to in terms of an upgrade tool or an automated way to update all the necessary packages without any manual process. Unfortunately for us, as of now that is still being worked on, so manual updates it is!&lt;/p&gt;
-
-&lt;p&gt;I have closely followed .NET Core&amp;rsquo;s progress and began learning way back in rc4 and 5. I chose to leave it alone for a while, waiting for final release. Now, we are here, and we are ready.  I &lt;em&gt;absolutely love&lt;/em&gt; most everything that&amp;rsquo;s been done with the framework in terms of design decisions and am extremely excited to begin building and using in production.&lt;/p&gt;
-
-&lt;h3 id=&#34;side-note-call-to-action-for-any-and-all-open-source-contributors-out-there&#34;&gt;Side note: Call to action for any and all Open Source contributors out there.&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Especially if you are a user of &lt;code&gt;log4net&lt;/code&gt; or  would like to see it on .NET Core&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://apache.org&#34;&gt;&lt;em&gt;The Apache Software Foundation&lt;/em&gt;&lt;/a&gt; needs &lt;strong&gt;HELP&lt;/strong&gt;.  Apache &lt;a href=&#34;http://logging.apache.org&#34;&gt;log4net&lt;/a&gt; is a very robust logging framework that was born out of &lt;a href=&#34;http://logging.apache.org/log4j/2.x/&#34;&gt;log4j&lt;/a&gt; and is extremely powerful. I, myself, have used it as my logging solution in several projects and continue to do so in some ASP.NET 4.5 &amp;amp; 4.6 solutions.  Apache has issued a public &lt;a href=&#34;https://blogs.apache.org/logging/entry/apache_log4net_needs_help&#34;&gt;call for arms&lt;/a&gt; from the community, especially those of us who still use log4net as their preferred framework.&lt;/p&gt;
-
-&lt;p&gt;Check out Apache&amp;rsquo;s blog post @ &lt;a href=&#34;https://blogs.apache.org/logging/entry/apache_log4net_needs_help&#34;&gt;https://blogs.apache.org/logging/entry/&amp;hellip;&lt;/a&gt; and feel free to get your hands dirty! They are asking for help and will take it any way they can.&lt;/p&gt;
-
-&lt;p&gt;Feel free to check their JIRA @ &lt;a href=&#34;https://issues.apache.org/jira/browse/LOG4NET&#34;&gt;https://issues.apache.org/jira/browse/LOG4NET&lt;/a&gt; and&lt;/p&gt;
-
-&lt;p&gt;Dev mailing list @ &lt;a href=&#34;https://logging.apache.org/log4net/mail-lists.html&#34;&gt;https://logging.apache.org/log4net/mail-lists.html&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;wrapping-up&#34;&gt;Wrapping Up&lt;/h3&gt;
-
-&lt;p&gt;Totally unrelated, but: &lt;a href=&#34;http://angular.io&#34;&gt;Angular 2&lt;/a&gt; has also released its &amp;ldquo;final&amp;rdquo; version! Timing couldn&amp;rsquo;t be better and we are heavily invested in these new technologies in terms of education &amp;amp; man-hours&amp;ndash;I am giddy with excitement.&lt;/p&gt;
-
-&lt;p&gt;Aside from that, all I can do is hope that &lt;em&gt;semver&lt;/em&gt; doesn&amp;rsquo;t turn into a developer nightmare (instead of &lt;em&gt;npm package hell&lt;/em&gt; or &lt;em&gt;nuget hell&lt;/em&gt;). Hopefully, some of the .NET tooling will also become significantly better as it is moved up out of beta. As much as a complete paradigm shift that the Core frameworks and open source are for Microsoft, I &lt;em&gt;do not&lt;/em&gt; think they are getting out of the business of prescription and spreading &amp;ldquo;best practices.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;So fear not&amp;ndash;we&amp;rsquo;re just barely getting past the bleeding edge here. :)&lt;/p&gt;
-</description>
+      <description>This past week marked the first official patch update since .NET Core&amp;rsquo;s initial release. Naturally, the version number we have jumped up to is 1.0.1. If you spent any time with the beta&amp;rsquo;s and rc1-8, let me forewarn you now: DO NOT go open project.json and edit every single reference up to 1.0.1.
+Firstly, in a basic Hello World or a Console App, the declaration the .NET Core version has changed very slightly.</description>
     </item>
     
   </channel>
