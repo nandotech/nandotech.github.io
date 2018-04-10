@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>ZEIT Now Deploying ASP.NET (and .NET) Core Apps in seconds with your Dockerfile</title>
+
+  <meta name="author" content="Fernando Rodriguez" />
+  
+  
+  <meta name="description" content="Blog posts on programming, technology and entrepreneurship. A true polyglot, Software Developer and CEO of NandoTech Inc, Fernando Rodriguez, blogging on how &amp; where we cater custom software &amp; SIP solutions for small to medium sized businesses.">
+  
+  <meta name="keywords" content="nancyfx, asp.net, company, .net, .net core, software engineer, web development, microsoft, consultant">
+
+  <meta name="generator" content="Hugo 0.38.2" />
+
+  <link rel="alternate" href="https://blog.nandotech.com/index.xml" type="application/rss+xml" title="NandoTech">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="/css/pygment_highlights.css" />
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  <meta property="og:title" content="ZEIT Now Deploying ASP.NET (and .NET) Core Apps in seconds with your Dockerfile" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/post/2017-03-16-zeit-now-deploying-dotnet-core-in-a-docker-bow//" />
+  <meta property="og:image" content="/img/nandotech_logo_gray.gif" />
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://blog.nandotech.com/">NandoTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">           
+      
+        
+          <li>
+          <a title="Blog" href="/">Blog</a>
+  	      </li>
+  	    
+      
+        
+          <li>
+          <a title="About" href="/page/about/">About</a>
+  	      </li>
+  	    
+      
+        
+          <li>
+          <a title="Company Website" href="https://nandotech.com">Company Website</a>
+  	      </li>
+  	    
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+          <a title="NandoTech" href="https://blog.nandotech.com/">
+              <img class="avatar-img" src="/img/nandotech_logo_gray.gif" alt="NandoTech" />
+          </a>
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>ZEIT Now Deploying ASP.NET (and .NET) Core Apps in seconds with your Dockerfile</h1>
+      
+        
+      <h2 class="post-subheading">Add the Dockerfile, watch magic happen.</h2>
+      
+      
+      
+      
+      <span class="post-meta">Posted on March 16, 2017</span>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      <article role="main" class="blog-post">
+          
+
+<h1 id="if-you-re-anything-like-me-you-constantly-are-finding-more-and-more-tasks-that-require-your-attention">If you&rsquo;re anything like me, you constantly are finding more and more tasks that require your attention.</h1>
+
+<p>To make matters worse, the industry definition of <a href="https://en.wikipedia.org/wiki/DevOps"><em>&ldquo;DevOps&rdquo;</em></a> is still evolving itself, quickly becoming ubiquitous with &ldquo;a litle bit of everything&rdquo; in the process.</p>
+
+<p>Like a breath of fresh air, <a href="https://zeit.co">ZEIT</a> is a cloud service that allows near-mindless deployment of <code>javascript</code> &amp; <code>node.js</code> apps.  Much thanks probably also belongs to <a href="https://twitter.com/shanselman">Scott Hanselman</a> and his ever-tinkering soul who published <a href="https://www.hanselman.com/blog/ZEITNowDeploymentsOfOpenSourceASPNETCoreWebAppsWithDocker.aspx">&ldquo;ZEIT now deployments of open source ASP.NET Core web apps with Docker&rdquo;</a> yesterday and I was immediately intrigued.  Since Zeit Now supports <a href="https://docker.com">Docker</a>, then why not <a href="https://dot.net">.NET Core</a>?</p>
+
+<p>In the blog post, Scott (with help from friend <a href="https://twitter.com/condrong?lang=en">Glenn Condron</a>) walks you through from creating a fresh ASP.NET Core Web App using the <code>dotnet cli</code>.  Next, it is almost embarassingly simple to see him</p>
+
+<ul>
+<li>run a <code>dotnet restore</code></li>
+<li>create a valid <code>Dockerfile</code></li>
+<li><code>dotnet publish</code></li>
+<li>ensure your project outputs are in the right directory</li>
+<li>type <code>now</code> command down in your publish folder</li>
+</ul>
+
+<p>And that&rsquo;s it.  You now have a live URL on your clipboard&ndash;this is the DNS assigned to the <a href="https://docker.com"><code>Docker</code></a> container that is running in the cloud for you. As I poked around the <a href="https://zeit.co/now">Zeit Now</a> app &amp; documentation I also found some really cool features like single click &ldquo;file sharing&rdquo; in the form of deploying a container with your file.</p>
+
+<p>The number of technically savvy people available in my vicinity has been reduced, yet in the mid-to-long term here we do expect to have a significant software <a href="http://amzn.to/2mydV0m">microservices architecture</a> deployment. That said, it is in my best interest to begin finding and familiarizing myself with the <em>absolute simplest</em> tools and procedures in order to put them into place and avoid some of the DevOps minefield that a team can find itself on when it is unfamiliar with the options available.</p>
+
+<p><a href="https://zeit.co/now">Zeit Now</a> seems like a fantastic service to fit many of our needs. My test was then to see if this was as simple &amp; easy for me as it seemed to be for Mr. Hanselman.  One main difference between my project and Scott&rsquo;s here as well: I am not using the barebones <code>ASP.NET MVC</code> template.  Instead, I took a functioning <a href="https://www.nancyfx.org">NancyFX</a> example API/website, still using <code>project.json</code> structure instead of <code>MSBuild</code> as well, generated the <code>Dockerfile</code> and after adding a few items under our <code>include</code> in <code>publishOptions</code>&hellip;</p>
+
+<p>I wanted to know if this was going to work with my existing <a href="https://nancyfx.org">NancyFX</a> services and/or if there were any extra gotcha&rsquo;s or things to know. As a jumpstart, the easiest thing to do was simply clone my <a href="https://github.com/nandotech/VSNancyDemo/"><code>VSNancyDemo</code> repository</a> from <a href="https://github.com">GitHub</a>.</p>
+
+<p>The <a href="https://github.com/nandotech/VSNancyDemo/">repository is public</a> so feel free to clone the project as well if you&rsquo;d like to follow along or try out your ZEIT Now with something a little different or pull in any project of your own!</p>
+
+<p>Lines added to <em>project.json</em> (to ensure required files copy to <code>publish</code> dir)</p>
+
+<pre><code class="language-json">  &quot;publishOptions&quot;: {
+    &quot;include&quot;: [
+      &quot;wwwroot&quot;,
+      &quot;web.config&quot;,
+      &quot;appsettings.json&quot;,
+      &quot;Content&quot;,
+      &quot;Dockerfile&quot;,
+      &quot;views&quot;
+    ]
+  }
+</code></pre>
+
+<p>I noticed if some of the above were missing, there would be some issues. For instance, before I added the <code>&quot;views&quot;</code> folder, I was getting a <code>500 Error</code> from <code>Nancy</code> as if the <code>index.html</code> did not exist.  Rightfully so, as in the container environment that ZEIT deployed the folder with views was not copied.</p>
+
+<p><em>Dockerfile</em></p>
+
+<pre><code class="language-dockerfile">FROM microsoft/aspnetcore
+LABEL name=&quot;DispoStatsService&quot;
+ENTRYPOINT [&quot;dotnet&quot;, &quot;DispoStatsService.dll&quot;]
+ARG source=.
+WORKDIR /app
+EXPOSE 80
+COPY $source .
+
+</code></pre>
+
+<p>Easy as pie.</p>
+
+<p>So as to not be repetetive, I&rsquo;ll pick up here <em>after</em> the <code>dotnet publish</code></p>
+
+<p><img src="http://i.imgur.com/C6tiFbc.png" alt="Publish Output Directory" /></p>
+
+<p>You can see at the very end here I ran the <code>now</code> command inside the folder <code>dotnet cli</code> published to.  When it is done there, your app is deployed and running in a container.  The URL (since it&rsquo;s a little long and auto-generated) gets automatically copied to your clipboard.</p>
+
+<p>I wanted to go ahead and also get custom domain names working as <a href="https://zeit.co">Zeit.co</a> seemed to make doing so extremely easy. See the <code>cli</code> output, deployment and alias assignment below:</p>
+
+<p><img src="http://i.imgur.com/zAV9pgo.png" alt="ZEIT Deployment and Alias" /></p>
+
+<p>Lo&rsquo; and behold, I have my <code>NancyFX 2.0-clinteastwood</code> sample app running on <code>Docker</code> in the cloud using <a href="https://zeit.co">https://zeit.co</a>.  The container may be reached using either the <code>alias</code> I assigned, <a href="https://umgdss.nt-x.com">https://umgdss.nt-x.com</a>, or the original address, <a href="https://dispostatsservice-wjpwcfkfcq.now.sh/">https://dispostatsservice-wjpwcfkfcq.now.sh/</a>.  While we are admiring the shiny tool: see how it also auto-issued SSL certificate for the <code>alias</code> domain.</p>
+
+<p>Another cool thing about this sample application is some of the very basic routes and functions incorporate some framework bits, like the <a href="https://en.wikipedia.org/wiki/Dependency_injection">dependency injection</a> container, so we can be confident parts of the app were tested/working early on.</p>
+
+<p>For example, as shown below, my <em>Home</em> <code>/</code> Route returns an <code>index.html</code> with whatever <code>Greeting</code> is in <code>appsettings.json</code> and the <code>/test/</code> route right next to it does the same, but returns plain text with no web page. This is helpful, for instance, in how it helped me realize the <code>/views/</code> folder was not  in the publish path.  The final 2 browsers simply show a sample <code>AsyncModule</code> with some of the possibilities using the built-in request pipelines and last but not least: the <code>/os/</code> route!</p>
+
+<p>Don&rsquo;t let the code for this overwhelm you, ok?</p>
+
+<pre><code class="language-csharp">   Get(&quot;/os&quot;, x =&gt;
+    {
+       return System.Runtime.InteropServices.RuntimeInformation.OSDescription;
+    });
+
+</code></pre>
+
+<p><img src="http://i.imgur.com/fXmVmvo.png" alt="Route Screenshot" /></p>
+
+<p>I find this one particularly cool because it works no matter where or how you are hosting your <a href="https://nancyfx.org">NancyFX</a> app, the route will return what operating system the host is running. Here on this cloud provider the app is aware of itself being hosted on <code>Linux 4.7.0-coreos</code> which sounds more like a kernel version (container) to me.</p>
+
+<p>Here is the exact same app again, but debugging locally (ignoring our <code>Dockerfile</code> etc).</p>
+
+<p><img src="http://i.imgur.com/kkkZejX.png" alt="/os/ route debugging" /></p>
+
+<h3 id="now-go-on-hack-and-be-merry">Now go on, hack and be Merry.</h3>
+
+<p>I hope some part of this was helpful, I personally want to thank <a href="https://twitter.com/shanselman">Scott Hanselman</a> and <a href="https://twitter.com/condrong">Glenn Condron</a> for their tinkering and getting this to work! This has not only helped me overall understand the concept and inner workings with regard to <a href="https://docker.com">Docker</a>, but it also exposed me to an awesome service &amp; host in <a href="https://zeit.co">ZEIT</a> that I immediately fell in love with!</p>
+
+<p>Now that I&rsquo;ve completed that diversion&ndash;back to writing the <strong>core functionality</strong> for this API &amp; app I&rsquo;m supposed to be working on.</p>
+
+      </article>
+<div class="row">
+<div>
+
+  <strong>Categories:</strong>
+  <a href="/categories/">.NET Core</a>, <a href="/categories/">Docker</a>, <a href="/categories/">Deployment</a>, <a href="/categories/">Automation</a>, <a href="/categories/">DevOps</a>
+
+<br />
+
+  <strong>Tags:</strong>
+  <a href="/tags/">DevOps</a>, <a href="/tags/">cloud</a>, <a href="/tags/">.net core</a>, <a href="/tags/">docker</a>, <a href="/tags/">zeit</a>, <a href="/tags/">now</a>
+ <br />
+</div>
+  </div>
+  
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="https://blog.nandotech.com/post/2017-03-09-visual-studio-2017-final-released/" data-toggle="tooltip" data-placement="top" title="Visual Studio 2017 Final Released">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="https://blog.nandotech.com/post/2018-04-09-learning-go-resources-and-my-journey/" data-toggle="tooltip" data-placement="top" title="Learning Go--Resources and My Journey">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+              <div>
+        <h3>Looking for something specific? Search.</h3>
+<script>
+  (function() {
+    var cx = '003420899800509316729:h45j9hocqui';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
+      
+      <div class="disqus-comments">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nandotech" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          <li>
+            <a href="https://www.facebook.com/nandotechinc" title="Facebook">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/nandotech" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://twitter.com/nand0tech" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="mailto:info@nandotech.com" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://linkedin.com/in/fernando-rodriguez-6082914a" title="LinkedIn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+	    	  
+          <li>
+            <a href="https://stackoverflow.com/users/4308952/fernando-rodriguez" title="StackOverflow">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+
+    		  <li>
+      			<a href="https://blog.nandotech.com/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+          &copy; 
+    		  2018
+    		  
+    		  <a href="https://blog.nandotech.com/">NandoTech, Inc.</a>
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  Fernando Rodriguez
+    		  
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+        <p class="theme-by text-muted">
+          <i style="vertical-align: middle">-- Advertisement --</i>
+          </p>
+          <p>
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6674509845232880"
+     data-ad-slot="7443085854"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+          </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/jquery-1.11.2.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-59045667-5', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  </body>
+</html>

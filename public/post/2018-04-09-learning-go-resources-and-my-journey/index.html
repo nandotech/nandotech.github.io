@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Learning Go--Resources and My Journey</title>
+
+  <meta name="author" content="Fernando Rodriguez" />
+  
+  
+  <meta name="description" content="Blog posts on programming, technology and entrepreneurship. A true polyglot, Software Developer and CEO of NandoTech Inc, Fernando Rodriguez, blogging on how &amp; where we cater custom software &amp; SIP solutions for small to medium sized businesses.">
+  
+  <meta name="keywords" content="nancyfx, asp.net, company, .net, .net core, software engineer, web development, microsoft, consultant">
+
+  <meta name="generator" content="Hugo 0.38.2" />
+
+  <link rel="alternate" href="https://blog.nandotech.com/index.xml" type="application/rss+xml" title="NandoTech">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="/css/pygment_highlights.css" />
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  <meta property="og:title" content="Learning Go--Resources and My Journey" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/post/2018-04-09-learning-go-resources-and-my-journey//" />
+  <meta property="og:image" content="/img/nandotech_logo_gray.gif" />
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://blog.nandotech.com/">NandoTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">           
+      
+        
+          <li>
+          <a title="Blog" href="/">Blog</a>
+  	      </li>
+  	    
+      
+        
+          <li>
+          <a title="About" href="/page/about/">About</a>
+  	      </li>
+  	    
+      
+        
+          <li>
+          <a title="Company Website" href="https://nandotech.com">Company Website</a>
+  	      </li>
+  	    
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+          <a title="NandoTech" href="https://blog.nandotech.com/">
+              <img class="avatar-img" src="/img/nandotech_logo_gray.gif" alt="NandoTech" />
+          </a>
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Learning Go--Resources and My Journey</h1>
+      
+        
+      <h2 class="post-subheading">Free and paid resources for learning Golang, plus my personal experience learning.</h2>
+      
+      
+      
+      
+      <span class="post-meta">Posted on April 9, 2018</span>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      <article role="main" class="blog-post">
+          
+
+<h2 id="it-has-been-an-awfully-long-time-in-between-blog-posts">It has been an awfully long time in between blog posts.</h2>
+
+<h4 id="the-past-year-has-resulted-in-a-slew-of-unforeseen-changes-that-i-would-never-have-imagined-after-my-post-regarding-learning-from-failure-post-2017-02-23-learning-from-failure-i-was-ultimately-forced-to-make-an-extremely-tough-decision-and-effectively-shutter-nandotech-inc-as-an-independent-entity">The past year has resulted in a slew of unforeseen changes that I would never have imagined. After my post regarding <a href="/post/2017-02-23-learning-from-failure/">Learning From Failure</a>, I was ultimately forced to make an extremely tough decision and effectively shutter NandoTech, Inc. as an independent entity.</h4>
+
+<p>The company was absorbed by a client whom also provided me with full-time work. Since then, life has been quite the whirlwind and rollercoaster ride&ndash;such that I realize my last blog post was over a year ago.  However, taking the opportunity to look on the bright side; the long hiatus and freedom to do some dedicated learning at my new position allowed me the time to pick up <a href="https://www.golang.org">Google&rsquo;s Go programming language</a> which I had an interest in for over a year.</p>
+
+<p>That said, I began reading some books and collecting resources around 6 months ago and decided I would learn Go. Unfortunately, my procastination and work-related items prevented me from fully committing to my learning, so it has been very slow going. Beyond this, I have come to realize that the most important part of learning a programing language is quite simply PRACTICE.</p>
+
+<p>PRACTICE, PRACTICE, PRACTICE.  Since I was already familiar with programming and languages, I believed that I could read a few books and blog posts, become comfortable with the Go syntax and I would suddenly be just as effective programming in Go as I was already using C#.  It actually took a few coding interviews for me to realize I was not nearly as familiar and comfortable with Go syntax as I thought.</p>
+
+<p>So, I went ahead with searching for resources that provide some more practical examples and more importantly, just simply anything that can at least be followed along and solved to exercise those coding muscles.</p>
+
+<h4 id="no-matter-how-many-videos-i-watch-code-blogs-books-i-read-if-i-do-not-code-and-practice-the-syntax-and-principles-i-am-learning-the-information-will-leave-my-brain-just-as-quickly-as-it-entered">No matter how many videos I watch, code, blogs &amp; books I read: if I do not code and practice the syntax and principles I am learning the information will leave my brain just as quickly as it entered.</h4>
+
+<p>All that being said, without further adieu, below is a listing of <a href="https://golang.org">Go</a> resources.  Books, blogs, conference talks, videos and some practical coding exercises (some with and without solutions) that I have found helpful, are all included.</p>
+
+<h3 id="books">Books:</h3>
+
+<ol>
+<li><a href="https://amzn.to/2H79KGp">Go In Action</a> by <a href="https://twitter.com/wkennedy">William Kennedy</a></li>
+<li><a href="https://amzn.to/2JyzREG">Go Web Programminmg</a> by Sau Cheong Chang</li>
+<li><a href="https://amzn.to/2JyzREG">The Little Go Book</a> by Karl Seguin</li>
+</ol>
+
+<h3 id="blogs">Blogs:</h3>
+
+<ol>
+<li><a href="https://blog.golang.org/">The Go Programming Language</a></li>
+<li><a href="https://dave.cheney.net">The Acme of Foolishness</a> by <a href="https://twitter.com/davecheney">Dave Cheney</a></li>
+<li><a href="https://rakyll.org/">GO, The Unwritten Parts</a> by <a href="https://twitter.com/rakyll">Rakyll</a></li>
+<li><a href="https://www.ardanlabs.com/blog/">Ardan Labs Blog</a></li>
+</ol>
+
+<h3 id="videos-series-conference-talks">Videos (Series &amp; Conference Talks)</h3>
+
+<ol>
+<li><a href="https://youtube.com/justforfunc">Just For Func</a> Video Series (Youtube Channel) by <a href="https://twitter.com/francsec">Francesc Campoy</a></li>
+<li><a href="https://www.youtube.com/channel/UCx9QVEApa5BKLw9r8cnOFEA">Gopher Academy</a> by Various Authors (compilation)</li>
+<li><a href="https://www.youtube.com/watch?v=ZCB-g2B4Y5A">GopherCon Russia - Go Looking Back and Looking Forward</a> by <a href="https://twitter.com/bradfitz">Brad Fitzpatrick</a></li>
+<li><a href="https://www.youtube.com/watch?v=MzTcsI6tn-0">GopherCon Russia - Go Best Practices</a> by <a href="https://twitter.com/bketelsen">Brian Ketelson</a></li>
+</ol>
+
+<h3 id="other-resources-practice">Other Resources &amp; Practice</h3>
+
+<ol>
+<li><a href="https://gophercises.com">Gophercises</a> by <a href="https://twitter.com/@joncalhoun">Jon Calhoun</a></li>
+<li><a href="https://gotime.fm">GoTime FM Podcast</a> with <a href="https://twitter.com/carlisia">Carlisia Pinto</a>, <a href="https://twitter.com/bketelsen">Brian Ketelsen</a>, <a href="https://twitter.com/erikstmartin">Erik St Martin</a> and <a href="https://twitter.com/adamstac">Adam Stacoviak</a></li>
+</ol>
+
+      </article>
+<div class="row">
+<div>
+
+  <strong>Categories:</strong>
+  <a href="/categories/">Go</a>, <a href="/categories/">Golang</a>, <a href="/categories/">Books</a>, <a href="/categories/">Resources</a>
+
+<br />
+
+  <strong>Tags:</strong>
+  <a href="/tags/">go</a>, <a href="/tags/">golang</a>, <a href="/tags/">books</a>, <a href="/tags/">resources</a>
+ <br />
+</div>
+  </div>
+  
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="https://blog.nandotech.com/post/2017-03-16-zeit-now-deploying-dotnet-core-in-a-docker-bow/" data-toggle="tooltip" data-placement="top" title="ZEIT Now Deploying ASP.NET (and .NET) Core Apps in seconds with your Dockerfile">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+              <div>
+        <h3>Looking for something specific? Search.</h3>
+<script>
+  (function() {
+    var cx = '003420899800509316729:h45j9hocqui';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
+      
+      <div class="disqus-comments">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nandotech" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          <li>
+            <a href="https://www.facebook.com/nandotechinc" title="Facebook">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/nandotech" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://twitter.com/nand0tech" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="mailto:info@nandotech.com" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://linkedin.com/in/fernando-rodriguez-6082914a" title="LinkedIn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+	    	  
+          <li>
+            <a href="https://stackoverflow.com/users/4308952/fernando-rodriguez" title="StackOverflow">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+
+    		  <li>
+      			<a href="https://blog.nandotech.com/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+          &copy; 
+    		  2018
+    		  
+    		  <a href="https://blog.nandotech.com/">NandoTech, Inc.</a>
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  Fernando Rodriguez
+    		  
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+        <p class="theme-by text-muted">
+          <i style="vertical-align: middle">-- Advertisement --</i>
+          </p>
+          <p>
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6674509845232880"
+     data-ad-slot="7443085854"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+          </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/jquery-1.11.2.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-59045667-5', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  </body>
+</html>

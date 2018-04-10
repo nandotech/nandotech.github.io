@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zeit on NandoTech</title>
+    <link>https://blog.nandotech.com/tags/zeit/</link>
+    <description>Recent content in Zeit on NandoTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
+    <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
+    <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.nandotech.com/tags/zeit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ZEIT Now Deploying ASP.NET (and .NET) Core Apps in seconds with your Dockerfile</title>
+      <link>https://blog.nandotech.com/post/2017-03-16-zeit-now-deploying-dotnet-core-in-a-docker-bow/</link>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      <author>info@nandotech.com (Fernando Rodriguez)</author>
+      <guid>https://blog.nandotech.com/post/2017-03-16-zeit-now-deploying-dotnet-core-in-a-docker-bow/</guid>
+      <description>If you&amp;rsquo;re anything like me, you constantly are finding more and more tasks that require your attention. To make matters worse, the industry definition of &amp;ldquo;DevOps&amp;rdquo; is still evolving itself, quickly becoming ubiquitous with &amp;ldquo;a litle bit of everything&amp;rdquo; in the process.
+Like a breath of fresh air, ZEIT is a cloud service that allows near-mindless deployment of javascript &amp;amp; node.js apps. Much thanks probably also belongs to Scott Hanselman and his ever-tinkering soul who published &amp;ldquo;ZEIT now deployments of open source ASP.</description>
+    </item>
+    
+  </channel>
+</rss>

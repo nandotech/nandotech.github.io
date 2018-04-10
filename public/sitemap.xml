@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.nandotech.com/</loc>
-    <lastmod>2016-12-20T00:00:00+00:00</lastmod>
+    <loc>https://blog.nandotech.com/post/2018-04-09-learning-go-resources-and-my-journey/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version/</loc>
+    <loc>https://blog.nandotech.com/post/2017-03-16-zeit-now-deploying-dotnet-core-in-a-docker-bow/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/post/2017-03-09-visual-studio-2017-final-released/</loc>
+    <lastmod>2017-03-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/post/2017-02-23-learning-from-failure/</loc>
+    <lastmod>2017-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/post/2017-01-19-nancy-dotnet-core-file-upload/</loc>
+    <lastmod>2017-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/post/2016-12-20-dotnet-core-cli-version.1/</loc>
     <lastmod>2016-12-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -90,7 +111,414 @@
   </url>
   
   <url>
+    <loc>https://blog.nandotech.com/categories/.net-core/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/.net-core/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.nandotech.com/page/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/angular-2/</loc>
+    <lastmod>2016-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/angular1/</loc>
+    <lastmod>2016-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/angular2/</loc>
+    <lastmod>2016-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/angularjs/</loc>
+    <lastmod>2016-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/api/</loc>
+    <lastmod>2016-10-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/async/</loc>
+    <lastmod>2016-11-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/automation/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/azure/</loc>
+    <lastmod>2017-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/azure/</loc>
+    <lastmod>2017-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/books/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/books/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/business/</loc>
+    <lastmod>2017-02-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/cli/</loc>
+    <lastmod>2016-12-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/cli/</loc>
+    <lastmod>2017-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/cloud/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/comcast/</loc>
+    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/console/</loc>
+    <lastmod>2016-11-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/csharp/</loc>
+    <lastmod>2016-11-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/dapper/</loc>
+    <lastmod>2017-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/dapper/</loc>
+    <lastmod>2017-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/deployment/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/devops/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/devops/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/docker/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/docker/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/entrepreneurship/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/entrepreneurship/</loc>
+    <lastmod>2016-02-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/feelings/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/fun/</loc>
+    <lastmod>2016-10-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/github/</loc>
+    <lastmod>2016-10-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/go/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/go/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/golang/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/golang/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/greenfield/</loc>
+    <lastmod>2016-10-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/javascript/</loc>
+    <lastmod>2016-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/js-frameworks/</loc>
+    <lastmod>2016-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/learning/</loc>
+    <lastmod>2016-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/management/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/management/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/mikrotik/</loc>
+    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/miscellaneous/</loc>
+    <lastmod>2016-10-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/nancyfx/</loc>
+    <lastmod>2017-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/nancyfx/</loc>
+    <lastmod>2016-11-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/network-setup/</loc>
+    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/networking/</loc>
+    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/now/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/people/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/post/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/priorities/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/resources/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/resources/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/router/</loc>
+    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/semver/</loc>
+    <lastmod>2016-09-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/startups/</loc>
+    <lastmod>2017-02-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/startups/</loc>
+    <lastmod>2017-02-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/twilio/</loc>
+    <lastmod>2016-11-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/twilio/</loc>
+    <lastmod>2016-11-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/visual-studio/</loc>
+    <lastmod>2017-03-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/visual-studio/</loc>
+    <lastmod>2017-03-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/categories/voip/</loc>
+    <lastmod>2016-11-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nandotech.com/tags/zeit/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
