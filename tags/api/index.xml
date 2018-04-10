@@ -9,9 +9,7 @@
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Tue, 25 Oct 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.nandotech.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://blog.nandotech.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building an (awesome) API with NancyFX 2.0 &#43; Dapper</title>
@@ -19,7 +17,565 @@
       <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2016-10-25-nancyfx-webapi-dapper/</guid>
-      <description>NancyFX &amp;amp; Dapper are so hot right now. Naturally, I had to put them together. I am a huge fan and follower of .NET Core and the entire open source movement going on inside Microsoft and really what seems like the world over. More and more companies, big and small are open sourcing projects as the default rather than the exception. ASP.NET Core looks extremely promising, but I was always a fan of NancyFX and wanted to try it out.</description>
+      <description>
+
+&lt;h2 id=&#34;nancyfx-dapper-are-so-hot-right-now-naturally-i-had-to-put-them-together:e48c0fcb364edcd7525c48af0f4e977f&#34;&gt;NancyFX &amp;amp; Dapper are so hot right now. Naturally, I had to put them together.&lt;/h2&gt;
+
+&lt;h4 id=&#34;i-am-a-huge-fan-and-follower-of-net-core-https-dot-net-and-the-entire-open-source-movement-going-on-inside-microsoft-and-really-what-seems-like-the-world-over-more-and-more-companies-big-and-small-are-open-sourcing-projects-as-the-default-rather-than-the-exception:e48c0fcb364edcd7525c48af0f4e977f&#34;&gt;I am a huge fan and follower of &lt;a href=&#34;https://dot.net&#34;&gt;.NET Core&lt;/a&gt; and the entire open source movement going on inside Microsoft and really what seems like the world over. More and more companies, big and small are open sourcing projects as the default rather than the exception.&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://asp.net&#34;&gt;ASP.NET Core&lt;/a&gt; looks extremely promising, but I was always a fan of NancyFX and wanted to try it out. Subsequently, I was extremely excited when I found out that &lt;a href=&#34;http://nancyfx.org&#34;&gt;NancyFX&lt;/a&gt; would be compatible with Core, and I basically gave myself a reason to use it.&lt;/p&gt;
+
+&lt;p&gt;That reason is a rather small Web API project that I very simply needed to accept &lt;code&gt;POST&lt;/code&gt; requests from two separate web servers/services and provide &lt;code&gt;GET&lt;/code&gt; routes that would be accessed via a SPA (probably &lt;a href=&#34;http://angular.io&#34;&gt;Angular 2&lt;/a&gt;) with some relevant business information that would be coming in from the API&amp;rsquo;s.&lt;/p&gt;
+
+&lt;p&gt;For the lazy, TL;DR &amp;ndash; Repository is available on Github: &lt;a href=&#34;https://github.com/nandotech/VSNancyDemo&#34;&gt;https://github.com/nandotech/VSNancyDemo&lt;/a&gt;.  Feel free to clone it, fork it, add, fix &amp;amp; send pull requests if you fancy.&lt;/p&gt;
+
+&lt;p&gt;Moral of the story is that this was incredibly easy to accomplish, especially if you stay on the &amp;ldquo;&lt;a href=&#34;https://github.com/NancyFx/Nancy/wiki/Introduction&#34;&gt;Super Duper Happy Path&lt;/a&gt;&amp;rdquo; as the developers like to put it.  We will only cover the back end service here, possibly saving the Angular 2 portion for another post.&lt;/p&gt;
+
+&lt;p&gt;With Core, we have a few options as it pertains to tooling, it really comes down to personal preference.  You may generate and do everything necessary from the &lt;a href=&#34;https://github.com/dotnet/cli&#34;&gt;command line&lt;/a&gt; and utilize your text editor of choice (in this case, I prefer &lt;a href=&#34;http://code.visualstudio.com/&#34;&gt;VS Code&lt;/a&gt;).  My personal preference is actually still to use the full version of Visual Studio for the C#/.NET coding, though I do like some of the cli templates better.&lt;/p&gt;
+
+&lt;p&gt;Generally, I like to take some parts of ASP.NET web templates to help take care of some boilerplate, but there is some value in doing everything from scratch. Below, we&amp;rsquo;ll explore a few options.&lt;/p&gt;
+
+&lt;p&gt;So, why not both?&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;CLI/Code&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Visual Studio&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/PhJP72m.png&#34; alt=&#34;.NET Core CLI&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/HoGGd07.png&#34; alt=&#34;VS Web API&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/VVHHhQG.png&#34; alt=&#34;VS Code&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/69T7KsR.png&#34; alt=&#34;Bare WebAPI Proj&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;From here, the direction are basicallly identical regardless which IDE or setup you are attempting to use. I will try to point out differences wherever possible. Also of note, from the &lt;code&gt;dotnet&lt;/code&gt; cli you may use the command &lt;code&gt;dotnet new -t web&lt;/code&gt; to get a full ASP.NET application.  Alternatively, you can also use the &lt;a href=&#34;http://yeoman.io/&#34;&gt;Yeoman&lt;/a&gt; tool that provides several different templates that can be utilized typing &lt;code&gt;yo aspnet&lt;/code&gt; (&lt;a href=&#34;https://docs.asp.net/en/latest/client-side/yeoman.html&#34;&gt;assuming you&amp;rsquo;ve installed yeoman &amp;amp; the aspnet generators&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Regardless which route you go, next step here is our config files.  Every Core project has a &lt;code&gt;project.json&lt;/code&gt; and we will also add an &lt;code&gt;appsettings.json&lt;/code&gt; file where we will inject some static data from as well as database connection string.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;project.json&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;dependencies&amp;quot;: {
+    &amp;quot;Microsoft.NETCore.App&amp;quot;: {
+      &amp;quot;version&amp;quot;: &amp;quot;1.0.1&amp;quot;,
+      &amp;quot;type&amp;quot;: &amp;quot;platform&amp;quot;
+    },
+    &amp;quot;Microsoft.AspNetCore.Diagnostics&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+    &amp;quot;Microsoft.AspNetCore.Server.IISIntegration&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+    &amp;quot;Microsoft.AspNetCore.Server.Kestrel&amp;quot;: &amp;quot;1.0.1&amp;quot;,
+    &amp;quot;Microsoft.Extensions.Logging.Console&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+    &amp;quot;Microsoft.AspNetCore.Owin&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+    &amp;quot;Microsoft.Extensions.Configuration.FileExtensions&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+    &amp;quot;Microsoft.Extensions.Configuration.Json&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+    &amp;quot;Nancy&amp;quot;: &amp;quot;2.0.0-barneyrubble&amp;quot;,
+    &amp;quot;Dapper&amp;quot;: &amp;quot;1.50.2&amp;quot;
+  },
+  &amp;quot;tools&amp;quot;: {
+    &amp;quot;Microsoft.AspNetCore.Server.IISIntegration.Tools&amp;quot;: &amp;quot;1.0.0-preview2-final&amp;quot;
+  },
+  &amp;quot;frameworks&amp;quot;: {
+    &amp;quot;netcoreapp1.0&amp;quot;: {}
+  },
+  &amp;quot;buildOptions&amp;quot;: {
+    &amp;quot;debugType&amp;quot;: &amp;quot;portable&amp;quot;, 
+    &amp;quot;emitEntryPoint&amp;quot;: true
+  },
+  &amp;quot;runtimeOptions&amp;quot;: {
+    &amp;quot;configProperties&amp;quot;: {
+      &amp;quot;System.GC.Server&amp;quot;: true
+    }
+  },
+  &amp;quot;publishOptions&amp;quot;: {
+    &amp;quot;include&amp;quot;: [
+      &amp;quot;wwwroot&amp;quot;,
+      &amp;quot;web.config&amp;quot;
+    ]
+  },
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;postpublish&amp;quot;: [ &amp;quot;dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:coreclr%&amp;quot; ]
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;appsettings.json&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;ConnectionStrings&amp;quot;: {
+    &amp;quot;DefaultConnection&amp;quot;: &amp;quot;Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=DemoDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False&amp;quot;
+  },
+    &amp;quot;Greeting&amp;quot;: &amp;quot;A configurable Hello!&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here, we&amp;rsquo;ll use &lt;code&gt;DefaultConnection&lt;/code&gt; as our DB connection string and will be injecting &lt;code&gt;Greeting&lt;/code&gt; via Dependency Injection as a simple API string response and in a Nancy view, mainly just to show that we can do that. :)&lt;/p&gt;
+
+&lt;p&gt;Depending which app template you used, you may or may not already have a &lt;code&gt;Startup.cs&lt;/code&gt; file in the root of your project. Either way, we want to edit that file to look like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Startup.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;    public class Startup
+    {
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            // All dependency injection will be done in NancyBootstrapper
+        }
+        // This method gets called by the runtime.
+        // We will configure this to use Nancy middleware.
+        public void Configure(IApplicationBuilder app)
+        {
+            // Creating our request pipeline--strictly Nancy middleware
+            app.UseOwin(x =&amp;gt; x.UseNancy());
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Note: see &lt;a href=&#34;https://github.com/NancyFx/Nancy/tree/master/samples/Nancy.Demo.Hosting.Kestrel&#34;&gt;this example&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/jchannon&#34;&gt;Jonathan Channon&lt;/a&gt; from the &lt;code&gt;NancyFX&lt;/code&gt; team for how to keep IConfiguration in your &lt;code&gt;Startup.cs&lt;/code&gt; and pass it into the &lt;code&gt;NancyBootstrapper&lt;/code&gt;. In our case, a) I felt the code was cleaner and easier to understand using the &lt;code&gt;Nancy&lt;/code&gt; DI scheme and b) using the aforementioned method gave me some issues resolving dependencies since I am pulling things in from &lt;code&gt;appSettings.json&lt;/code&gt;.  The example in the link is a full Nancy app running on Kestrel&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;At this point, if we define a &lt;code&gt;HomeModule&lt;/code&gt; which is Nancy&amp;rsquo;s default route, equivalent to the &lt;code&gt;HomeController&lt;/code&gt; in MVC, then you will have an API that can handle requests already. While I like to split up these different types of code files into folders, it is not in any way required.&lt;/p&gt;
+
+&lt;p&gt;Below is a very basic module with a &amp;ldquo;Hello World&amp;rdquo; message at the &lt;code&gt;/&lt;/code&gt; route at &lt;code&gt;localhost:5000&lt;/code&gt;. You can also see Nancy returning your current OS (or whatever is hosting the app) by visiting &lt;code&gt;localhost:5000/os&lt;/code&gt;.  Below code also demonstrates how you may write your route definitions in-line (for very short routes) and also within blocks (curly braces) allowing you to write as much code as you need.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;HomeModule.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt; public class HomeModule : NancyModule
+    {
+        public HomeModule()
+        {
+            Get(&amp;quot;/&amp;quot;, args =&amp;gt; &amp;quot;Hello World&amp;quot;);
+
+            Get(&amp;quot;/os&amp;quot;, x =&amp;gt;
+            {
+                return System.Runtime.InteropServices.RuntimeInformation.OSDescription;
+            });
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We will experiment with injecting dependencies using Nancy&amp;rsquo;s built in &lt;code&gt;TinyIoC&lt;/code&gt; and also build a few other modules. We&amp;rsquo;ll include very cursory, somewhat contrived examples, but you will get to also see how &lt;code&gt;async&lt;/code&gt; modules look along with the use of &lt;code&gt;Before&lt;/code&gt; and &lt;code&gt;After&lt;/code&gt; request pipelines in Nancy modules. The same applies for Nancy views, though I will try and provide some explanation and/or guidance with links to point you in the right direction.&lt;/p&gt;
+
+&lt;p&gt;For now, let&amp;rsquo;s pat ourselves on the back: you&amp;rsquo;ve got an API running on &lt;code&gt;NancyFX 2.0&lt;/code&gt; on &lt;code&gt;.NET Core&lt;/code&gt; with 2 Get routes, which you can test and confirm in your browser.  From here, the sky is the limit.  However, back to the matter at hand: we are now configured and ready to go with &lt;code&gt;.NET Core&lt;/code&gt; and &lt;code&gt;Nancy&lt;/code&gt;, and we&amp;rsquo;ve pulled in the dependencies we need for &lt;code&gt;Dapper&lt;/code&gt;. Before we create a database and service to access data from it, let&amp;rsquo;s set up another &lt;code&gt;Module&lt;/code&gt; (think [in &lt;a href=&#34;http://asp.net&#34;&gt;ASP.NET&lt;/a&gt; terms]: &lt;code&gt;Controller&lt;/code&gt;) and explore &lt;a href=&#34;http://docs.asp.net/en/latest/fundamentals/dependency-injection.html&#34;&gt;Dependency&lt;/a&gt; &lt;a href=&#34;https://wildermuth.com/2016/08/07/ASP-NET-Core-Dependency-Injection&#34;&gt;Injection&lt;/a&gt; with &lt;a href=&#34;https://github.com/grumpydev/TinyIoC&#34;&gt;TinyIoC&lt;/a&gt;, which comes baked into &lt;code&gt;Nancy&lt;/code&gt; for us.&lt;/p&gt;
+
+&lt;p&gt;Also, putting aside our SPA for now, what if we wanted to return an &lt;code&gt;index.html&lt;/code&gt; page showing &amp;ldquo;Hello World&amp;rdquo; rather than the current plain text response?&lt;/p&gt;
+
+&lt;p&gt;There are 2 things we need to do:
+1. Create an &lt;code&gt;index.html&lt;/code&gt; view with a &lt;code&gt;@Model&lt;/code&gt; element for data from the &lt;code&gt;Controller&lt;/code&gt;
+2. Update our &lt;code&gt;HomeModule.cs&lt;/code&gt; &lt;code&gt;GET&lt;/code&gt; Route to render a view.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;index.html&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot; /&amp;gt;
+    &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;
+    &amp;lt;h2&amp;gt;@Model&amp;lt;/h2&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;HomeModule.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;public class HomeModule : NancyModule
+    {
+        public HomeModule()
+        {
+
+            Get(&amp;quot;/&amp;quot;, args =&amp;gt;
+            {
+                
+                return View[&amp;quot;index.html&amp;quot;, &amp;quot;Hello World&amp;quot;];
+            });
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You may be seeing something like this:
+&lt;img src=&#34;http://i.imgur.com/94mQKnp.png&#34; alt=&#34;500 Error!&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Don&amp;rsquo;t worry! You didn&amp;rsquo;t do anything wrong.  If we read into the error message, we see that it seems to be looking in &lt;code&gt;views/Home/&lt;/code&gt; as well as &lt;code&gt;views&lt;/code&gt; and the &lt;code&gt;root&lt;/code&gt; path for several different variations. But we put our &lt;code&gt;index.html&lt;/code&gt; in our &lt;code&gt;views&lt;/code&gt; folder, right? The key here is to notice the &lt;code&gt;&amp;quot;Root Path&amp;quot;&lt;/code&gt; which on my OS as we debug here is set to &lt;code&gt;C:\VSCode\VSNancyNetCore\src\VSNancyDemo\bin\Release\netcoreapp1.0\&lt;/code&gt; &amp;ndash;no wonder we can&amp;rsquo;t find our &lt;code&gt;index.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thankfully, this is a simple fix: we simply need to override &lt;code&gt;NancyFX&lt;/code&gt;&amp;rsquo;s default &lt;code&gt;IRootPathProvider&lt;/code&gt;. This is no way prescriptive, but here is the folder structure I choose to utilize for a basic &lt;code&gt;Nancy&lt;/code&gt; project:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/bkgjvNm.png&#34; alt=&#34;Nancy File Structure&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The only real &amp;ldquo;definite&amp;rdquo; here is Nancy generally prefers static content be placed in the &lt;code&gt;/Content/&lt;/code&gt; directory for simplicity.  Otherwise, this folder structure is 100% mine (although not particularly creative or anything, just my way or organizing things).  That said, the aforementioned class, one that inherits &lt;code&gt;IRootPathProvider&lt;/code&gt; we will add into our &lt;code&gt;/Helpers/&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;CustomRootPathProvider.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;    public class CustomRootPathProvider : IRootPathProvider
+    {
+        public string GetRootPath()
+        {
+            return Directory.GetCurrentDirectory();
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;This will fix our root directory issue&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Awesome.  We&amp;rsquo;re now using &lt;code&gt;NancyFX&lt;/code&gt;&amp;rsquo;s &lt;code&gt;Super-Simple View Engine&lt;/code&gt; or &lt;code&gt;SSVE&lt;/code&gt; for short to render our &lt;code&gt;Model&lt;/code&gt; to our &lt;code&gt;index.html&lt;/code&gt; page. Press &lt;code&gt;F5&lt;/code&gt; or type &lt;code&gt;dotnet run&lt;/code&gt; in your command line to see &amp;ldquo;hello world&amp;rdquo; displayed in HTML coming from your &lt;code&gt;NancyFX&lt;/code&gt; app.&lt;/p&gt;
+
+&lt;p&gt;Since that is out of the way, let&amp;rsquo;s create our &lt;code&gt;IGreeterService&lt;/code&gt; and &lt;code&gt;GreeterService&lt;/code&gt;.  To help show how the Dependency Injection scheme works, this will be a simple interface that has 1 function and the service will simply implement &lt;code&gt;GetGreeting()&lt;/code&gt; which pulls a &amp;ldquo;Greeting&amp;rdquo; variable from our &lt;code&gt;appsettings.json&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;IGreeterService.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;    public interface IGreeterService
+    {
+        string GetGreeting();
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;GreeterService.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;    public class GreeterService : IGreeterService
+    {
+        private string _greeting;
+
+        public GreeterService(IConfiguration config)
+        {
+            _greeting = config[&amp;quot;Greeting&amp;quot;];
+        }
+
+        public string GetGreeting()
+        {
+            return _greeting;
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, in order to take control of our configuration and dependency injection (and have our above sample work properly), we now have to inherit the &lt;code&gt;DefaultNancyBootstrapper&lt;/code&gt; and build our dependencies there. You&amp;rsquo;ll notice I&amp;rsquo;ve moved &lt;code&gt;IConfiguration&lt;/code&gt; and the adding of &lt;code&gt;appsettings.json&lt;/code&gt; into this file instead of in &lt;code&gt;Startup.cs&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;CustomBootstrapper.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;    public class CustomBootstrapper : DefaultNancyBootstrapper
+    {
+        public IConfiguration Configuration;
+        public CustomBootstrapper()
+        {
+            var builder = new ConfigurationBuilder()
+                            .SetBasePath(RootPathProvider.GetRootPath())
+                            .AddJsonFile(&amp;quot;appsettings.json&amp;quot;)
+                            .AddEnvironmentVariables();
+            Configuration = builder.Build();
+        }
+        protected override void ConfigureApplicationContainer(TinyIoCContainer container)
+        {
+            container.Register&amp;lt;IGreeterService, GreeterService&amp;gt;();
+            container.Register(Configuration);
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By default here, &lt;code&gt;GreeterService&lt;/code&gt; is scoped as a &lt;a href=&#34;http://csharpindepth.com/Articles/General/Singleton.aspx&#34;&gt;&lt;code&gt;Singleton&lt;/code&gt;&lt;/a&gt; and I believe &lt;code&gt;Configuration&lt;/code&gt; is &lt;code&gt;multi-instance&lt;/code&gt; (see: &lt;a href=&#34;https://github.com/NancyFx/Nancy/wiki/Bootstrapping-nancy&#34;&gt;https://github.com/NancyFx/Nancy/wiki/Bootstrapping-nancy&lt;/a&gt; for more info).  As you may also override Request &amp;amp; Application Containers, we can dig into this much further another day.&lt;/p&gt;
+
+&lt;p&gt;To see our &lt;code&gt;GreeterService&lt;/code&gt; in action and &lt;code&gt;TinyIoC&lt;/code&gt; resolving it, let&amp;rsquo;s update our &lt;code&gt;HomeModule.cs&lt;/code&gt; again:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;HomeModule.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;        public HomeModule(IGreeterService greeter)
+        {
+            Get(&amp;quot;/&amp;quot;, args =&amp;gt;
+            {
+                
+                return View[&amp;quot;index.html&amp;quot;, greeter.GetGreeting()];
+            });
+            
+            Get(&amp;quot;/test&amp;quot;, args =&amp;gt; greeter.GetGreeting());
+
+            Get(&amp;quot;/os&amp;quot;, x =&amp;gt;
+            {
+                return System.Runtime.InteropServices.RuntimeInformation.OSDescription;
+            });
+        }  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Our &lt;code&gt;index.html&lt;/code&gt; is now returning the message labelled &lt;code&gt;&amp;quot;Greeting&amp;quot;&lt;/code&gt; from our &lt;code&gt;appsettings.json&lt;/code&gt; file at the &lt;code&gt;/&lt;/code&gt; route. The &lt;code&gt;/test&lt;/code&gt; route just returns the same thing in plain text to the browser and/or &lt;a href=&#34;https://www.getpostman.com/&#34;&gt;Postman&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For the sake of length, I&amp;rsquo;m actually going to skip reviewing &lt;code&gt;async&lt;/code&gt;, &lt;code&gt;Before()&lt;/code&gt; and &lt;code&gt;After()&lt;/code&gt; lifetime hooks as well as built-in context logger&amp;ndash;you can still look over how this works in the &lt;code&gt;AsyncModule.cs&lt;/code&gt; within the &lt;a href=&#34;https://github.com/nandotech/VSNancyNetCore/&#34;&gt;repository&lt;/a&gt;. You can run this Get request from your browser and see how it works.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;With all the basics out of the way, including our side foray into using &lt;code&gt;NancyFX&lt;/code&gt; with a View Engine and exploring Dependency Injection, now we&amp;rsquo;re ready to build a database and get &lt;code&gt;Dapper&lt;/code&gt; up and running.&lt;/p&gt;
+
+&lt;p&gt;For this example, I will use my &lt;code&gt;localdb&lt;/code&gt;, specifically &lt;code&gt;(localdb)\\MSSQLLocalDB&lt;/code&gt; which should be just fine.  We are going to assume we have just 2 types (&lt;code&gt;class&lt;/code&gt;) of data and build a simple database to reflect our classes.&lt;/p&gt;
+
+&lt;p&gt;In typical usage, &lt;a href=&#34;https://github.com/StackExchange/dapper-dot-net&#34;&gt;Dapper&lt;/a&gt; expects that you have a connection open, or you may explicitly advise the library to &lt;code&gt;Open&lt;/code&gt; the database connection by calling &lt;code&gt;.Open()&lt;/code&gt; on their extended &lt;code&gt;IDbConnection&lt;/code&gt; interface.  In the interest of keeping code a little more &lt;a href=&#34;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&#34;&gt;D.R.Y.&lt;/a&gt;, I decided to make a &lt;code&gt;IDbConnectionProvider.cs&lt;/code&gt; and &lt;code&gt;DbConnectionProvider.cs&lt;/code&gt; which will return the &lt;code&gt;IDbConnection&lt;/code&gt; required for our Dapper queries.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update 11/2/2016:&lt;/em&gt; If you check out the &lt;a href=&#34;https://github.com/nandotech/VSNancyDemo/&#34;&gt;public github repo&lt;/a&gt; you will see I have factored out the need for &lt;code&gt;DbConnectionProvider&lt;/code&gt; and &lt;code&gt;IDbConnectionProvider&lt;/code&gt; from the project. Instead, there is an &lt;code&gt;IDispoRepository.cs&lt;/code&gt; and the &lt;code&gt;Startup.cs&lt;/code&gt; has the same singleton style instantiation, &lt;code&gt;container.Register&amp;lt;IDispoRepository, DispoRepository&amp;gt;();&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Such a small piece of code was simple to move into the data repository, and saved us 2 unncessary files.  Updated code below.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;IDispoRepository.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;    public interface IDispoRepository
+    {
+        IEnumerable&amp;lt;Disposition&amp;gt; GetAll();
+        Disposition Get(int id);
+        void Add(Disposition dispo);
+        void Remove(int id);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;DbConnectionProvider.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;    public class DispoRepository : IDispoRepository
+    {
+        //private IDbConnection dbConn;
+        private string dbConnectionString;
+        public DispoRepository(IConfiguration _dbConn)
+        {
+            dbConnectionString = _dbConn.GetConnectionString(&amp;quot;DefaultConnection&amp;quot;); ;
+        }
+
+        internal IDbConnection dbConn
+        {
+            get
+            {
+                return new SqlConnection(dbConnectionString);
+            }
+        }
+       
+       // I finish this class up further down the post
+       // after we&#39;ve created our database
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This way any other service or repository we may need to create simply needs a constructor accepting &lt;code&gt;IDispoRepository&lt;/code&gt; and it will have access to the correct &lt;code&gt;IDbConnection&lt;/code&gt; instance. Would also save having to update a bunch of different locations if the variable or connection  type were changed.  That said, we must add the following line to our &lt;code&gt;Bootstrapper&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;container.Register&amp;lt;IDispoRepository, DispoRepository&amp;gt;();  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once again: this is a &lt;code&gt;Singleton&lt;/code&gt; but since the IDbConnection object does not directly control opening/closing DB connections this is perfectly okay. (Thanks &lt;a href=&#34;http://twitter.com/jchannon&#34;&gt;@jchannon&lt;/a&gt; for helping me out here).&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s see now what we have in our &lt;code&gt;/Data/&lt;/code&gt; folder for classes that need to become database tables. In our app we will have 2 simple data types, &lt;code&gt;Disposition&lt;/code&gt; and &lt;code&gt;Sale&lt;/code&gt; that we&amp;rsquo;ll be able to INSERT into (POST) and also return (GET) some contextual data. Here are the classes below&amp;ndash;without using a database migration tool, we&amp;rsquo;ll just run a &lt;code&gt;.sql&lt;/code&gt; script to create the requisite database.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ll be using SQL Server for our example, but remember Dapper supports many different types of databases, from SQLite to Postgres.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Sale.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;    public class Sale
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime Timestamp { get; set; }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Disposition.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;    public class Disposition
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime Timestamp { get; set; }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which we can translate to:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;CreateDatabase.sql&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE TABLE [dbo].[Dispositions](
+    [Id] [int] IDENTITY(1,1) NOT NULL,
+    [Name] [nvarchar](max) NULL,
+    [Description] [nvarchar](max) NULL,
+    [Timestamp] datetime NULL,
+ CONSTRAINT [PK_Dispositions] PRIMARY KEY CLUSTERED 
+(
+    [Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+CREATE TABLE [dbo].[Sales](
+    [Id] [int] IDENTITY(1,1) NOT NULL,
+    [Name] [nvarchar](max) NULL,
+    [Description] [nvarchar](max) NULL,
+    [Timestamp] datetime NULL,
+ CONSTRAINT [PK_Sales] PRIMARY KEY CLUSTERED 
+(
+    [Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;looks-like-we-re-ready-to-use-dapper-and-interact-with-our-database-from-our-nancyfx-application-now:e48c0fcb364edcd7525c48af0f4e977f&#34;&gt;Looks like we&amp;rsquo;re ready to use Dapper and interact with our database from our &lt;code&gt;NancyFX&lt;/code&gt; application now.&lt;/h2&gt;
+
+&lt;p&gt;We&amp;rsquo;ll start by creating a simple &lt;code&gt;service&lt;/code&gt; or &lt;code&gt;repository&lt;/code&gt; depending who you ask, and using that to call Dapper functions to interact with our database.  If you&amp;rsquo;re reading this, I&amp;rsquo;m going to assume you&amp;rsquo;re at least a little familiar with SQL, so we won&amp;rsquo;t be going over any of that. Moreover, for this demo, I don&amp;rsquo;t think we&amp;rsquo;ll be doing anything real complicated.  The SQL script above is included in the &lt;a href=&#34;https://github.com/nandotech/VSNancyDemo&#34;&gt;Github Repository&lt;/a&gt; for your convenience.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;DispoRepository.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;    public class DispoRepository
+    {
+        private IDbConnection dbConn;
+
+        public DispoRepository(IDbConnectionProvider _dbConn)
+        {
+            dbConn = _dbConn.Connection;
+        }
+        public IEnumerable&amp;lt;Disposition&amp;gt; GetAll()
+        {
+            using (IDbConnection active = dbConn)
+            {
+                active.Open();
+                return active.Query&amp;lt;Disposition&amp;gt;(&amp;quot;SELECT * FROM Dispositions&amp;quot;);
+            }
+        }
+        public Disposition Get(int id)
+        {
+            using (IDbConnection active = dbConn)
+            {
+                active.Open();
+                return active.QueryFirst&amp;lt;Disposition&amp;gt;(&amp;quot;SELECT * FROM Dispositions WHERE id = @Id&amp;quot;, new { Id = id });
+            }
+        }
+        public void Add(Disposition dispo)
+        {
+            string sQuery = &amp;quot;INSERT INTO dbo.Dispositions (Name, Description, Timestamp)&amp;quot;
+                + &amp;quot; VALUES(@Name, @Description, @Timestamp)&amp;quot;;
+            using (IDbConnection active = dbConn)
+            {
+                active.Open();
+                active.Execute(sQuery, dispo);
+            }
+        }
+        public void Remove(int id)
+        {
+            using (IDbConnection active = dbConn)
+            {
+                active.Open();
+                active.Execute(&amp;quot;DELETE FROM Dispositions WHERE Id = @Id&amp;quot;, new { Id = id });
+            }
+        }
+
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;DispoRepository&lt;/code&gt; above contains some basic functions for interaction with the &lt;code&gt;Dispositions&lt;/code&gt; table we created in &lt;code&gt;SQL Server&lt;/code&gt;.  We have &lt;code&gt;GetAll()&lt;/code&gt;, &lt;code&gt;Get(int id)&lt;/code&gt;, &lt;code&gt;Add(Disposition dispo)&lt;/code&gt;, and &lt;code&gt;Remove(int id)&lt;/code&gt; and predictably they all do exactly what you&amp;rsquo;d expect.  Again for brevity, I will likely leave only the &lt;code&gt;Disposition&lt;/code&gt; Repo &amp;amp; &lt;code&gt;DispoModule&lt;/code&gt; completed with the &lt;code&gt;SaleModule.cs&lt;/code&gt; &amp;amp; implementing a &lt;code&gt;SalesRepository.cs&lt;/code&gt; as an exercise for you.  You may even add a field to relate the two and create a more robust data model.&lt;/p&gt;
+
+&lt;p&gt;I will personally be doing exactly that, as this is basically the barebones/precursor to a very simple closely related application I am working on.  I just really wanted to explore both Nancy &amp;amp; Dapper while I did it.&lt;/p&gt;
+
+&lt;p&gt;That said, here&amp;rsquo;s our &lt;code&gt;DispoModule.cs&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;DispoModule.cs&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;    public class DispoModule : NancyModule
+    {
+
+        public DispoModule(IDispoRepository _repo)
+            : base(&amp;quot;/dispo&amp;quot;)
+        {
+            //No longer needed, since we are injecting IDispoRepository
+           // var _repo = new DispoRepository(_dbConn);
+
+            Get(&amp;quot;/&amp;quot;, args =&amp;gt;
+            {
+                return _repo.GetAll();
+            });
+
+            Get(&amp;quot;Id={id}&amp;quot;, args =&amp;gt;
+            {
+                return _repo.Get(args.id);
+            });
+
+            Post(&amp;quot;/Name={name}&amp;amp;Desc={description}&amp;quot;, args =&amp;gt;
+            {
+                var posted = new Disposition();
+                posted.Name = args.Name;
+                posted.Description = args.Description;
+                posted.Timestamp = DateTime.Now;
+                _repo.Add(posted);
+
+                return posted;
+            });
+
+            Delete(&amp;quot;Id={id}&amp;quot;, args =&amp;gt;
+            {
+                _repo.Remove(args.id);
+                return $&amp;quot;{args.id} Removed&amp;quot;;
+            });
+        }
+
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Use your favorite API tester to see the results (the &lt;code&gt;/dispo/&lt;/code&gt; route will not display in your browser, as we saw before this is expected since there is no view associated with it).&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Get Requests&lt;/th&gt;
+&lt;th&gt;Post Requests&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/Q316PoH.png&#34; alt=&#34;GetAll()&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/blNKGRg.png&#34; alt=&#34;Post New&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/0qhU561.png&#34; alt=&#34;Get By ID&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/N7OUbsL.png&#34; alt=&#34;Delete Post&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;There are obviously several strategies you can take, and I was fairly primitive in my argument passing &amp;amp; capturing in these examples, intentionally so.  I didn&amp;rsquo;t want to confuse intent while covering full functionality and everything you should need.&lt;/p&gt;
+
+&lt;p&gt;Along the lines of Dapper, rather than creating &lt;code&gt;Repository&lt;/code&gt; class for each data type, we could also do something much more generic. From creating a single repository that would include all necessary methods for data retrieval app-wide to actually using a &amp;ldquo;Generic Repository&amp;rdquo; pattern to have each data type inherit from a common &lt;code&gt;interface&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Anyhow, that was much longer than I intended for it to be.  I did want the walkthrough to be fairly thorough and approachable for those coming into the stack with no prior knowledge, while still providing useful insight for those who have used these technologies together before.&lt;/p&gt;
+
+&lt;p&gt;With that, please direct any questions or comments to me via twitter or any of the links at the bottom of the page, I would love to hear from you. Do you use Dapper and .NET Core (and more specifically, Nancy) in production? Your hobby project?  How do your patterns differ from what I show here?  How could some of this code be improved?  Let me know.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nandotech/VSNancyDemo&#34;&gt;Github Repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;lastly:e48c0fcb364edcd7525c48af0f4e977f&#34;&gt;Lastly:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;I want to give a huge shout-out and big thank you to the &lt;code&gt;NancyFX&lt;/code&gt; developers.&lt;/strong&gt;  These guys do amazing work for the community &lt;em&gt;for free&lt;/em&gt; and I could not be  more thankful.  On top of that, the &lt;code&gt;NancyFX&lt;/code&gt; community has a &lt;a href=&#34;http://nancyfx.slack.com&#34;&gt;Slack&lt;/a&gt; that you can feel free to join @ &lt;a href=&#34;http://nancyfx.slack.com&#34;&gt;http://nancyfx.slack.com&lt;/a&gt; and ask questions!  Rarely do you find such a friendly and helpful community online these days, and these guys were awesome at answering all my questions and contributing to my understanding of the stack.&lt;/p&gt;
+
+&lt;p&gt;Nonetheless, in no particular order I&amp;rsquo;d like to recognize the following specifically:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/thecodejunkie&#34;&gt;Andreas Hakansson aka &amp;ldquo;thecodejunkie&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jchannon&#34;&gt;Jonathan Channon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/grumpydev&#34;&gt;Steven Robbins aka &amp;ldquo;grumpydev&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/phillip-haydon&#34;&gt;Phillip Haydon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/khellang&#34;&gt;Kristian Hellang&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and lastly, non-Nancy team member but awesome community member:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Sphiecoh&#34;&gt;Sifiso Shezi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I have had the pleasure of having direct access to and some interaction with just about every single one of these guys and it has been absolutely invaluable.  Again, all are encouraged to join the community, drop in Slack and ask questions! This is an awesome project and the community behind it is just as awesome as it grows and matures. :)&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
     </item>
     
   </channel>

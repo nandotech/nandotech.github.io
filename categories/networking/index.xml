@@ -9,9 +9,7 @@
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Tue, 20 Sep 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.nandotech.com/categories/networking/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://blog.nandotech.com/categories/networking/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Networking Woes</title>
@@ -19,8 +17,74 @@
       <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2016-09-20-comcast-networking-woes/</guid>
-      <description>Let me start off by saying unequivocally and without any shadow of a doubt: I am not a networking expert. Although I understand all the constructs of the web and most all of the requisite information pertaining to how computers and the internet communicate as well as the nuances of local and public networks.
-My real deep protocol knowledge extends mostly into the realm of software development and how bits/bytes are consumed over the wire.</description>
+      <description>
+
+&lt;p&gt;Let me start off by saying unequivocally and without any shadow of a doubt: I am not a networking expert.  Although I understand all the constructs of the web and most all of the requisite information pertaining to how computers and the internet communicate as well as the nuances of local and public networks.&lt;/p&gt;
+
+&lt;p&gt;My real deep protocol knowledge extends mostly into the realm of software development and how bits/bytes are consumed over the wire. I, for one, found it &lt;em&gt;absolutely fascinating&lt;/em&gt; how &lt;a href=&#34;http://www.microsoft.com&#34;&gt;Microsoft&lt;/a&gt; and the &lt;a href=&#34;http://www.dot.net&#34;&gt;.NET team&lt;/a&gt; built the kestrel http server. There is an awesome video where &lt;a href=&#34;https://twitter.com/damianedwards&#34;&gt;Damian Edwards&lt;/a&gt; &lt;a href=&#34;https://vimeo.com/172009499&#34;&gt;discusses it here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;That, however, is a discussion slated for another day. Truly fascinating though how they&amp;rsquo;ve basically chosen to look at any given http request like a sequence of &lt;code&gt;float&lt;/code&gt; values to avoid &lt;code&gt;string&lt;/code&gt; allocations.&lt;/p&gt;
+
+&lt;p&gt;However, I digress, Today is mainly about 2 things:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Venting&lt;/li&gt;
+&lt;li&gt;Helping guide anyone who is running into the same/similar issues with Comcast.&lt;/li&gt;
+&lt;li&gt;Venting&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://martinfowler.com/bliki/TwoHardThings.html&#34;&gt;(Lest we forget one of the hardest problems in Computer Science&amp;ndash;Off By One errors)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;comcast-default-behavior:9c866264be6bb2070de64ff11fc9372f&#34;&gt;Comcast Default Behavior&lt;/h2&gt;
+
+&lt;p&gt;So to get on with it: naturally the Comcast modem default behavior is to be extremely confusing. Our public, &lt;a href=&#34;http://www.ipchicken.com&#34;&gt;static IP&lt;/a&gt; address from &lt;a href=&#34;http://comcast.com&#34;&gt;Comcast&lt;/a&gt; here is &lt;code&gt;96.xxx.xxx.9&lt;/code&gt; (blocking some for safety/privacy).  One might expect the Comcast firewall to show this IP with the .10 Gateway, or something similar.  Instead, we get this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://blog.nandotech.com/img/comcast_ip.png&#34; alt=&#34;Comcast IP&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In case anyone missed that: for some reason I am unable to explain, if you have purchased a static IP or a group of IP&amp;rsquo;s from Comcast your router actually gives off your &lt;strong&gt;Default Gateway&lt;/strong&gt; as your &lt;em&gt;Public IP&lt;/em&gt; and your Comcast  Business Router will have a &lt;em&gt;Default Gateway&lt;/em&gt; referencing some other point or thing on their network (presumably where, in this case, our /30 routes through).&lt;/p&gt;
+
+&lt;p&gt;After several visits and phone calls with Comcast, no engineer was able to reliably explain it to me either.  I&amp;rsquo;ve moved on to the &lt;a href=&#34;https://media2.giphy.com/media/hIavT8NX1SE4E/200.gif&#34;&gt;acceptance stage of my grief&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up-your-own-router:9c866264be6bb2070de64ff11fc9372f&#34;&gt;Setting up your own Router&lt;/h2&gt;
+
+&lt;p&gt;All that said, this seemingly small thing has an interesting and convenient side effect.&lt;/p&gt;
+
+&lt;p&gt;Since none of the public IP&amp;rsquo;s are in use, any new router you may want to plug in on the inside of it can use &lt;em&gt;any&lt;/em&gt; of your available static IP addresses and the Comcast modem is able to stay up and 100% functioning if you so choose (to partition your network, for example).&lt;/p&gt;
+
+&lt;p&gt;Now this is where it gets confusing, especially for me&amp;ndash;this is because very often we are being dragged into an environment that we are not familiar with, did not set up, and/or there is no one available with the technical information (static IP range, subnet mask, etc) you actually need to set it up.&lt;/p&gt;
+
+&lt;p&gt;To make matters worse, you always run the risk of receiving bad information from Comcast should you decide to call for information (Has happened to me, &lt;em&gt;more than once&lt;/em&gt;!).&lt;/p&gt;
+
+&lt;h3 id=&#34;sidebar-which-router:9c866264be6bb2070de64ff11fc9372f&#34;&gt;&lt;em&gt;Sidebar: Which Router?&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;As an FYI, the router referenced and used in the specific configuration shown here is a &lt;a href=&#34;https://www.amazon.com/MikroTik-CRS125-24G-1S-RM-rackmount-enclosure-manageable/dp/B00I4QJSIM&#34;&gt;Mikrotik Cloud Router Switch CRS125-24G&lt;/a&gt; which is also available in a &lt;a href=&#34;https://routerboard.com/CRS125-24G-1S-IN&#34;&gt;Non-Rackmount Version&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For much more extreme loads, the &lt;a href=&#34;https://www.amazon.com/MikroTik-Cloud-Core-Router-1009-8G-1S-1S/dp/B00KVFLKHG&#34;&gt;Mikrotik Cloud Core Router 1009-8G-1S+&lt;/a&gt; is recommended.  (&lt;em&gt;NOTE: This particular version requires much more granular setup &amp;amp; understanding of some networking beyond the scope of this article to complete setup&lt;/em&gt;.)&lt;/p&gt;
+
+&lt;p&gt;Once you do have the correct information, here is an example of how the network referenced above is set:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://blog.nandotech.com/img/mikrotik-comcast-setup.png&#34; alt=&#34;Mikrotik Setup&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see and would expect, your &lt;em&gt;static IP&lt;/em&gt; and correct &lt;a href=&#34;https://www.aelius.com/njh/subnet_sheet.html&#34;&gt;&lt;em&gt;subnet mask&lt;/em&gt;&lt;/a&gt; (in this case, /30) need to be in the WAN IP Address field (this may differ or have a different name in other routers).&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;default gateway&lt;/em&gt; which the Comcast router uses as its IP, in turn, should be the &lt;em&gt;Gateway&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;We choose to utilize &lt;a href=&#34;http://google.com&#34;&gt;Google&lt;/a&gt; and &lt;a href=&#34;http://opendns.com&#34;&gt;OpenDNS&lt;/a&gt; public DNS servers rather than Comcast&amp;rsquo;s usual defaults of &lt;code&gt;75.75.75.75&lt;/code&gt; and &lt;code&gt;75.75.76.76&lt;/code&gt;, though in some cases using the defaults helps to avoid some issues.&lt;/p&gt;
+
+&lt;h2 id=&#34;wrapping-it-up:9c866264be6bb2070de64ff11fc9372f&#34;&gt;Wrapping It Up&lt;/h2&gt;
+
+&lt;p&gt;Like I mentioned before; if you follow the strategy outlined above you&amp;rsquo;ll be able to set up your new router/firewall inside of the Comcast network, utilize any one of your static IP addresses as a public, and all the while leave the Comcast Router up &amp;amp; running/functioning perfectly.&lt;/p&gt;
+
+&lt;p&gt;For security reasons, I personally turned off just about every single feature &amp;amp; network available on the default Comcast box once I got our &lt;a href=&#34;http://www.mikrotik.com&#34;&gt;Mikrotik&lt;/a&gt; working properly. This includes turning off all DHCP &amp;amp; Wireless on the Comcast modem.&lt;/p&gt;
+
+&lt;p&gt;In my case, I can actually get to &lt;code&gt;10.1.10.1&lt;/code&gt; (Comcast Router Default IP) while on my other local network of &lt;code&gt;192.168.88.xxx&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;While convenient, once you have your firewall/router properly configured inside of your Comcast box, you should have very little reason to ever need to log into it.&lt;/p&gt;
+
+&lt;p&gt;Your other option is if you want to partition your network into different &amp;ldquo;areas&amp;rsquo;, you could easily utilize both your Mikrotik Firewall network &lt;strong&gt;AND&lt;/strong&gt; your Comcast Firewall network in tandem even if you have only &lt;em&gt;one&lt;/em&gt; static IP address.&lt;/p&gt;
+
+&lt;p&gt;The Comcast Firewall will broadcast your &lt;em&gt;Gateway IP&lt;/em&gt; while your own Firewall will broadcast your assigned &lt;em&gt;Static IP&lt;/em&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -16,7 +16,7 @@
   
   <meta name="keywords" content="nancyfx, asp.net, company, .net, .net core, software engineer, web development, microsoft, consultant">
 
-  <meta name="generator" content="Hugo 0.38.2" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   <link rel="alternate" href="https://blog.nandotech.com/index.xml" type="application/rss+xml" title="NandoTech">
 
@@ -33,7 +33,7 @@
   
   <meta property="og:title" content="ZEIT Now Deploying ASP.NET (and .NET) Core Apps in seconds with your Dockerfile" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/post/2017-03-16-zeit-now-deploying-dotnet-core-in-a-docker-bow//" />
+  <meta property="og:url" content="/" />
   <meta property="og:image" content="/img/nandotech_logo_gray.gif" />
   
 </head>
@@ -58,6 +58,12 @@
       
         
           <li>
+          <a title="Company Website" href="https://nandotech.com">Company Website</a>
+  	      </li>
+  	    
+      
+        
+          <li>
           <a title="Blog" href="/">Blog</a>
   	      </li>
   	    
@@ -65,12 +71,6 @@
         
           <li>
           <a title="About" href="/page/about/">About</a>
-  	      </li>
-  	    
-      
-        
-          <li>
-          <a title="Company Website" href="https://nandotech.com">Company Website</a>
   	      </li>
   	    
       
@@ -133,7 +133,7 @@
       <article role="main" class="blog-post">
           
 
-<h1 id="if-you-re-anything-like-me-you-constantly-are-finding-more-and-more-tasks-that-require-your-attention">If you&rsquo;re anything like me, you constantly are finding more and more tasks that require your attention.</h1>
+<h1 id="if-you-re-anything-like-me-you-constantly-are-finding-more-and-more-tasks-that-require-your-attention:d508c4d6ee6630c786fa146d78ab38ef">If you&rsquo;re anything like me, you constantly are finding more and more tasks that require your attention.</h1>
 
 <p>To make matters worse, the industry definition of <a href="https://en.wikipedia.org/wiki/DevOps"><em>&ldquo;DevOps&rdquo;</em></a> is still evolving itself, quickly becoming ubiquitous with &ldquo;a litle bit of everything&rdquo; in the process.</p>
 
@@ -222,7 +222,7 @@ COPY $source .
 
 <p><img src="http://i.imgur.com/kkkZejX.png" alt="/os/ route debugging" /></p>
 
-<h3 id="now-go-on-hack-and-be-merry">Now go on, hack and be Merry.</h3>
+<h3 id="now-go-on-hack-and-be-merry:d508c4d6ee6630c786fa146d78ab38ef">Now go on, hack and be Merry.</h3>
 
 <p>I hope some part of this was helpful, I personally want to thank <a href="https://twitter.com/shanselman">Scott Hanselman</a> and <a href="https://twitter.com/condrong">Glenn Condron</a> for their tinkering and getting this to work! This has not only helped me overall understand the concept and inner workings with regard to <a href="https://docker.com">Docker</a>, but it also exposed me to an awesome service &amp; host in <a href="https://zeit.co">ZEIT</a> that I immediately fell in love with!</p>
 
@@ -273,25 +273,20 @@ COPY $source .
       
       <div class="disqus-comments">
         <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
+<script type="text/javascript">
+    var disqus_shortname = 'nandotech';
+    var disqus_identifier = 'https:\/\/blog.nandotech.com\/post\/2017-03-16-zeit-now-deploying-dotnet-core-in-a-docker-bow\/';
+    var disqus_title = 'ZEIT Now Deploying ASP.NET (and .NET) Core Apps in seconds with your Dockerfile';
+    var disqus_url = 'https:\/\/blog.nandotech.com\/post\/2017-03-16-zeit-now-deploying-dotnet-core-in-a-docker-bow\/';
+
     (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "nandotech" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       </div>
       
     </div>
@@ -425,7 +420,7 @@ COPY $source .
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-59045667-5', 'auto');
 ga('send', 'pageview');

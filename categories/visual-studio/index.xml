@@ -9,9 +9,7 @@
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Thu, 09 Mar 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.nandotech.com/categories/visual-studio/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://blog.nandotech.com/categories/visual-studio/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Visual Studio 2017 Final Released</title>
@@ -19,7 +17,66 @@
       <pubDate>Thu, 09 Mar 2017 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2017-03-09-visual-studio-2017-final-released/</guid>
-      <description>Microsoft has finally dropped Visual Studio 2017 with a bevy of new features and also relocated all our .NET Core docs over to https://docs.microsoft.com/. I, for one, had downloaded Visual Studio 2017 RC quite a while back and due to some horrible judgement and lack of forethought I actually had been using the IDE almost full-time for my .NET projects. I basically used it for everything I could and if I couldn&amp;rsquo;t make the transition, I simply used Visual Studio Code.</description>
+      <description>
+
+&lt;h1 id=&#34;microsoft-http-www-microsoft-com-has-finally-dropped-visual-studio-2017-https-www-visualstudio-com-vs-whatsnew-with-a-bevy-of-new-features-and-also-relocated-all-our-net-core-https-dot-net-docs-over-to-https-docs-microsoft-com-https-docs-microsoft-com:a3edb291adf603d0d1abfa114bcfa0a9&#34;&gt;&lt;a href=&#34;http://www.microsoft.com&#34;&gt;Microsoft&lt;/a&gt; &lt;a href=&#34;https://www.visualstudio.com/vs/whatsnew/&#34;&gt;has finally dropped Visual Studio 2017&lt;/a&gt; with a bevy of new features and also relocated all our &lt;a href=&#34;https://dot.net&#34;&gt;.NET Core&lt;/a&gt; docs over to &lt;a href=&#34;https://docs.microsoft.com/&#34;&gt;https://docs.microsoft.com/&lt;/a&gt;.&lt;/h1&gt;
+
+&lt;p&gt;I, for one, had downloaded Visual Studio 2017 RC quite a while back and due to some horrible judgement and lack of forethought I actually had been using the IDE almost full-time for my .NET projects.  I basically used it for everything I could and if I couldn&amp;rsquo;t make the transition, I simply used &lt;a href=&#34;https://code.visualstudio.com&#34;&gt;Visual Studio Code&lt;/a&gt;.  Which, by the way, if you aren&amp;rsquo;t using it, you probably really should be.  VS Code has become my absolute go-to for pretty much everything that I don&amp;rsquo;t use Visual Studio for.&lt;/p&gt;
+
+&lt;p&gt;If you haven&amp;rsquo;t already, you can find link &amp;amp; instructions to &lt;a href=&#34;https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc&#34;&gt;download VS 2017 Final&lt;/a&gt; and get started on your first app.&lt;/p&gt;
+
+&lt;p&gt;So we have Visual Studio 2017 Final now and I honestly must say that I love the IDE thus far.  Some features are kinda small and stupid (but surprisingly useful and freaking awesome) like the new way the IDE can show you &lt;em&gt;&amp;ldquo;show structure guide lines&amp;rdquo;&lt;/em&gt;.  Some are much more practical and extremely useful, like &amp;ldquo;click of a button&amp;rdquo; &lt;a href=&#34;https://docker.com&#34;&gt;Docker&lt;/a&gt; support making it feel very much like a first class citizen, including the auto generation of &lt;a href=&#34;https://docs.docker.com/compose/&#34;&gt;docker-compose&lt;/a&gt; files.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/axsA6Xl.png&#34; alt=&#34;Visual Studio 2017 Docker File Structure&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, if when creating your &lt;a href=&#34;http://docs.microsfot.com&#34;&gt;ASP.NET Core Project&lt;/a&gt; you click the &amp;ldquo;Enable Docker  Support&amp;rdquo; box, you get all these files right out of the box, which is pretty freaking awesome.  Shame on us lazy developers for not remembering the syntax, but I for the life of me could not ever recall the &lt;em&gt;Dockerfile&lt;/em&gt; layout and rules.  Just didn&amp;rsquo;t stick well in my brain.&lt;/p&gt;
+
+&lt;p&gt;Check out the samples of the files provided below.  Once again, this is a completely fresh project with nothing but a Home, About &amp;amp; Contact pages with the standard bootstrap/etc. boilerplate.  One thing I do find interesting: debugging locally this site seems to be running even faster than I feel like my kestrel web servers typically would.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Dockerfile&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-dockerfile&#34;&gt;FROM microsoft/aspnetcore:1.1
+ARG source
+WORKDIR /app
+EXPOSE 80
+COPY ${source:-obj/Docker/publish} .
+ENTRYPOINT [&amp;quot;dotnet&amp;quot;, &amp;quot;VsFinalDemo.dll&amp;quot;]
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;docker-compose.yml&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;version: &#39;2&#39;
+
+services:
+  vsfinaldemo:
+    image: vsfinaldemo
+    build:
+      context: ./VsFinalDemo
+      dockerfile: Dockerfile
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;docker-compose.ci.build.yml&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;version: &#39;2&#39;
+
+services:
+  ci-build:
+    image: microsoft/aspnetcore-build:1.0-1.1
+    volumes:
+      - .:/src
+    working_dir: /src
+    command: /bin/bash -c &amp;quot;dotnet restore ./VsFinalDemo.sln &amp;amp;&amp;amp; dotnet publish ./VsFinalDemo.sln -c Release -o ./obj/Docker/publish&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that Microsoft has this in final release, I may have to start using some &lt;code&gt;.csproj&lt;/code&gt; and running some &lt;code&gt;ASP.NET Core&lt;/code&gt; built with Visual Studio 2017.&lt;/p&gt;
+
+&lt;p&gt;On another note, I&amp;rsquo;m also beginning a rather large undertaking of building a microservices architecture.  This is our wrinkle, because I am extremely inclined towards and interested in using &lt;a href=&#34;https://nancyfx.org&#34;&gt;NancyFX&lt;/a&gt; for all the points of our microservice in general.  That said, I&amp;rsquo;m not sure &lt;code&gt;.csproj&lt;/code&gt; and anything that comes along with it will apply once I really get to cranking out code.&lt;/p&gt;
+
+&lt;p&gt;Nonetheless, I may totally still use VS2017 to help cheat creating &lt;code&gt;Dockerfiles&lt;/code&gt; and &lt;code&gt;docker-compose&lt;/code&gt; files, that&amp;rsquo;s for sure! :)&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -8,9 +8,7 @@
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
-    
-	<atom:link href="https://blog.nandotech.com/page/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://blog.nandotech.com/page/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About me</title>
@@ -18,8 +16,26 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/page/about/</guid>
-      <description>My name is Fernando Rodriguez. I am the Founder &amp;amp; CEO of NandoTech Inc, where we specialize in customized software development work for businesses of all shapes and sizes. Beyond custom and software development work, we have also developed a fairly strong portfolio of VoIP customers ranging from small office phone systems to large-scale call center capablities.
-I have an deep love for Clean Code and strive for many of the same principles applied by giants who started long before us.</description>
+      <description>
+
+&lt;p&gt;My name is Fernando Rodriguez. I am the Founder &amp;amp; CEO of NandoTech Inc, where we specialize in customized software development work for businesses of all shapes and sizes.  Beyond custom and software development work, we have also developed a fairly strong portfolio of VoIP customers ranging from small office phone systems to large-scale call center capablities.&lt;/p&gt;
+
+&lt;p&gt;I have an deep love for Clean Code and strive for many of the same principles applied by giants who started long before us.  I believe in iterating quickly and working closely with customers to achieve a shared goal.&lt;/p&gt;
+
+&lt;p&gt;Much of what I&amp;rsquo;m rambling on about, you can read more about in &lt;a href=&#34;http://agilemanifesto.org/&#34;&gt;The Agile Manifesto&lt;/a&gt; and what have probably become my two favorite books: &lt;a href=&#34;https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882&#34;&gt;Clean Code by Robert C. Martin&lt;/a&gt; and &lt;a href=&#34;https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X&#34;&gt;Scrum by Kent Beck &amp;amp; Jeff Sutherland&lt;/a&gt; that have deeply help shape my views and experiences in software development.&lt;/p&gt;
+
+&lt;p&gt;I began writing HTML &amp;amp; JavaScript and made awesome (read: brightly colored with flashing backgrounds) websites in my early teen years and my love affair with computers took off.  It would be a while yet, but around 2006 at Florida Atlantic University I was first exposed to C and algorithms.&lt;/p&gt;
+
+&lt;p&gt;I fell in love all over again.  Next came C++. Then Data Structures.  I couldn&amp;rsquo;t get enough.&lt;/p&gt;
+
+&lt;p&gt;Fortunately for all of us, I am now heavily invested in C# and absolutely love the &lt;a href=&#34;https://dot.net&#34;&gt;ASP.NET&lt;/a&gt; stack.  I consider myself an extremely competent web developer and also a polyglot.  There is something about programming especially and solving problems that completely transcends all programming languages and technology stacks&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Beyond that&lt;/em&gt;, welcome to my blog.  A diary of productivity, legwork, technical decisions, and the reasoning behind them as we build up our development shop.&lt;/p&gt;
+
+&lt;h2 id=&#34;links:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Links&lt;/h2&gt;
+
+&lt;p&gt;Check links located at the bottom of the page for some of my profiles around the web.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

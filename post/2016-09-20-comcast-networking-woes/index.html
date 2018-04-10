@@ -16,7 +16,7 @@
   
   <meta name="keywords" content="nancyfx, asp.net, company, .net, .net core, software engineer, web development, microsoft, consultant">
 
-  <meta name="generator" content="Hugo 0.38.2" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   <link rel="alternate" href="https://blog.nandotech.com/index.xml" type="application/rss+xml" title="NandoTech">
 
@@ -33,7 +33,7 @@
   
   <meta property="og:title" content="Networking Woes" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/post/2016-09-20-comcast-networking-woes//" />
+  <meta property="og:url" content="/" />
   <meta property="og:image" content="/img/nandotech_logo_gray.gif" />
   
 </head>
@@ -58,6 +58,12 @@
       
         
           <li>
+          <a title="Company Website" href="https://nandotech.com">Company Website</a>
+  	      </li>
+  	    
+      
+        
+          <li>
           <a title="Blog" href="/">Blog</a>
   	      </li>
   	    
@@ -65,12 +71,6 @@
         
           <li>
           <a title="About" href="/page/about/">About</a>
-  	      </li>
-  	    
-      
-        
-          <li>
-          <a title="Company Website" href="https://nandotech.com">Company Website</a>
   	      </li>
   	    
       
@@ -173,7 +173,7 @@
 
 <p><a href="http://martinfowler.com/bliki/TwoHardThings.html">(Lest we forget one of the hardest problems in Computer Science&ndash;Off By One errors)</a></p>
 
-<h2 id="comcast-default-behavior">Comcast Default Behavior</h2>
+<h2 id="comcast-default-behavior:9c866264be6bb2070de64ff11fc9372f">Comcast Default Behavior</h2>
 
 <p>So to get on with it: naturally the Comcast modem default behavior is to be extremely confusing. Our public, <a href="http://www.ipchicken.com">static IP</a> address from <a href="http://comcast.com">Comcast</a> here is <code>96.xxx.xxx.9</code> (blocking some for safety/privacy).  One might expect the Comcast firewall to show this IP with the .10 Gateway, or something similar.  Instead, we get this:</p>
 
@@ -183,7 +183,7 @@
 
 <p>After several visits and phone calls with Comcast, no engineer was able to reliably explain it to me either.  I&rsquo;ve moved on to the <a href="https://media2.giphy.com/media/hIavT8NX1SE4E/200.gif">acceptance stage of my grief</a>.</p>
 
-<h2 id="setting-up-your-own-router">Setting up your own Router</h2>
+<h2 id="setting-up-your-own-router:9c866264be6bb2070de64ff11fc9372f">Setting up your own Router</h2>
 
 <p>All that said, this seemingly small thing has an interesting and convenient side effect.</p>
 
@@ -193,7 +193,7 @@
 
 <p>To make matters worse, you always run the risk of receiving bad information from Comcast should you decide to call for information (Has happened to me, <em>more than once</em>!).</p>
 
-<h3 id="sidebar-which-router"><em>Sidebar: Which Router?</em></h3>
+<h3 id="sidebar-which-router:9c866264be6bb2070de64ff11fc9372f"><em>Sidebar: Which Router?</em></h3>
 
 <p>As an FYI, the router referenced and used in the specific configuration shown here is a <a href="https://www.amazon.com/MikroTik-CRS125-24G-1S-RM-rackmount-enclosure-manageable/dp/B00I4QJSIM">Mikrotik Cloud Router Switch CRS125-24G</a> which is also available in a <a href="https://routerboard.com/CRS125-24G-1S-IN">Non-Rackmount Version</a>.</p>
 
@@ -209,7 +209,7 @@
 
 <p>We choose to utilize <a href="http://google.com">Google</a> and <a href="http://opendns.com">OpenDNS</a> public DNS servers rather than Comcast&rsquo;s usual defaults of <code>75.75.75.75</code> and <code>75.75.76.76</code>, though in some cases using the defaults helps to avoid some issues.</p>
 
-<h2 id="wrapping-it-up">Wrapping It Up</h2>
+<h2 id="wrapping-it-up:9c866264be6bb2070de64ff11fc9372f">Wrapping It Up</h2>
 
 <p>Like I mentioned before; if you follow the strategy outlined above you&rsquo;ll be able to set up your new router/firewall inside of the Comcast network, utilize any one of your static IP addresses as a public, and all the while leave the Comcast Router up &amp; running/functioning perfectly.</p>
 
@@ -268,25 +268,20 @@
       
       <div class="disqus-comments">
         <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
+<script type="text/javascript">
+    var disqus_shortname = 'nandotech';
+    var disqus_identifier = 'https:\/\/blog.nandotech.com\/post\/2016-09-20-comcast-networking-woes\/';
+    var disqus_title = 'Networking Woes';
+    var disqus_url = 'https:\/\/blog.nandotech.com\/post\/2016-09-20-comcast-networking-woes\/';
+
     (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "nandotech" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       </div>
       
     </div>
@@ -420,7 +415,7 @@
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-59045667-5', 'auto');
 ga('send', 'pageview');

@@ -9,9 +9,7 @@
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.nandotech.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://blog.nandotech.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ZEIT Now Deploying ASP.NET (and .NET) Core Apps in seconds with your Dockerfile</title>
@@ -19,8 +17,103 @@
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2017-03-16-zeit-now-deploying-dotnet-core-in-a-docker-bow/</guid>
-      <description>If you&amp;rsquo;re anything like me, you constantly are finding more and more tasks that require your attention. To make matters worse, the industry definition of &amp;ldquo;DevOps&amp;rdquo; is still evolving itself, quickly becoming ubiquitous with &amp;ldquo;a litle bit of everything&amp;rdquo; in the process.
-Like a breath of fresh air, ZEIT is a cloud service that allows near-mindless deployment of javascript &amp;amp; node.js apps. Much thanks probably also belongs to Scott Hanselman and his ever-tinkering soul who published &amp;ldquo;ZEIT now deployments of open source ASP.</description>
+      <description>
+
+&lt;h1 id=&#34;if-you-re-anything-like-me-you-constantly-are-finding-more-and-more-tasks-that-require-your-attention:d508c4d6ee6630c786fa146d78ab38ef&#34;&gt;If you&amp;rsquo;re anything like me, you constantly are finding more and more tasks that require your attention.&lt;/h1&gt;
+
+&lt;p&gt;To make matters worse, the industry definition of &lt;a href=&#34;https://en.wikipedia.org/wiki/DevOps&#34;&gt;&lt;em&gt;&amp;ldquo;DevOps&amp;rdquo;&lt;/em&gt;&lt;/a&gt; is still evolving itself, quickly becoming ubiquitous with &amp;ldquo;a litle bit of everything&amp;rdquo; in the process.&lt;/p&gt;
+
+&lt;p&gt;Like a breath of fresh air, &lt;a href=&#34;https://zeit.co&#34;&gt;ZEIT&lt;/a&gt; is a cloud service that allows near-mindless deployment of &lt;code&gt;javascript&lt;/code&gt; &amp;amp; &lt;code&gt;node.js&lt;/code&gt; apps.  Much thanks probably also belongs to &lt;a href=&#34;https://twitter.com/shanselman&#34;&gt;Scott Hanselman&lt;/a&gt; and his ever-tinkering soul who published &lt;a href=&#34;https://www.hanselman.com/blog/ZEITNowDeploymentsOfOpenSourceASPNETCoreWebAppsWithDocker.aspx&#34;&gt;&amp;ldquo;ZEIT now deployments of open source ASP.NET Core web apps with Docker&amp;rdquo;&lt;/a&gt; yesterday and I was immediately intrigued.  Since Zeit Now supports &lt;a href=&#34;https://docker.com&#34;&gt;Docker&lt;/a&gt;, then why not &lt;a href=&#34;https://dot.net&#34;&gt;.NET Core&lt;/a&gt;?&lt;/p&gt;
+
+&lt;p&gt;In the blog post, Scott (with help from friend &lt;a href=&#34;https://twitter.com/condrong?lang=en&#34;&gt;Glenn Condron&lt;/a&gt;) walks you through from creating a fresh ASP.NET Core Web App using the &lt;code&gt;dotnet cli&lt;/code&gt;.  Next, it is almost embarassingly simple to see him&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;run a &lt;code&gt;dotnet restore&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;create a valid &lt;code&gt;Dockerfile&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dotnet publish&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ensure your project outputs are in the right directory&lt;/li&gt;
+&lt;li&gt;type &lt;code&gt;now&lt;/code&gt; command down in your publish folder&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And that&amp;rsquo;s it.  You now have a live URL on your clipboard&amp;ndash;this is the DNS assigned to the &lt;a href=&#34;https://docker.com&#34;&gt;&lt;code&gt;Docker&lt;/code&gt;&lt;/a&gt; container that is running in the cloud for you. As I poked around the &lt;a href=&#34;https://zeit.co/now&#34;&gt;Zeit Now&lt;/a&gt; app &amp;amp; documentation I also found some really cool features like single click &amp;ldquo;file sharing&amp;rdquo; in the form of deploying a container with your file.&lt;/p&gt;
+
+&lt;p&gt;The number of technically savvy people available in my vicinity has been reduced, yet in the mid-to-long term here we do expect to have a significant software &lt;a href=&#34;http://amzn.to/2mydV0m&#34;&gt;microservices architecture&lt;/a&gt; deployment. That said, it is in my best interest to begin finding and familiarizing myself with the &lt;em&gt;absolute simplest&lt;/em&gt; tools and procedures in order to put them into place and avoid some of the DevOps minefield that a team can find itself on when it is unfamiliar with the options available.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zeit.co/now&#34;&gt;Zeit Now&lt;/a&gt; seems like a fantastic service to fit many of our needs. My test was then to see if this was as simple &amp;amp; easy for me as it seemed to be for Mr. Hanselman.  One main difference between my project and Scott&amp;rsquo;s here as well: I am not using the barebones &lt;code&gt;ASP.NET MVC&lt;/code&gt; template.  Instead, I took a functioning &lt;a href=&#34;https://www.nancyfx.org&#34;&gt;NancyFX&lt;/a&gt; example API/website, still using &lt;code&gt;project.json&lt;/code&gt; structure instead of &lt;code&gt;MSBuild&lt;/code&gt; as well, generated the &lt;code&gt;Dockerfile&lt;/code&gt; and after adding a few items under our &lt;code&gt;include&lt;/code&gt; in &lt;code&gt;publishOptions&lt;/code&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;I wanted to know if this was going to work with my existing &lt;a href=&#34;https://nancyfx.org&#34;&gt;NancyFX&lt;/a&gt; services and/or if there were any extra gotcha&amp;rsquo;s or things to know. As a jumpstart, the easiest thing to do was simply clone my &lt;a href=&#34;https://github.com/nandotech/VSNancyDemo/&#34;&gt;&lt;code&gt;VSNancyDemo&lt;/code&gt; repository&lt;/a&gt; from &lt;a href=&#34;https://github.com&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://github.com/nandotech/VSNancyDemo/&#34;&gt;repository is public&lt;/a&gt; so feel free to clone the project as well if you&amp;rsquo;d like to follow along or try out your ZEIT Now with something a little different or pull in any project of your own!&lt;/p&gt;
+
+&lt;p&gt;Lines added to &lt;em&gt;project.json&lt;/em&gt; (to ensure required files copy to &lt;code&gt;publish&lt;/code&gt; dir)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;  &amp;quot;publishOptions&amp;quot;: {
+    &amp;quot;include&amp;quot;: [
+      &amp;quot;wwwroot&amp;quot;,
+      &amp;quot;web.config&amp;quot;,
+      &amp;quot;appsettings.json&amp;quot;,
+      &amp;quot;Content&amp;quot;,
+      &amp;quot;Dockerfile&amp;quot;,
+      &amp;quot;views&amp;quot;
+    ]
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I noticed if some of the above were missing, there would be some issues. For instance, before I added the &lt;code&gt;&amp;quot;views&amp;quot;&lt;/code&gt; folder, I was getting a &lt;code&gt;500 Error&lt;/code&gt; from &lt;code&gt;Nancy&lt;/code&gt; as if the &lt;code&gt;index.html&lt;/code&gt; did not exist.  Rightfully so, as in the container environment that ZEIT deployed the folder with views was not copied.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Dockerfile&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-dockerfile&#34;&gt;FROM microsoft/aspnetcore
+LABEL name=&amp;quot;DispoStatsService&amp;quot;
+ENTRYPOINT [&amp;quot;dotnet&amp;quot;, &amp;quot;DispoStatsService.dll&amp;quot;]
+ARG source=.
+WORKDIR /app
+EXPOSE 80
+COPY $source .
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Easy as pie.&lt;/p&gt;
+
+&lt;p&gt;So as to not be repetetive, I&amp;rsquo;ll pick up here &lt;em&gt;after&lt;/em&gt; the &lt;code&gt;dotnet publish&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/C6tiFbc.png&#34; alt=&#34;Publish Output Directory&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see at the very end here I ran the &lt;code&gt;now&lt;/code&gt; command inside the folder &lt;code&gt;dotnet cli&lt;/code&gt; published to.  When it is done there, your app is deployed and running in a container.  The URL (since it&amp;rsquo;s a little long and auto-generated) gets automatically copied to your clipboard.&lt;/p&gt;
+
+&lt;p&gt;I wanted to go ahead and also get custom domain names working as &lt;a href=&#34;https://zeit.co&#34;&gt;Zeit.co&lt;/a&gt; seemed to make doing so extremely easy. See the &lt;code&gt;cli&lt;/code&gt; output, deployment and alias assignment below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/zAV9pgo.png&#34; alt=&#34;ZEIT Deployment and Alias&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lo&amp;rsquo; and behold, I have my &lt;code&gt;NancyFX 2.0-clinteastwood&lt;/code&gt; sample app running on &lt;code&gt;Docker&lt;/code&gt; in the cloud using &lt;a href=&#34;https://zeit.co&#34;&gt;https://zeit.co&lt;/a&gt;.  The container may be reached using either the &lt;code&gt;alias&lt;/code&gt; I assigned, &lt;a href=&#34;https://umgdss.nt-x.com&#34;&gt;https://umgdss.nt-x.com&lt;/a&gt;, or the original address, &lt;a href=&#34;https://dispostatsservice-wjpwcfkfcq.now.sh/&#34;&gt;https://dispostatsservice-wjpwcfkfcq.now.sh/&lt;/a&gt;.  While we are admiring the shiny tool: see how it also auto-issued SSL certificate for the &lt;code&gt;alias&lt;/code&gt; domain.&lt;/p&gt;
+
+&lt;p&gt;Another cool thing about this sample application is some of the very basic routes and functions incorporate some framework bits, like the &lt;a href=&#34;https://en.wikipedia.org/wiki/Dependency_injection&#34;&gt;dependency injection&lt;/a&gt; container, so we can be confident parts of the app were tested/working early on.&lt;/p&gt;
+
+&lt;p&gt;For example, as shown below, my &lt;em&gt;Home&lt;/em&gt; &lt;code&gt;/&lt;/code&gt; Route returns an &lt;code&gt;index.html&lt;/code&gt; with whatever &lt;code&gt;Greeting&lt;/code&gt; is in &lt;code&gt;appsettings.json&lt;/code&gt; and the &lt;code&gt;/test/&lt;/code&gt; route right next to it does the same, but returns plain text with no web page. This is helpful, for instance, in how it helped me realize the &lt;code&gt;/views/&lt;/code&gt; folder was not  in the publish path.  The final 2 browsers simply show a sample &lt;code&gt;AsyncModule&lt;/code&gt; with some of the possibilities using the built-in request pipelines and last but not least: the &lt;code&gt;/os/&lt;/code&gt; route!&lt;/p&gt;
+
+&lt;p&gt;Don&amp;rsquo;t let the code for this overwhelm you, ok?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;   Get(&amp;quot;/os&amp;quot;, x =&amp;gt;
+    {
+       return System.Runtime.InteropServices.RuntimeInformation.OSDescription;
+    });
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/fXmVmvo.png&#34; alt=&#34;Route Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I find this one particularly cool because it works no matter where or how you are hosting your &lt;a href=&#34;https://nancyfx.org&#34;&gt;NancyFX&lt;/a&gt; app, the route will return what operating system the host is running. Here on this cloud provider the app is aware of itself being hosted on &lt;code&gt;Linux 4.7.0-coreos&lt;/code&gt; which sounds more like a kernel version (container) to me.&lt;/p&gt;
+
+&lt;p&gt;Here is the exact same app again, but debugging locally (ignoring our &lt;code&gt;Dockerfile&lt;/code&gt; etc).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/kkkZejX.png&#34; alt=&#34;/os/ route debugging&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;now-go-on-hack-and-be-merry:d508c4d6ee6630c786fa146d78ab38ef&#34;&gt;Now go on, hack and be Merry.&lt;/h3&gt;
+
+&lt;p&gt;I hope some part of this was helpful, I personally want to thank &lt;a href=&#34;https://twitter.com/shanselman&#34;&gt;Scott Hanselman&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/condrong&#34;&gt;Glenn Condron&lt;/a&gt; for their tinkering and getting this to work! This has not only helped me overall understand the concept and inner workings with regard to &lt;a href=&#34;https://docker.com&#34;&gt;Docker&lt;/a&gt;, but it also exposed me to an awesome service &amp;amp; host in &lt;a href=&#34;https://zeit.co&#34;&gt;ZEIT&lt;/a&gt; that I immediately fell in love with!&lt;/p&gt;
+
+&lt;p&gt;Now that I&amp;rsquo;ve completed that diversion&amp;ndash;back to writing the &lt;strong&gt;core functionality&lt;/strong&gt; for this API &amp;amp; app I&amp;rsquo;m supposed to be working on.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

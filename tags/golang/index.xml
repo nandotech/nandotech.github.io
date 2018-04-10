@@ -9,9 +9,7 @@
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
     <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.nandotech.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://blog.nandotech.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Learning Go--Resources and My Journey</title>
@@ -19,7 +17,65 @@
       <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
       <author>info@nandotech.com (Fernando Rodriguez)</author>
       <guid>https://blog.nandotech.com/post/2018-04-09-learning-go-resources-and-my-journey/</guid>
-      <description>It has been an awfully long time in between blog posts. The past year has resulted in a slew of unforeseen changes that I would never have imagined. After my post regarding Learning From Failure, I was ultimately forced to make an extremely tough decision and effectively shutter NandoTech, Inc. as an independent entity. The company was absorbed by a client whom also provided me with full-time work. Since then, life has been quite the whirlwind and rollercoaster ride&amp;ndash;such that I realize my last blog post was over a year ago.</description>
+      <description>
+
+&lt;h2 id=&#34;it-has-been-an-awfully-long-time-in-between-blog-posts:2399d7be5e85926c15e68f9bd4f30d2f&#34;&gt;It has been an awfully long time in between blog posts.&lt;/h2&gt;
+
+&lt;h4 id=&#34;the-past-year-has-resulted-in-a-slew-of-unforeseen-changes-that-i-would-never-have-imagined-after-my-post-regarding-learning-from-failure-post-2017-02-23-learning-from-failure-i-was-ultimately-forced-to-make-an-extremely-tough-decision-and-effectively-shutter-nandotech-inc-as-an-independent-entity:2399d7be5e85926c15e68f9bd4f30d2f&#34;&gt;The past year has resulted in a slew of unforeseen changes that I would never have imagined. After my post regarding &lt;a href=&#34;https://blog.nandotech.com/post/2017-02-23-learning-from-failure/&#34;&gt;Learning From Failure&lt;/a&gt;, I was ultimately forced to make an extremely tough decision and effectively shutter NandoTech, Inc. as an independent entity.&lt;/h4&gt;
+
+&lt;p&gt;The company was absorbed by a client whom also provided me with full-time work. Since then, life has been quite the whirlwind and rollercoaster ride&amp;ndash;such that I realize my last blog post was over a year ago.  However, taking the opportunity to look on the bright side; the long hiatus and freedom to do some dedicated learning at my new position allowed me the time to pick up &lt;a href=&#34;https://www.golang.org&#34;&gt;Google&amp;rsquo;s Go programming language&lt;/a&gt; which I had an interest in for over a year.&lt;/p&gt;
+
+&lt;p&gt;That said, I began reading some books and collecting resources around 6 months ago and decided I would learn Go. Unfortunately, my procastination and work-related items prevented me from fully committing to my learning, so it has been very slow going. Beyond this, I have come to realize that the most important part of learning a programing language is quite simply PRACTICE.&lt;/p&gt;
+
+&lt;p&gt;PRACTICE, PRACTICE, PRACTICE.  Since I was already familiar with programming and languages, I believed that I could read a few books and blog posts, become comfortable with the Go syntax and I would suddenly be just as effective programming in Go as I was already using C#.  It actually took a few coding interviews for me to realize I was not nearly as familiar and comfortable with Go syntax as I thought.&lt;/p&gt;
+
+&lt;p&gt;So, I went ahead with searching for resources that provide some more practical examples and more importantly, just simply anything that can at least be followed along and solved to exercise those coding muscles.&lt;/p&gt;
+
+&lt;h4 id=&#34;no-matter-how-many-videos-i-watch-code-blogs-books-i-read-if-i-do-not-code-and-practice-the-syntax-and-principles-i-am-learning-the-information-will-leave-my-brain-just-as-quickly-as-it-entered:2399d7be5e85926c15e68f9bd4f30d2f&#34;&gt;No matter how many videos I watch, code, blogs &amp;amp; books I read: if I do not code and practice the syntax and principles I am learning the information will leave my brain just as quickly as it entered.&lt;/h4&gt;
+
+&lt;p&gt;All that being said, without further adieu, below is a listing of &lt;a href=&#34;https://golang.org&#34;&gt;Go&lt;/a&gt; resources.  Books, blogs, conference talks, videos and some practical coding exercises (some with and without solutions) that I have found helpful, are all included.&lt;/p&gt;
+
+&lt;h2 id=&#34;p-s-i-will-periodically-update-this-list-as-i-come-across-other-resources-available-for-go-and-find-other-things-that-have-helped-me-in-my-quest:2399d7be5e85926c15e68f9bd4f30d2f&#34;&gt;P.S. I will periodically update this list as I come across other resources available for Go and find other things that have helped me in my quest.&lt;/h2&gt;
+
+&lt;h3 id=&#34;books:2399d7be5e85926c15e68f9bd4f30d2f&#34;&gt;Books:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.to/2H79KGp&#34;&gt;Go In Action&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/wkennedy&#34;&gt;William Kennedy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.to/2JyzREG&#34;&gt;Go Web Programminmg&lt;/a&gt; by Sau Cheong Chang&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.to/2JyzREG&#34;&gt;The Little Go Book&lt;/a&gt; by Karl Seguin&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.golang-book.com/books/intro&#34;&gt;An Introduction to Programming in Go&lt;/a&gt; by &lt;a href=&#34;https://github.com/calebdoxsey&#34;&gt;Caleb Doxsey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/teh-cmc/go-internals&#34;&gt;Go Internals&lt;/a&gt; by &lt;a href=&#34;https://github.com/teh-cmc&#34;&gt;Clement Rey&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;blogs:2399d7be5e85926c15e68f9bd4f30d2f&#34;&gt;Blogs:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.golang.org/&#34;&gt;The Go Programming Language&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dave.cheney.net&#34;&gt;The Acme of Foolishness&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/davecheney&#34;&gt;Dave Cheney&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rakyll.org/&#34;&gt;Go, The Unwritten Parts&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/rakyll&#34;&gt;Rakyll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ardanlabs.com/blog/&#34;&gt;Ardan Labs Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;videos-series-conference-talks:2399d7be5e85926c15e68f9bd4f30d2f&#34;&gt;Videos (Series &amp;amp; Conference Talks)&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtube.com/justforfunc&#34;&gt;Just For Func&lt;/a&gt; Video Series (Youtube Channel) by &lt;a href=&#34;https://twitter.com/francsec&#34;&gt;Francesc Campoy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCx9QVEApa5BKLw9r8cnOFEA&#34;&gt;Gopher Academy&lt;/a&gt; by Various Authors (compilation)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=ZCB-g2B4Y5A&#34;&gt;GopherCon Russia - Go Looking Back and Looking Forward&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/bradfitz&#34;&gt;Brad Fitzpatrick&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=MzTcsI6tn-0&#34;&gt;GopherCon Russia - Go Best Practices&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/bketelsen&#34;&gt;Brian Ketelson&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;other-resources-practice:2399d7be5e85926c15e68f9bd4f30d2f&#34;&gt;Other Resources &amp;amp; Practice&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://gophercises.com&#34;&gt;Gophercises&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/@joncalhoun&#34;&gt;Jon Calhoun&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gotime.fm&#34;&gt;GoTime FM Podcast&lt;/a&gt; with &lt;a href=&#34;https://twitter.com/carlisia&#34;&gt;Carlisia Pinto&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/bketelsen&#34;&gt;Brian Ketelsen&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/erikstmartin&#34;&gt;Erik St Martin&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/adamstac&#34;&gt;Adam Stacoviak&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/floyernick/Data-Structures-and-Algorithms&#34;&gt;Go Data Structures and Algorithms&lt;/a&gt; by &lt;a href=&#34;https://github.com/floyernick&#34;&gt;Mykyta Paliienko&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://play.golang.org/&#34;&gt;Go Playground&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tour.golang.org/welcome/1&#34;&gt;A Tour of Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://exercism.io/languages/go/exercises&#34;&gt;Exercism.io Go Exercises&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
   </channel>
