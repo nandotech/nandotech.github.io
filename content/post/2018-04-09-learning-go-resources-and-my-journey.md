@@ -37,7 +37,7 @@ All that being said, without further adieu, below is a listing of [Go](https://g
 
 1. [The Go Programming Language](https://blog.golang.org/) 
 2. [The Acme of Foolishness](https://dave.cheney.net) by [Dave Cheney](https://twitter.com/davecheney)
-3. [GO, THe Unwritten Parts](https://rakyll.org/) by [Rakyll](https://twitter.com/rakyll)
+3. [GO, The Unwritten Parts](https://rakyll.org/) by [Rakyll](https://twitter.com/rakyll)
 4. [Ardan Labs Blog](https://www.ardanlabs.com/blog/)
 
 ### Videos (Series & Conference Talks)
