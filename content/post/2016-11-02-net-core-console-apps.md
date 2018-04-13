@@ -13,9 +13,9 @@ categories:
 
 NandoTech has published our [first open source utility](https://github.com/nandotechinc/TwilioCallsImporter) that we are using in-house.  The application in and of itself is nothing special and doesn't do anything particuarly complicated, but it solves an important problem for us while having the added benefit of possibly helping someone else with a similar problem.
 
-| [NandoTech](http://www.nandotech.com)                                    | [Twilio](http://www.twilio.com)
----------------------------------------------|------------------------|
-| ![NandoTech](http://i.imgur.com/P0ccWI9.gif)| ![Twilio Logo](http://i.imgur.com/XApo9Wc.png)
+| [NandoTech](https://www.nandotech.com)        | [Twilio](https://www.twilio.com)                |
+| --------------------------------------------- | ----------------------------------------------- |
+| ![NandoTech](https://i.imgur.com/P0ccWI9.gif) | ![Twilio Logo](https://i.imgur.com/XApo9Wc.png) |
 
 The utility we've released is a [Twilio Call Importer](https://github.com/nandotechinc/TwilioCallsImporter) which essentially just goes out and grabs all SIP call logs from [Twilio](https://www.twilio.com) and then saves them in batches of 1,000 to [SQL Server](), but there are serveral guides showing how you can configure Dapper for other databases very easily around the web.  There's guides for [MySQL](https://github.com/mysql-net/MySqlConnector), [Postgres](http://techbrij.com/asp-net-core-postgresql-dapper-crud) and [MongoDB](http://www.dotnetcurry.com/aspnet-mvc/1267/using-mongodb-nosql-database-with-aspnet-webapi-core) that you could easily adapt for your needs.
 
