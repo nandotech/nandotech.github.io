@@ -26,15 +26,15 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;&lt;a href=&#34;http://www.nandotech.com&#34;&gt;NandoTech&lt;/a&gt;&lt;/th&gt;
-&lt;th&gt;&lt;a href=&#34;http://www.twilio.com&#34;&gt;Twilio&lt;/a&gt;&lt;/th&gt;
+&lt;th&gt;&lt;a href=&#34;https://www.nandotech.com&#34;&gt;NandoTech&lt;/a&gt;&lt;/th&gt;
+&lt;th&gt;&lt;a href=&#34;https://www.twilio.com&#34;&gt;Twilio&lt;/a&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/P0ccWI9.gif&#34; alt=&#34;NandoTech&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;http://i.imgur.com/XApo9Wc.png&#34; alt=&#34;Twilio Logo&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://i.imgur.com/P0ccWI9.gif&#34; alt=&#34;NandoTech&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://i.imgur.com/XApo9Wc.png&#34; alt=&#34;Twilio Logo&#34; /&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

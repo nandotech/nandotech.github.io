@@ -8,8 +8,45 @@
     <language>en-us</language>
     <managingEditor>info@nandotech.com (Fernando Rodriguez)</managingEditor>
     <webMaster>info@nandotech.com (Fernando Rodriguez)</webMaster>
-    <lastBuildDate>Thu, 23 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Apr 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.nandotech.com/tags/business/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Communication</title>
+      <link>https://blog.nandotech.com/post/2018-04-13-communication/</link>
+      <pubDate>Fri, 13 Apr 2018 00:00:00 +0000</pubDate>
+      <author>info@nandotech.com (Fernando Rodriguez)</author>
+      <guid>https://blog.nandotech.com/post/2018-04-13-communication/</guid>
+      <description>
+
+&lt;h1 id=&#34;communication:df820c8ea274b177330787fba5a0f8b6&#34;&gt;Communication&lt;/h1&gt;
+
+&lt;h3 id=&#34;the-fact-that-communication-is-important-in-the-workplace-goes-without-saying-well-i-guess-if-that-were-true-wouldn-t-be-saying-it:df820c8ea274b177330787fba5a0f8b6&#34;&gt;The fact that communication is important in the workplace goes without saying (well, I guess if that were true  wouldn&amp;rsquo;t be saying it).&lt;/h3&gt;
+
+&lt;p&gt;The real point, or better put, insight here that seems almost counterintuitive is the fact that communication is still indispensible when a person is working solo or on projects where they are making fully independent progress. Now obviously communicating with yourself could take many forms. To be even more specific, I have come to believe strongly that you should leave artifacts of your communication behind.&lt;/p&gt;
+
+&lt;p&gt;For us, since we are building software (mostly), we want to follow the &lt;a href=&#34;https://www.scrum.org/resources/what-is-scrum&#34;&gt;SCRUM framework&lt;/a&gt;. That means leaving behind physical artifacts of our Sprint planning, retrospectives as well as Daily Standups.  Now I&amp;rsquo;d love to take all the credit for this, but truthfully this was not really my idea. I came across the idea of a &lt;a href=&#34;http://dotmonster.co/blog/the-solo-daily-stand-up&#34;&gt;solo daily stand-up&lt;/a&gt; on other blogs.&lt;/p&gt;
+
+&lt;p&gt;For the longest time (even when I had a small team and was not solo) I tried to implement SCRUM and begin doing Daily Standups and the whole 9 yards&amp;ndash;unfortunately I never was able to gain much traction or get the rest of my team to really see the benefits.  Scrum is one of those things, truthfully if everyone does not buy in 100%, they just won&amp;rsquo;t dedicate themselves and really adhere to it.&lt;/p&gt;
+
+&lt;p&gt;I now realize that part of the inability to gain traction and adoption was a lack of accountability. Not just for the team, but even myself. The main reason why we failed at being accountable is also quite simply that nothing was &lt;em&gt;expected&lt;/em&gt; to come out of these meetings and planning/retrospective. The answer to this is to create a physical artifact of every single scrum event, &lt;strong&gt;especially&lt;/strong&gt; now that I am working solo.&lt;/p&gt;
+
+&lt;p&gt;Even without having a project manager or a group specifically to report to, in a short week I&amp;rsquo;ve already seen and felt the benefits of holding myself accountable in this way. On days where I otherwise may have allowed things to slip my mind, I&amp;rsquo;ve referred back to my Daily Standup document or Sprint planning board, readjusted my priorities and did what I had to do. For now, I even have my full process open to the public on &lt;a href=&#34;https://github.com/nandotech/&#34;&gt;my Github Account&lt;/a&gt; in my &lt;a href=&#34;https://github.com/nandotech/Scrum&#34;&gt;&amp;ldquo;Scrum&amp;rdquo;&lt;/a&gt; repository.  Each day I add a &lt;code&gt;markdown&lt;/code&gt; file to the &lt;code&gt;Daily Standups&lt;/code&gt; folder (Monday through Friday) and each &lt;code&gt;Planning&lt;/code&gt; and &lt;code&gt;Retrospective&lt;/code&gt; will be 2 weeks apart, corresponding with 2 week &amp;ldquo;Sprints&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;If you are unfamiliar with Scrum, it is my utmost pleasure to introduce you to this revolutionary framework for getting work done. The original book by Jeff Sutherland has a byline that reads &lt;em&gt;&amp;ldquo;The Art of Doing Twice the Work in Half the Time&amp;rdquo;&lt;/em&gt; which typically can be construed as the hyperbole that it sounds like. In the case of Scrum, it is actually nothing but the truth. The book is &lt;a href=&#34;https://amzn.to/2ISGEYF&#34;&gt;available on Amazon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&amp;OneJS=1&amp;Operation=GetAdHtml&amp;MarketPlace=US&amp;source=ss&amp;ref=as_ss_li_til&amp;ad_type=product_link&amp;tracking_id=nandotech-20&amp;marketplace=amazon&amp;region=US&amp;placement=B00JI54HCU&amp;asins=B00JI54HCU&amp;linkId=18d0051217780e6e919d9daa9e15e370&amp;show_border=true&amp;link_opens_in_new_window=true&#34; align=&#34;right&#34;&gt;&lt;/iframe&gt;
+
+&lt;h4 id=&#34;scrum-the-art-of-doing-twice-the-work-in-half-the-time-https-amzn-to-2isgeyf:df820c8ea274b177330787fba5a0f8b6&#34;&gt;&lt;a href=&#34;https://amzn.to/2ISGEYF&#34;&gt;Scrum: The Art of Doing Twice the Work in Half the Time&lt;/a&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.to/2ISGEYF&#34;&gt;Hardcover&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.to/2Hxh4sF&#34;&gt;Audible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.to/2JKgyIA&#34;&gt;Audio CD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Note: The only available paperbacks cost $40+&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Learning From Failure</title>
